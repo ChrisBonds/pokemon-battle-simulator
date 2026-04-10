@@ -46,3 +46,33 @@ def get_effectiveness(attacking_type: str, defending_types: list[str]) -> float:
     for t in defending_types:
         mult *= row.get(t.lower(), 1.0)
     return mult
+
+
+def weather_modifier(move_type: str, weather: str | None) -> float:
+    """Return the weather damage multiplier for a given move type."""
+    if weather == "rain":
+        if move_type == "water":
+            return 1.5
+        if move_type == "fire":
+            return 0.5
+    elif weather == "sun":
+        if move_type == "fire":
+            return 1.5
+        if move_type == "water":
+            return 0.5
+    return 1.0
+
+
+# Types immune to sand/hail chip damage
+_SAND_IMMUNE = {"rock", "ground", "steel"}
+_HAIL_IMMUNE = {"ice"}
+
+
+def weather_chip_immune(pokemon_types: list[str], weather: str) -> bool:
+    """Return True if this Pokémon is immune to end-of-turn weather chip damage."""
+    types = {t.lower() for t in pokemon_types}
+    if weather == "sand":
+        return bool(types & _SAND_IMMUNE)
+    if weather == "hail":
+        return bool(types & _HAIL_IMMUNE)
+    return True

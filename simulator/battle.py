@@ -4,24 +4,36 @@ from __future__ import annotations
 
 import math
 import random
+from typing import Union
 
 from simulator.move import Move
 from simulator.pokemon import Pokemon
-from simulator.trainer import Trainer
-from simulator.type_chart import get_effectiveness
+from simulator.trainer import Trainer, BattleState, Action
+from simulator.type_chart import get_effectiveness, weather_modifier, weather_chip_immune
+from simulator.items import get_item_data
+from simulator.effects import apply_secondary
 
-# Status conditions that affect damage output or turn execution
-_BURN_DAMAGE_FRACTION = 1 / 16   # fraction of max HP lost per turn
-_POISON_DAMAGE_FRACTION = 1 / 8
-_PARALYSIS_SKIP_CHANCE = 0.25    # probability the paralysed Pokémon can't move
 _CRIT_CHANCE = 1 / 16
-_CRIT_MULTIPLIER = 1.5
+_CRIT_MULT = 1.5
+_BURN_DAMAGE = 1 / 16
+_POISON_DAMAGE = 1 / 8
+_PARALYSIS_SKIP = 0.25
+_FREEZE_THAW = 0.20
+_SLEEP_WAKE = 0.33
+_WEATHER_CHIP = 1 / 16   # sand/hail end-of-turn chip
+_WEATHER_TURNS_DEFAULT = 5
 
 
 class BattleResult:
-    """Stores the outcome of a completed battle."""
+    """Outcome of a completed battle."""
 
-    def __init__(self, winner: Trainer, loser: Trainer, turns: int, log: list[str]) -> None:
+    def __init__(
+        self,
+        winner: Trainer,
+        loser: Trainer,
+        turns: int,
+        log: list[str],
+    ) -> None:
         self.winner = winner
         self.loser = loser
         self.turns = turns
@@ -32,13 +44,23 @@ class BattleResult:
 
 
 class Battle:
-    """Runs a 1v1 Pokémon battle between two Trainers."""
+    """Runs a 6v6 Pokémon battle between two Trainers."""
 
-    def __init__(self, trainer1: Trainer, trainer2: Trainer, verbose: bool = True) -> None:
+    def __init__(
+        self,
+        trainer1: Trainer,
+        trainer2: Trainer,
+        weather: str | None = None,
+        weather_turns: int = _WEATHER_TURNS_DEFAULT,
+        verbose: bool = True,
+    ) -> None:
         self.t1 = trainer1
         self.t2 = trainer2
+        self.weather = weather
+        self.weather_turns = weather_turns if weather else 0
         self.verbose = verbose
         self.log: list[str] = []
+        self._turn = 0
 
     # ------------------------------------------------------------------
     # Public
@@ -48,73 +70,236 @@ class Battle:
         """Execute the battle and return the result."""
         self._reset_battle_state()
         self._emit(f"=== {self.t1.name} vs {self.t2.name} ===")
-        self._emit(f"  {self.t1.pokemon.name} vs {self.t2.pokemon.name}\n")
+        self._emit(
+            f"  {[p.name for p in self.t1.team]} vs {[p.name for p in self.t2.team]}\n"
+        )
+        if self.weather:
+            self._emit(f"  Weather: {self.weather} ({self.weather_turns} turns)\n")
 
-        turn = 0
         while not self._is_over():
-            turn += 1
-            self._emit(f"-- Turn {turn} --")
+            self._turn += 1
+            self._emit(f"-- Turn {self._turn} --")
             self._run_turn()
 
-        winner, loser = self._determine_winner()
-        self._emit(f"\n{winner.name}'s {winner.pokemon.name} wins in {turn} turn(s)!")
-        return BattleResult(winner, loser, turn, self.log)
+        winner, loser = (self.t1, self.t2) if not self.t1.is_defeated() else (self.t2, self.t1)
+        self._emit(f"\n{winner.name} wins in {self._turn} turn(s)!")
+        return BattleResult(winner, loser, self._turn, self.log)
 
     # ------------------------------------------------------------------
-    # Turn resolution
+    # Turn loop
     # ------------------------------------------------------------------
 
     def _run_turn(self) -> None:
-        p1, p2 = self.t1.pokemon, self.t2.pokemon
+        state = BattleState(self.t1, self.t2, self.weather, self._turn)
+        action1 = self.t1.choose_action(state)
+        action2 = self.t2.choose_action(state)
 
-        move1 = self.t1.choose_move(p2)
-        move2 = self.t2.choose_move(p1)
+        # Switches execute first (in speed order); moves execute after
+        switch_pairs = []
+        move_pairs = []
 
-        # Determine order by speed; ties broken randomly
-        if p1.spe > p2.spe or (p1.spe == p2.spe and random.random() < 0.5):
-            first, second = (self.t1, move1), (self.t2, move2)
-        else:
-            first, second = (self.t2, move2), (self.t1, move1)
+        for trainer, action in ((self.t1, action1), (self.t2, action2)):
+            if isinstance(action, int):
+                switch_pairs.append((trainer, action))
+            else:
+                move_pairs.append((trainer, action))
 
-        for trainer, move in (first, second):
-            attacker = trainer.pokemon
-            defender = (self.t2 if trainer is self.t1 else self.t1).pokemon
+        # Execute switches (faster trainer switches first)
+        switch_pairs.sort(
+            key=lambda ta: self._effective_speed(ta[0]), reverse=True
+        )
+        for trainer, idx in switch_pairs:
+            self._execute_switch(trainer, idx)
 
-            if defender.is_fainted:
+        # Execute moves: sort by priority desc, then speed desc
+        move_pairs.sort(
+            key=lambda ta: (ta[1].priority, self._effective_speed(ta[0])),
+            reverse=True,
+        )
+        for trainer, move in move_pairs:
+            opponent = self._opponent(trainer)
+            if trainer.active.is_fainted:
+                self._handle_faint_replacement(trainer)
+                continue
+            if opponent.active.is_fainted:
+                self._handle_faint_replacement(opponent)
+            if opponent.is_defeated():
+                break
+            if not self._can_act(trainer.active):
+                continue
+            self._execute_move(trainer, opponent, move)
+            if self._is_over():
                 break
 
-            if not self._can_act(attacker):
-                continue
+        if not self._is_over():
+            self._apply_end_of_turn()
 
-            self._execute_move(attacker, defender, move)
-
-        # End-of-turn status damage
-        for trainer in (self.t1, self.t2):
-            if not trainer.pokemon.is_fainted:
-                self._apply_end_of_turn_status(trainer.pokemon)
-
+        # Summary line
+        p1, p2 = self.t1.active, self.t2.active
         self._emit(
-            f"  HP: {p1.name} {p1.current_hp}/{p1.hp}  |  "
-            f"{p2.name} {p2.current_hp}/{p2.hp}"
+            f"  HP: {p1.name} {p1.current_hp}/{p1.hp}  |  {p2.name} {p2.current_hp}/{p2.hp}"
         )
 
+    # ------------------------------------------------------------------
+    # Action resolution
+    # ------------------------------------------------------------------
+
+    def _execute_switch(self, trainer: Trainer, target_idx: int) -> None:
+        if trainer.team[target_idx].is_fainted:
+            self._emit(f"  {trainer.name} tried to switch to a fainted Pokémon!")
+            return
+        old_name = trainer.active.name
+        trainer.active_index = target_idx
+        trainer.choice_lock = None
+        self._emit(f"  {trainer.name} withdrew {old_name} and sent out {trainer.active.name}!")
+
+    def _execute_move(self, trainer: Trainer, opponent: Trainer, move: Move) -> None:
+        attacker = trainer.active
+        defender = opponent.active
+        self._emit(f"  {attacker.name} uses {move.name}!")
+
+        # Accuracy check
+        if move.accuracy is not None:
+            acc_stage = attacker.stat_stages.get("acc", 0) - defender.stat_stages.get("eva", 0)
+            acc_mult = max(0.33, min(3.0, (3 + acc_stage) / 3))
+            if random.random() > (move.accuracy / 100) * acc_mult:
+                self._emit(f"  {attacker.name}'s attack missed!")
+                return
+
+        # Assault Vest blocks status moves
+        if move.category == "status":
+            item_data = get_item_data(defender.held_item)
+            if item_data.get("blocks_status_moves"):
+                self._emit(f"  {defender.name}'s Assault Vest blocked the status move!")
+                return
+            self._apply_status_move(attacker, defender, move, trainer, opponent)
+            return
+
+        # Damage
+        dmg = self._calc_damage(attacker, defender, move)
+        if dmg == 0:
+            self._emit(f"  It doesn't affect {defender.name}...")
+            return
+
+        defender.current_hp = max(0, defender.current_hp - dmg)
+        eff = get_effectiveness(move.type, defender.types)
+        suffix = f" ({dmg} dmg)"
+        if eff == 0:
+            self._emit(f"  It doesn't affect {defender.name}...")
+        elif eff < 1:
+            self._emit(f"  It's not very effective...{suffix}")
+        elif eff > 1:
+            self._emit(f"  It's super effective!{suffix}")
+        else:
+            self._emit(f"  {suffix}")
+
+        # Choice lock
+        item_data = get_item_data(attacker.held_item)
+        if item_data.get("choice_lock") and trainer.choice_lock is None:
+            trainer.choice_lock = move.name
+
+        # Life Orb recoil (applied after damage dealt)
+        if attacker.held_item == "Life Orb" and not attacker.is_fainted:
+            recoil = max(1, math.floor(attacker.hp / 10))
+            attacker.current_hp = max(0, attacker.current_hp - recoil)
+            self._emit(f"  {attacker.name} is hurt by Life Orb! (-{recoil})")
+
+        # Rocky Helmet recoil to attacker on contact moves
+        if move.contact and not attacker.is_fainted:
+            helm_data = get_item_data(defender.held_item)
+            frac = helm_data.get("contact_recoil_fraction", 0)
+            if frac:
+                recoil = max(1, math.floor(attacker.hp * frac))
+                attacker.current_hp = max(0, attacker.current_hp - recoil)
+                self._emit(f"  {attacker.name} was hurt by {defender.name}'s Rocky Helmet! (-{recoil})")
+
+        # Secondary effects
+        if move.secondary and not defender.is_fainted:
+            apply_secondary(move, attacker, defender, self)
+
+        if defender.is_fainted:
+            self._emit(f"  {defender.name} fainted!")
+            self._handle_faint_replacement(opponent)
+
+        if attacker.is_fainted:
+            self._emit(f"  {attacker.name} fainted! (recoil)")
+            self._handle_faint_replacement(trainer)
+
+    def _apply_status_move(
+        self,
+        attacker: Pokemon,
+        defender: Pokemon,
+        move: Move,
+        trainer: Trainer,
+        opponent: Trainer,
+    ) -> None:
+        """Resolve a status-category move via its secondary effects list."""
+        if move.secondary:
+            apply_secondary(move, attacker, defender, self)
+        else:
+            self._emit(f"  (No effect implemented for {move.name})")
+
+    # ------------------------------------------------------------------
+    # Damage calculation
+    # ------------------------------------------------------------------
+
+    def _calc_damage(self, attacker: Pokemon, defender: Pokemon, move: Move) -> int:
+        """Gen 5+ damage formula with stat stages, weather, and items."""
+        eff = get_effectiveness(move.type, defender.types)
+        if eff == 0:
+            return 0
+
+        level = attacker.level
+
+        if move.category == "physical":
+            a_stat = attacker.effective_stat("atk")
+            d_stat = defender.effective_stat("def_")
+            if attacker.status == "burn":
+                a_stat = math.floor(a_stat / 2)
+        else:
+            a_stat = attacker.effective_stat("sp_atk")
+            # Assault Vest boosts sp_def
+            d_base = defender.effective_stat("sp_def")
+            item_data = get_item_data(defender.held_item)
+            d_stat = math.floor(d_base * item_data.get("sp_def_mult", 1.0))
+
+        base = math.floor(
+            math.floor(math.floor(2 * level / 5 + 2) * move.power * a_stat / d_stat / 50) + 2
+        )
+
+        stab = 1.5 if move.type in attacker.types else 1.0
+        w_mod = weather_modifier(move.type, self.weather)
+        crit = _CRIT_MULT if random.random() < _CRIT_CHANCE else 1.0
+        if crit > 1:
+            self._emit("  A critical hit!")
+        roll = random.uniform(0.85, 1.0)
+
+        # Item damage multiplier
+        item_data = get_item_data(attacker.held_item)
+        if move.category == "physical":
+            item_mult = item_data.get("physical_damage_mult", item_data.get("damage_mult", 1.0))
+        else:
+            item_mult = item_data.get("special_damage_mult", item_data.get("damage_mult", 1.0))
+
+        return max(1, math.floor(base * stab * eff * w_mod * crit * roll * item_mult))
+
+    # ------------------------------------------------------------------
+    # Can act / status
+    # ------------------------------------------------------------------
+
     def _can_act(self, pokemon: Pokemon) -> bool:
-        """Return False if status prevents the Pokémon from moving this turn."""
-        if pokemon.status == "paralysis" and random.random() < _PARALYSIS_SKIP_CHANCE:
+        if pokemon.status == "paralysis" and random.random() < _PARALYSIS_SKIP:
             self._emit(f"  {pokemon.name} is paralyzed and can't move!")
             return False
         if pokemon.status == "freeze":
-            # 20% chance to thaw each turn
-            if random.random() < 0.20:
+            if random.random() < _FREEZE_THAW:
                 pokemon.status = None
                 self._emit(f"  {pokemon.name} thawed out!")
             else:
                 self._emit(f"  {pokemon.name} is frozen solid!")
                 return False
         if pokemon.status == "sleep":
-            # Sleep lasts 1–3 turns (tracked via negative counter hack — not modelled here;
-            # instead use a simple 33% wake-up chance per turn for simplicity)
-            if random.random() < 0.33:
+            if random.random() < _SLEEP_WAKE:
                 pokemon.status = None
                 self._emit(f"  {pokemon.name} woke up!")
             else:
@@ -122,106 +307,126 @@ class Battle:
                 return False
         return True
 
-    def _execute_move(self, attacker: Pokemon, defender: Pokemon, move: Move) -> None:
-        self._emit(f"  {attacker.name} uses {move.name}!")
+    # ------------------------------------------------------------------
+    # End-of-turn effects
+    # ------------------------------------------------------------------
 
-        # Accuracy check
-        if move.accuracy is not None and random.random() > move.accuracy / 100:
-            self._emit(f"  {attacker.name}'s attack missed!")
-            return
+    def _apply_end_of_turn(self) -> None:
+        # Weather countdown
+        if self.weather and self.weather_turns > 0:
+            self.weather_turns -= 1
+            if self.weather_turns == 0:
+                self._emit(f"  The {self.weather} subsided.")
+                self.weather = None
 
-        if move.category == "status":
-            # Status moves — no damage; effects handled here as needed
-            self._apply_status_move(attacker, defender, move)
-            return
+        for trainer in (self.t1, self.t2):
+            p = trainer.active
+            if p.is_fainted:
+                continue
 
-        dmg = self._calc_damage(attacker, defender, move)
-        defender.current_hp = max(0, defender.current_hp - dmg)
+            # Status chip damage
+            if p.status == "burn":
+                dmg = max(1, math.floor(p.hp * _BURN_DAMAGE))
+                p.current_hp = max(0, p.current_hp - dmg)
+                self._emit(f"  {p.name} is hurt by burn! (-{dmg})")
+            elif p.status == "poison":
+                dmg = max(1, math.floor(p.hp * _POISON_DAMAGE))
+                p.current_hp = max(0, p.current_hp - dmg)
+                self._emit(f"  {p.name} is hurt by poison! (-{dmg})")
 
-        eff = get_effectiveness(move.type, defender.types)
-        if eff == 0:
-            self._emit(f"  It doesn't affect {defender.name}...")
-        elif eff < 1:
-            self._emit(f"  It's not very effective... ({dmg} dmg)")
-        elif eff > 1:
-            self._emit(f"  It's super effective! ({dmg} dmg)")
+            # Weather chip (sand/hail)
+            if self.weather in ("sand", "hail") and not weather_chip_immune(p.types, self.weather):
+                dmg = max(1, math.floor(p.hp * _WEATHER_CHIP))
+                p.current_hp = max(0, p.current_hp - dmg)
+                self._emit(f"  {p.name} is buffeted by {self.weather}! (-{dmg})")
+
+            # Item effects
+            item_data = get_item_data(p.held_item)
+
+            # Leftovers
+            heal_frac = item_data.get("end_of_turn_heal_fraction", 0)
+            if heal_frac and p.current_hp < p.hp:
+                heal = max(1, math.floor(p.hp * heal_frac))
+                p.current_hp = min(p.hp, p.current_hp + heal)
+                self._emit(f"  {p.name} restored HP with {p.held_item}! (+{heal})")
+
+            # Black Sludge
+            if p.held_item == "Black Sludge":
+                if "poison" in p.types:
+                    heal = max(1, math.floor(p.hp * item_data["end_of_turn_heal_fraction_poison"]))
+                    p.current_hp = min(p.hp, p.current_hp + heal)
+                    self._emit(f"  {p.name} restored HP with Black Sludge! (+{heal})")
+                else:
+                    dmg = max(1, math.floor(p.hp * item_data["end_of_turn_damage_fraction_other"]))
+                    p.current_hp = max(0, p.current_hp - dmg)
+                    self._emit(f"  {p.name} was hurt by Black Sludge! (-{dmg})")
+
+            # Lum Berry: cure status at end of turn
+            if p.held_item == "Lum Berry" and p.status:
+                self._emit(f"  {p.name}'s Lum Berry cured its {p.status}!")
+                p.status = None
+                p.held_item = None  # consumed
+
+            if p.is_fainted:
+                self._emit(f"  {p.name} fainted!")
+                self._handle_faint_replacement(trainer)
+
+    # ------------------------------------------------------------------
+    # Faint replacement
+    # ------------------------------------------------------------------
+
+    def _handle_faint_replacement(self, trainer: Trainer) -> None:
+        """Force a replacement switch when the active Pokémon faints."""
+        bench = trainer.alive_bench_indices()
+        if not bench:
+            return  # team fully defeated — battle end detected by _is_over()
+
+        if trainer.strategy == "random":
+            idx = random.choice(bench)
+        elif trainer.strategy in ("greedy", "minimax"):
+            # Pick the bench member with the best type matchup vs opponent
+            opp = self._opponent(trainer).active
+            idx = max(
+                bench,
+                key=lambda i: max(
+                    (get_effectiveness(m.type, opp.types) for m in trainer.team[i].moveset if m.power),
+                    default=0.0,
+                ),
+            )
         else:
-            self._emit(f"  ({dmg} dmg)")
+            idx = bench[0]
 
-        if defender.is_fainted:
-            self._emit(f"  {defender.name} fainted!")
-
-    # ------------------------------------------------------------------
-    # Damage formula (Gen 5+)
-    # ------------------------------------------------------------------
-
-    def _calc_damage(self, attacker: Pokemon, defender: Pokemon, move: Move) -> int:
-        """
-        Standard damage formula:
-            floor(floor(floor(2*level/5 + 2) * power * A/D / 50) + 2) * modifier
-        modifier = STAB × type_effectiveness × crit × random[0.85, 1.0]
-        """
-        level = attacker.level
-
-        if move.category == "physical":
-            a_stat = attacker.atk
-            d_stat = defender.def_
-            # Burn halves physical attack
-            if attacker.status == "burn":
-                a_stat = math.floor(a_stat / 2)
-        else:  # special
-            a_stat = attacker.sp_atk
-            d_stat = defender.sp_def
-
-        base = math.floor(
-            math.floor(math.floor(2 * level / 5 + 2) * move.power * a_stat / d_stat / 50) + 2
-        )
-
-        stab = 1.5 if move.type in attacker.types else 1.0
-        eff = get_effectiveness(move.type, defender.types)
-        crit = _CRIT_MULTIPLIER if random.random() < _CRIT_CHANCE else 1.0
-        if crit > 1:
-            self._emit("  A critical hit!")
-        roll = random.uniform(0.85, 1.0)
-
-        return max(1, math.floor(base * stab * eff * crit * roll))
-
-    # ------------------------------------------------------------------
-    # Status helpers
-    # ------------------------------------------------------------------
-
-    def _apply_end_of_turn_status(self, pokemon: Pokemon) -> None:
-        if pokemon.status == "burn":
-            dmg = max(1, math.floor(pokemon.hp * _BURN_DAMAGE_FRACTION))
-            pokemon.current_hp = max(0, pokemon.current_hp - dmg)
-            self._emit(f"  {pokemon.name} is hurt by its burn! ({dmg} dmg)")
-        elif pokemon.status == "poison":
-            dmg = max(1, math.floor(pokemon.hp * _POISON_DAMAGE_FRACTION))
-            pokemon.current_hp = max(0, pokemon.current_hp - dmg)
-            self._emit(f"  {pokemon.name} is hurt by poison! ({dmg} dmg)")
-
-    def _apply_status_move(self, attacker: Pokemon, defender: Pokemon, move: Move) -> None:
-        """Placeholder — real status move effects wired in here later."""
-        self._emit(f"  (Status move effect for {move.name} not yet implemented)")
+        trainer.active_index = idx
+        trainer.choice_lock = None
+        self._emit(f"  {trainer.name} sent out {trainer.active.name}!")
 
     # ------------------------------------------------------------------
     # Utilities
     # ------------------------------------------------------------------
 
+    def _effective_speed(self, trainer: Trainer) -> float:
+        p = trainer.active
+        spd = p.effective_stat("spe")
+        item_data = get_item_data(p.held_item)
+        spd *= item_data.get("speed_mult", 1.0)
+        if p.status == "paralysis":
+            spd *= 0.5
+        return spd
+
+    def _opponent(self, trainer: Trainer) -> Trainer:
+        return self.t2 if trainer is self.t1 else self.t1
+
     def _reset_battle_state(self) -> None:
         self.log = []
+        self._turn = 0
         for trainer in (self.t1, self.t2):
-            p = trainer.pokemon
-            p.current_hp = p.hp
-            p.status = None
+            trainer.active_index = 0
+            trainer.choice_lock = None
+            for p in trainer.team:
+                p.reset_battle_state()
 
     def _is_over(self) -> bool:
-        return self.t1.pokemon.is_fainted or self.t2.pokemon.is_fainted
-
-    def _determine_winner(self) -> tuple[Trainer, Trainer]:
-        if self.t2.pokemon.is_fainted:
-            return self.t1, self.t2
-        return self.t2, self.t1
+        return self.t1.is_defeated() or self.t2.is_defeated()
 
     def _emit(self, msg: str) -> None:
         self.log.append(msg)
