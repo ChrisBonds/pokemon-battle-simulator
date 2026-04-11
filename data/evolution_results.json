@@ -1,0 +1,394 @@
+[
+  {
+    "generation": 0,
+    "frequencies": {
+      "random": 0.2,
+      "greedy": 0.2,
+      "minimax": 0.2,
+      "stall": 0.2,
+      "setup_sweep": 0.2
+    },
+    "avg_turns": null,
+    "avg_winner_hp": null
+  },
+  {
+    "generation": 1,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.375,
+      "minimax": 0.225,
+      "stall": 0.0,
+      "setup_sweep": 0.4
+    },
+    "avg_turns": 13.89,
+    "avg_winner_hp": 0.398,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.542,
+      "minimax": 0.438,
+      "stall": 0.0,
+      "setup_sweep": 0.554
+    }
+  },
+  {
+    "generation": 2,
+    "frequencies": {
+      "random": 0.025,
+      "greedy": 0.6,
+      "minimax": 0.0,
+      "stall": 0.025,
+      "setup_sweep": 0.35
+    },
+    "avg_turns": 9.03,
+    "avg_winner_hp": 0.238,
+    "fitness": {
+      "random": 0.625,
+      "greedy": 0.489,
+      "minimax": 0.0,
+      "stall": 0.5,
+      "setup_sweep": 0.515
+    }
+  },
+  {
+    "generation": 3,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.675,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.325
+    },
+    "avg_turns": 8.21,
+    "avg_winner_hp": 0.271,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.49,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.535
+    }
+  },
+  {
+    "generation": 4,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.8,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.2
+    },
+    "avg_turns": 8.2,
+    "avg_winner_hp": 0.199,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.498,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.508
+    }
+  },
+  {
+    "generation": 5,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.8,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.2
+    },
+    "avg_turns": 8.19,
+    "avg_winner_hp": 0.194,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.506,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.489
+    }
+  },
+  {
+    "generation": 6,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.875,
+      "minimax": 0.025,
+      "stall": 0.0,
+      "setup_sweep": 0.1
+    },
+    "avg_turns": 8.19,
+    "avg_winner_hp": 0.21,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.51,
+      "minimax": 0.4,
+      "stall": 0.0,
+      "setup_sweep": 0.515
+    }
+  },
+  {
+    "generation": 7,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.9,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.1
+    },
+    "avg_turns": 8.11,
+    "avg_winner_hp": 0.23,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.509,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.458
+    }
+  },
+  {
+    "generation": 8,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.875,
+      "minimax": 0.0,
+      "stall": 0.025,
+      "setup_sweep": 0.1
+    },
+    "avg_turns": 8.06,
+    "avg_winner_hp": 0.207,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.508,
+      "minimax": 0.0,
+      "stall": 0.6,
+      "setup_sweep": 0.432
+    }
+  },
+  {
+    "generation": 9,
+    "frequencies": {
+      "random": 0.025,
+      "greedy": 0.875,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.1
+    },
+    "avg_turns": 8.23,
+    "avg_winner_hp": 0.222,
+    "fitness": {
+      "random": 0.7,
+      "greedy": 0.486,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.558
+    }
+  },
+  {
+    "generation": 10,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.95,
+      "minimax": 0.0,
+      "stall": 0.025,
+      "setup_sweep": 0.025
+    },
+    "avg_turns": 8.11,
+    "avg_winner_hp": 0.236,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.491,
+      "minimax": 0.0,
+      "stall": 0.692,
+      "setup_sweep": 0.6
+    }
+  },
+  {
+    "generation": 11,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.975,
+      "minimax": 0.0,
+      "stall": 0.025,
+      "setup_sweep": 0.0
+    },
+    "avg_turns": 8.12,
+    "avg_winner_hp": 0.232,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.501,
+      "minimax": 0.0,
+      "stall": 0.615,
+      "setup_sweep": 0.0
+    }
+  },
+  {
+    "generation": 12,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.975,
+      "minimax": 0.0,
+      "stall": 0.025,
+      "setup_sweep": 0.0
+    },
+    "avg_turns": 8.02,
+    "avg_winner_hp": 0.239,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.492,
+      "minimax": 0.0,
+      "stall": 0.8,
+      "setup_sweep": 0.0
+    }
+  },
+  {
+    "generation": 13,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.975,
+      "minimax": 0.0,
+      "stall": 0.025,
+      "setup_sweep": 0.0
+    },
+    "avg_turns": 8.16,
+    "avg_winner_hp": 0.222,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.506,
+      "minimax": 0.0,
+      "stall": 0.455,
+      "setup_sweep": 0.0
+    }
+  },
+  {
+    "generation": 14,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 1.0,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.0
+    },
+    "avg_turns": 8.06,
+    "avg_winner_hp": 0.224,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.504,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.0
+    }
+  },
+  {
+    "generation": 15,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.925,
+      "minimax": 0.025,
+      "stall": 0.0,
+      "setup_sweep": 0.05
+    },
+    "avg_turns": 8.1,
+    "avg_winner_hp": 0.225,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.504,
+      "minimax": 0.2,
+      "stall": 0.0,
+      "setup_sweep": 0.639
+    }
+  },
+  {
+    "generation": 16,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.95,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.05
+    },
+    "avg_turns": 8.05,
+    "avg_winner_hp": 0.214,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.514,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.419
+    }
+  },
+  {
+    "generation": 17,
+    "frequencies": {
+      "random": 0.025,
+      "greedy": 0.825,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.15
+    },
+    "avg_turns": 8.16,
+    "avg_winner_hp": 0.199,
+    "fitness": {
+      "random": 0.444,
+      "greedy": 0.511,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.401
+    }
+  },
+  {
+    "generation": 18,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 0.975,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.025
+    },
+    "avg_turns": 8.12,
+    "avg_winner_hp": 0.226,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.493,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.7
+    }
+  },
+  {
+    "generation": 19,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 1.0,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.0
+    },
+    "avg_turns": 8.06,
+    "avg_winner_hp": 0.203,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.501,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.0
+    }
+  },
+  {
+    "generation": 20,
+    "frequencies": {
+      "random": 0.0,
+      "greedy": 1.0,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.0
+    },
+    "avg_turns": 8.07,
+    "avg_winner_hp": 0.209,
+    "fitness": {
+      "random": 0.0,
+      "greedy": 0.501,
+      "minimax": 0.0,
+      "stall": 0.0,
+      "setup_sweep": 0.0
+    }
+  }
+]

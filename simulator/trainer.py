@@ -35,6 +35,7 @@ class Trainer:
         self.strategy = strategy
         self.active_index: int = 0
         self.choice_lock: str | None = None  # set by Choice items; cleared on switch
+        self._last_hp: int = -1  # tracks HP at start of turn for stall strategy
 
     @property
     def active(self) -> Pokemon:
@@ -68,6 +69,10 @@ class Trainer:
             return self._greedy_action(battle_state)
         elif self.strategy == "minimax":
             return self._minimax_action(battle_state)
+        elif self.strategy == "stall":
+            return self._stall_action(battle_state)
+        elif self.strategy == "setup_sweep":
+            return self._setup_sweep_action(battle_state)
         else:
             raise ValueError(f"Unknown strategy: {self.strategy!r}")
 
@@ -150,6 +155,129 @@ class Trainer:
 
         return best_action
 
+    # ------------------------------------------------------------------
+    # Strategy: stall (cooperator — invests in attrition over KO pressure)
+    # ------------------------------------------------------------------
+
+    def _stall_action(self, battle_state: BattleState) -> Action:
+        """
+        Priority: inflict status → recover if low HP → Protect if just took a hit → best damage.
+        Maps to the 'cooperator' in Axelrod terms — defers immediate damage for long-run gain.
+        """
+        me = self.active
+        opp = _opponent(self, battle_state).active
+
+        # Record HP now so next turn can detect damage taken (fix: update every branch)
+        prev_hp = self._last_hp
+        self._last_hp = me.current_hp
+
+        moves_by_name = {m.name: m for m in me.moveset}
+
+        # 1. Inflict badly poisoned if opponent is healthy and unstatused
+        if opp.status is None:
+            toxic_candidates = [
+                m for m in me.moveset
+                if any(e.get("inflict") in ("badly_poison", "poison") for e in m.secondary)
+                and m.category == "status"
+            ]
+            # Prefer badly_poison (Toxic) over regular poison
+            toxic_candidates.sort(
+                key=lambda m: 0 if any(e.get("inflict") == "badly_poison" for e in m.secondary) else 1
+            )
+            if toxic_candidates:
+                return toxic_candidates[0]
+
+            # Will-O-Wisp vs physical attacker
+            burn_moves = [
+                m for m in me.moveset
+                if any(e.get("inflict") == "burn" for e in m.secondary)
+                and m.category == "status"
+            ]
+            if burn_moves and any(m.category == "physical" for m in opp.moveset if m.power):
+                return burn_moves[0]
+
+        # 2. Recover if HP < 45%
+        if me.current_hp < me.hp * 0.45:
+            recovery = [
+                m for m in me.moveset
+                if any("heal_fraction" in e for e in m.secondary)
+            ]
+            if recovery:
+                return recovery[0]
+
+        # 3. Protect if took significant damage last turn
+        took_heavy_hit = (
+            prev_hp > 0
+            and (prev_hp - me.current_hp) > me.hp * 0.25
+            and not me.protect_used_last_turn
+        )
+        if took_heavy_hit:
+            protect = moves_by_name.get("Protect")
+            if protect:
+                return protect
+
+        # 4. Fall back to best offensive/setup move (greedy scoring)
+        scores = [(_move_score(m, me, opp), m) for m in me.moveset]
+        best_score = max(s for s, _ in scores)
+        if best_score == 0:
+            return random.choice(me.moveset)
+        best_moves = [m for s, m in scores if s == best_score]
+        return random.choice(best_moves)
+
+    # ------------------------------------------------------------------
+    # Strategy: setup_sweep (patient — sets up, then bursts)
+    # ------------------------------------------------------------------
+
+    def _setup_sweep_action(self, battle_state: BattleState) -> Action:
+        """
+        Use a setup move when conditions are safe, then go all-out once boosted.
+        'Patient cooperator' — different from stall in that it invests for burst damage,
+        not attrition. Pays setup cost only when it won't get punished.
+        """
+        me = self.active
+        opp = _opponent(self, battle_state).active
+
+        # Already boosted enough — switch to full greedy
+        offensive_boost = max(
+            me.stat_stages.get("atk", 0),
+            me.stat_stages.get("sp_atk", 0),
+        )
+        if offensive_boost >= 2:
+            scores = [(_move_score(m, me, opp), m) for m in me.moveset if m.power]
+            if scores:
+                best = max(scores, key=lambda x: x[0])
+                return best[1]
+
+        # Try to set up if healthy and safe
+        if me.current_hp > me.hp * 0.60:
+            opp_best_dmg = max(
+                (_expected_damage(opp, me, m, battle_state.weather) for m in opp.moveset if m.power),
+                default=0.0,
+            )
+            safe = opp_best_dmg < me.current_hp * 0.40
+
+            if safe:
+                setup_moves = [
+                    m for m in me.moveset
+                    if m.power is None
+                    and any("stat" in e and e.get("target") == "self" for e in m.secondary)
+                ]
+                if setup_moves:
+                    # Prefer moves that boost an offensive stat
+                    offensive_setup = [
+                        m for m in setup_moves
+                        if any(e.get("stat") in ("atk", "sp_atk") for e in m.secondary)
+                    ]
+                    return random.choice(offensive_setup) if offensive_setup else random.choice(setup_moves)
+
+        # Fallback: best damage move
+        damage_moves = [m for m in me.moveset if m.power]
+        if not damage_moves:
+            return random.choice(me.moveset)
+        scores = [(_move_score(m, me, opp), m) for m in damage_moves]
+        best = max(scores, key=lambda x: x[0])
+        return best[1]
+
     def __repr__(self) -> str:
         alive = sum(1 for p in self.team if not p.is_fainted)
         return (
@@ -176,8 +304,12 @@ def _move_score(move: Move, attacker: Pokemon, defender: Pokemon) -> float:
         # Status moves: score based on their secondary effect potential
         if any("stat" in e and e.get("target") == "self" for e in move.secondary):
             return 15.0  # setup moves are valuable
+        if any(e.get("inflict") in ("badly_poison", "poison") and e.get("target") == "foe" for e in move.secondary):
+            return 12.0  # Toxic / poisoning — high value if opponent is unstatused
         if any("inflict" in e for e in move.secondary):
-            return 10.0  # status-inflicting moves are useful
+            return 10.0  # other status (burn via Will-O-Wisp, etc.)
+        if any("heal_fraction" in e for e in move.secondary):
+            return 8.0   # recovery — valued when HP is low (rough heuristic)
         return 0.0
     stab = 1.5 if move.type in attacker.types else 1.0
     eff = get_effectiveness(move.type, defender.types)

@@ -19,6 +19,7 @@ class Move:
         priority: int = 0,
         secondary: list[dict] | None = None,
         contact: bool = True,
+        switch_after: bool = False,
     ) -> None:
         self.name = name
         self.type = type
@@ -28,6 +29,7 @@ class Move:
         self.priority = priority  # Quick Attack = +1, ExtremeSpeed = +2
         self.secondary = secondary or []  # list of effect dicts
         self.contact = contact and category == "physical"  # only physical can be contact
+        self.switch_after = switch_after  # U-turn / Volt Switch
 
     def __repr__(self) -> str:
         pwr = self.power if self.power is not None else "—"

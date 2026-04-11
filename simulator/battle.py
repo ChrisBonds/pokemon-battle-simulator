@@ -43,6 +43,9 @@ class BattleResult:
         return f"BattleResult(winner={self.winner.name!r}, turns={self.turns})"
 
 
+_MAX_TURNS = 200  # draw declared by HP advantage after this many turns
+
+
 class Battle:
     """Runs a 6v6 Pokémon battle between two Trainers."""
 
@@ -53,12 +56,14 @@ class Battle:
         weather: str | None = None,
         weather_turns: int = _WEATHER_TURNS_DEFAULT,
         verbose: bool = True,
+        max_turns: int = _MAX_TURNS,
     ) -> None:
         self.t1 = trainer1
         self.t2 = trainer2
         self.weather = weather
         self.weather_turns = weather_turns if weather else 0
         self.verbose = verbose
+        self.max_turns = max_turns
         self.log: list[str] = []
         self._turn = 0
 
@@ -78,6 +83,13 @@ class Battle:
 
         while not self._is_over():
             self._turn += 1
+            if self._turn > self.max_turns:
+                # Time-out: winner is whoever has more remaining HP fraction
+                t1_hp = sum(p.current_hp for p in self.t1.team) / max(1, sum(p.hp for p in self.t1.team))
+                t2_hp = sum(p.current_hp for p in self.t2.team) / max(1, sum(p.hp for p in self.t2.team))
+                winner, loser = (self.t1, self.t2) if t1_hp >= t2_hp else (self.t2, self.t1)
+                self._emit(f"\nTurn limit reached! {winner.name} wins on HP advantage.")
+                return BattleResult(winner, loser, self._turn, self.log)
             self._emit(f"-- Turn {self._turn} --")
             self._run_turn()
 
@@ -134,6 +146,12 @@ class Battle:
         if not self._is_over():
             self._apply_end_of_turn()
 
+        # Reset per-turn Protect flags for both active Pokémon
+        for trainer in (self.t1, self.t2):
+            p = trainer.active
+            p.protect_used_last_turn = p.is_protecting
+            p.is_protecting = False
+
         # Summary line
         p1, p2 = self.t1.active, self.t2.active
         self._emit(
@@ -151,12 +169,22 @@ class Battle:
         old_name = trainer.active.name
         trainer.active_index = target_idx
         trainer.choice_lock = None
+        # Reset badly_poison escalation and protect state on switch-in
+        incoming = trainer.active
+        incoming.badly_poison_counter = 0
+        incoming.is_protecting = False
+        incoming.protect_used_last_turn = False
         self._emit(f"  {trainer.name} withdrew {old_name} and sent out {trainer.active.name}!")
 
     def _execute_move(self, trainer: Trainer, opponent: Trainer, move: Move) -> None:
         attacker = trainer.active
         defender = opponent.active
         self._emit(f"  {attacker.name} uses {move.name}!")
+
+        # Protect check
+        if defender.is_protecting and move.category != "status":
+            self._emit(f"  {defender.name} is protected!")
+            return
 
         # Accuracy check
         if move.accuracy is not None:
@@ -180,6 +208,17 @@ class Battle:
         if dmg == 0:
             self._emit(f"  It doesn't affect {defender.name}...")
             return
+
+        # Focus Sash: survive one hit from full HP
+        focus_data = get_item_data(defender.held_item)
+        if (
+            focus_data.get("focus_sash")
+            and defender.current_hp == defender.hp
+            and dmg >= defender.current_hp
+        ):
+            dmg = defender.current_hp - 1
+            defender.held_item = None  # consumed
+            self._emit(f"  {defender.name} hung on using its Focus Sash!")
 
         defender.current_hp = max(0, defender.current_hp - dmg)
         eff = get_effectiveness(move.type, defender.types)
@@ -225,6 +264,13 @@ class Battle:
             self._emit(f"  {attacker.name} fainted! (recoil)")
             self._handle_faint_replacement(trainer)
 
+        # U-turn / Volt Switch: attacker switches out after dealing damage
+        if move.switch_after and not attacker.is_fainted:
+            bench = trainer.alive_bench_indices()
+            if bench:
+                idx = random.choice(bench)
+                self._execute_switch(trainer, idx)
+
     def _apply_status_move(
         self,
         attacker: Pokemon,
@@ -234,10 +280,37 @@ class Battle:
         opponent: Trainer,
     ) -> None:
         """Resolve a status-category move via its secondary effects list."""
-        if move.secondary:
-            apply_secondary(move, attacker, defender, self)
-        else:
+        if not move.secondary:
             self._emit(f"  (No effect implemented for {move.name})")
+            return
+
+        for eff in move.secondary:
+            # Protect: attacker becomes protected this turn
+            if eff.get("protect"):
+                if attacker.protect_used_last_turn:
+                    self._emit(f"  But {attacker.name} failed to protect itself!")
+                else:
+                    attacker.is_protecting = True
+                    self._emit(f"  {attacker.name} is protecting itself!")
+                return  # protect is the whole move
+
+            # Healing
+            if "heal_fraction" in eff:
+                if attacker.current_hp >= attacker.hp:
+                    self._emit(f"  {attacker.name}'s HP is already full!")
+                else:
+                    heal = max(1, math.floor(attacker.hp * eff["heal_fraction"]))
+                    attacker.current_hp = min(attacker.hp, attacker.current_hp + heal)
+                    self._emit(f"  {attacker.name} restored {heal} HP!")
+
+        # All other secondaries (stat changes, status infliction) go through apply_secondary
+        non_heal = [e for e in move.secondary if "heal_fraction" not in e and not e.get("protect")]
+        if non_heal:
+            # Temporarily replace move.secondary for the apply_secondary call
+            original = move.secondary
+            move.secondary = non_heal
+            apply_secondary(move, attacker, defender, self)
+            move.secondary = original
 
     # ------------------------------------------------------------------
     # Damage calculation
@@ -281,7 +354,21 @@ class Battle:
         else:
             item_mult = item_data.get("special_damage_mult", item_data.get("damage_mult", 1.0))
 
-        return max(1, math.floor(base * stab * eff * w_mod * crit * roll * item_mult))
+        # Expert Belt: 1.2× on super-effective hits
+        expert_belt = 1.2 if (item_data.get("expert_belt") and eff > 1) else 1.0
+
+        # Eviolite: boost defender's def/sp_def (handled here as a defender multiplier)
+        evolite_data = get_item_data(defender.held_item)
+        eviolite_mult = 1.0
+        if evolite_data.get("eviolite"):
+            if move.category == "physical":
+                eviolite_mult = evolite_data.get("def_mult", 1.0)
+            else:
+                eviolite_mult = evolite_data.get("sp_def_mult_eviolite", 1.0)
+        # Eviolite reduces damage to defender, so divide
+        eviolite_div = eviolite_mult
+
+        return max(1, math.floor(base * stab * eff * w_mod * crit * roll * item_mult * expert_belt / eviolite_div))
 
     # ------------------------------------------------------------------
     # Can act / status
@@ -333,6 +420,12 @@ class Battle:
                 dmg = max(1, math.floor(p.hp * _POISON_DAMAGE))
                 p.current_hp = max(0, p.current_hp - dmg)
                 self._emit(f"  {p.name} is hurt by poison! (-{dmg})")
+            elif p.status == "badly_poison":
+                p.badly_poison_counter = max(1, p.badly_poison_counter)
+                dmg = max(1, math.floor(p.hp * p.badly_poison_counter / 16))
+                p.current_hp = max(0, p.current_hp - dmg)
+                self._emit(f"  {p.name} is badly poisoned! (-{dmg})")
+                p.badly_poison_counter += 1
 
             # Weather chip (sand/hail)
             if self.weather in ("sand", "hail") and not weather_chip_immune(p.types, self.weather):
@@ -365,7 +458,16 @@ class Battle:
             if p.held_item == "Lum Berry" and p.status:
                 self._emit(f"  {p.name}'s Lum Berry cured its {p.status}!")
                 p.status = None
+                p.badly_poison_counter = 0
                 p.held_item = None  # consumed
+
+            # Sitrus Berry: heal 25% HP once when below 50%
+            sitrus_data = get_item_data(p.held_item)
+            if sitrus_data.get("sitrus_berry") and p.current_hp < p.hp // 2:
+                heal = max(1, math.floor(p.hp * sitrus_data["sitrus_heal_fraction"]))
+                p.current_hp = min(p.hp, p.current_hp + heal)
+                p.held_item = None  # consumed
+                self._emit(f"  {p.name} ate its Sitrus Berry and restored {heal} HP!")
 
             if p.is_fainted:
                 self._emit(f"  {p.name} fainted!")
@@ -383,6 +485,9 @@ class Battle:
 
         if trainer.strategy == "random":
             idx = random.choice(bench)
+        elif trainer.strategy == "stall":
+            # Send in the bulkiest remaining Pokémon (highest def + sp_def sum)
+            idx = max(bench, key=lambda i: trainer.team[i].def_ + trainer.team[i].sp_def)
         elif trainer.strategy in ("greedy", "minimax"):
             # Pick the bench member with the best type matchup vs opponent
             opp = self._opponent(trainer).active

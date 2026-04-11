@@ -1,0 +1,947 @@
+[
+  {
+    "name": "Acrobatics",
+    "type": "flying",
+    "power": 55,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Air Slash",
+    "type": "flying",
+    "power": 75,
+    "accuracy": 95,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Aqua Jet",
+    "type": "water",
+    "power": 40,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 1,
+    "secondary": []
+  },
+  {
+    "name": "Bullet Punch",
+    "type": "steel",
+    "power": 40,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 1,
+    "secondary": []
+  },
+  {
+    "name": "Calm Mind",
+    "type": "psychic",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "sp_atk",
+        "stages": 1,
+        "target": "self",
+        "chance": 1.0
+      },
+      {
+        "stat": "sp_def",
+        "stages": 1,
+        "target": "self",
+        "chance": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Close Combat",
+    "type": "fighting",
+    "power": 120,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "def_",
+        "stages": -1,
+        "target": "self",
+        "chance": 1.0
+      },
+      {
+        "stat": "sp_def",
+        "stages": -1,
+        "target": "self",
+        "chance": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Crunch",
+    "type": "dark",
+    "power": 80,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "def_",
+        "stages": -1,
+        "target": "foe",
+        "chance": 0.2
+      }
+    ]
+  },
+  {
+    "name": "Dazzling Gleam",
+    "type": "fairy",
+    "power": 80,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Defog",
+    "type": "flying",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Drain Punch",
+    "type": "fighting",
+    "power": 75,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Dynamic Punch",
+    "type": "fighting",
+    "power": 100,
+    "accuracy": 50,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Earth Power",
+    "type": "ground",
+    "power": 90,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "sp_def",
+        "stages": -1,
+        "target": "foe",
+        "chance": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Earthquake",
+    "type": "ground",
+    "power": 100,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Encore",
+    "type": "normal",
+    "power": null,
+    "accuracy": 100,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Energy Ball",
+    "type": "grass",
+    "power": 90,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "sp_def",
+        "stages": -1,
+        "target": "foe",
+        "chance": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Fake Out",
+    "type": "normal",
+    "power": 40,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Fire Blast",
+    "type": "fire",
+    "power": 110,
+    "accuracy": 85,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "burn",
+        "chance": 0.1,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Giga Drain",
+    "type": "grass",
+    "power": 75,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Grass Knot",
+    "type": "grass",
+    "power": null,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Gunk Shot",
+    "type": "poison",
+    "power": 120,
+    "accuracy": 80,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Heal Bell",
+    "type": "normal",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Healing Wish",
+    "type": "psychic",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Heavy Slam",
+    "type": "steel",
+    "power": null,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Hex",
+    "type": "ghost",
+    "power": 65,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Hidden Power Fire",
+    "type": "normal",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Hidden Power Grass",
+    "type": "normal",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Hurricane",
+    "type": "flying",
+    "power": 110,
+    "accuracy": 70,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Ice Beam",
+    "type": "ice",
+    "power": 90,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "freeze",
+        "chance": 0.1,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Ice Punch",
+    "type": "ice",
+    "power": 75,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Iron Tail",
+    "type": "steel",
+    "power": 100,
+    "accuracy": 75,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Knock Off",
+    "type": "dark",
+    "power": 65,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Lovely Kiss",
+    "type": "normal",
+    "power": null,
+    "accuracy": 75,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Mach Punch",
+    "type": "fighting",
+    "power": 40,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 1,
+    "secondary": []
+  },
+  {
+    "name": "Megahorn",
+    "type": "bug",
+    "power": 120,
+    "accuracy": 85,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Moonlight",
+    "type": "fairy",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "heal_fraction": 0.5,
+        "target": "self",
+        "chance": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Nasty Plot",
+    "type": "dark",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "sp_atk",
+        "stages": 2,
+        "target": "self",
+        "chance": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Pain Split",
+    "type": "normal",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Poison Jab",
+    "type": "poison",
+    "power": 80,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "poison",
+        "chance": 0.3,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Protect",
+    "type": "normal",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 4,
+    "secondary": [
+      {
+        "protect": true,
+        "target": "self",
+        "chance": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Psychic",
+    "type": "psychic",
+    "power": 90,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "sp_def",
+        "stages": -1,
+        "target": "foe",
+        "chance": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Psyshock",
+    "type": "psychic",
+    "power": 80,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Pursuit",
+    "type": "dark",
+    "power": 40,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Quiver Dance",
+    "type": "bug",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "sp_atk",
+        "stages": 1,
+        "target": "self",
+        "chance": 1.0
+      },
+      {
+        "stat": "sp_def",
+        "stages": 1,
+        "target": "self",
+        "chance": 1.0
+      },
+      {
+        "stat": "spe",
+        "stages": 1,
+        "target": "self",
+        "chance": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Rapid Spin",
+    "type": "normal",
+    "power": 50,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Razor Shell",
+    "type": "water",
+    "power": 75,
+    "accuracy": 95,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Rest",
+    "type": "psychic",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Rock Blast",
+    "type": "rock",
+    "power": 25,
+    "accuracy": 90,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Rock Climb",
+    "type": "normal",
+    "power": 90,
+    "accuracy": 85,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Roost",
+    "type": "flying",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "heal_fraction": 0.5,
+        "target": "self",
+        "chance": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Scald",
+    "type": "water",
+    "power": 80,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "burn",
+        "chance": 0.3,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Seed Bomb",
+    "type": "grass",
+    "power": 80,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Shadow Ball",
+    "type": "ghost",
+    "power": 80,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "sp_def",
+        "stages": -1,
+        "target": "foe",
+        "chance": 0.2
+      }
+    ]
+  },
+  {
+    "name": "Shadow Punch",
+    "type": "ghost",
+    "power": 60,
+    "accuracy": null,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Shell Smash",
+    "type": "normal",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "atk",
+        "stages": 2,
+        "target": "self",
+        "chance": 1.0
+      },
+      {
+        "stat": "sp_atk",
+        "stages": 2,
+        "target": "self",
+        "chance": 1.0
+      },
+      {
+        "stat": "spe",
+        "stages": 2,
+        "target": "self",
+        "chance": 1.0
+      },
+      {
+        "stat": "def_",
+        "stages": -1,
+        "target": "self",
+        "chance": 1.0
+      },
+      {
+        "stat": "sp_def",
+        "stages": -1,
+        "target": "self",
+        "chance": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Sleep Powder",
+    "type": "grass",
+    "power": null,
+    "accuracy": 75,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "sleep",
+        "chance": 1.0,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Sleep Talk",
+    "type": "normal",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Sludge Bomb",
+    "type": "poison",
+    "power": 90,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "poison",
+        "chance": 0.3,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Spikes",
+    "type": "ground",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Stealth Rock",
+    "type": "rock",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Stone Edge",
+    "type": "rock",
+    "power": 100,
+    "accuracy": 80,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Sucker Punch",
+    "type": "dark",
+    "power": 70,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 1,
+    "secondary": []
+  },
+  {
+    "name": "Superpower",
+    "type": "fighting",
+    "power": 120,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Swords Dance",
+    "type": "normal",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "stat": "atk",
+        "stages": 2,
+        "target": "self",
+        "chance": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Taunt",
+    "type": "dark",
+    "power": null,
+    "accuracy": 100,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Thunderbolt",
+    "type": "electric",
+    "power": 90,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "paralysis",
+        "chance": 0.1,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Toxic",
+    "type": "poison",
+    "power": null,
+    "accuracy": 90,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "badly_poison",
+        "chance": 1.0,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Toxic Spikes",
+    "type": "poison",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "Trick",
+    "type": "psychic",
+    "power": null,
+    "accuracy": 100,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "U-turn",
+    "type": "bug",
+    "power": 70,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": [],
+    "switch_after": true
+  },
+  {
+    "name": "Volt Switch",
+    "type": "electric",
+    "power": 70,
+    "accuracy": 100,
+    "category": "special",
+    "contact": false,
+    "priority": 0,
+    "secondary": [],
+    "switch_after": true
+  },
+  {
+    "name": "Waterfall",
+    "type": "water",
+    "power": 80,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "paralysis",
+        "chance": 0.2,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Will-O-Wisp",
+    "type": "fire",
+    "power": null,
+    "accuracy": 85,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": [
+      {
+        "inflict": "burn",
+        "chance": 1.0,
+        "target": "foe"
+      }
+    ]
+  },
+  {
+    "name": "Wish",
+    "type": "normal",
+    "power": null,
+    "accuracy": null,
+    "category": "status",
+    "contact": false,
+    "priority": 0,
+    "secondary": []
+  },
+  {
+    "name": "X-Scissor",
+    "type": "bug",
+    "power": 80,
+    "accuracy": 100,
+    "category": "physical",
+    "contact": true,
+    "priority": 0,
+    "secondary": []
+  }
+]

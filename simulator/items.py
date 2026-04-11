@@ -39,6 +39,21 @@ ITEM_DATA: dict[str, dict] = {
         "sp_def_mult": 1.5,
         "blocks_status_moves": True,  # battle.py enforces this
     },
+    "Sitrus Berry": {
+        "sitrus_berry": True,
+        "sitrus_heal_fraction": 0.25,  # heal 25% max HP once, consumed
+    },
+    "Focus Sash": {
+        "focus_sash": True,  # survive one hit from full HP with 1 HP, consumed
+    },
+    "Expert Belt": {
+        "expert_belt": True,  # 1.2× damage on super-effective hits
+    },
+    "Eviolite": {
+        "eviolite": True,
+        "def_mult": 1.5,             # reduces physical damage taken
+        "sp_def_mult_eviolite": 1.5, # reduces special damage taken
+    },
 }
 
 

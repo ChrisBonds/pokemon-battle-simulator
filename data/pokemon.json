@@ -1,0 +1,942 @@
+[
+  {
+    "name": "Mesprit",
+    "types": [
+      "psychic"
+    ],
+    "hp": 80,
+    "atk": 105,
+    "def": 105,
+    "sp_atk": 105,
+    "sp_def": 105,
+    "spe": 80,
+    "nature": "Timid",
+    "evs": {
+      "sp_atk": 252,
+      "sp_def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Psychic",
+      "U-turn",
+      "Ice Beam",
+      "Healing Wish"
+    ],
+    "held_item": "Choice Scarf",
+    "usage_pct": 38.464,
+    "archetype": "pivot"
+  },
+  {
+    "name": "Steelix",
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "hp": 75,
+    "atk": 85,
+    "def": 200,
+    "sp_atk": 55,
+    "sp_def": 65,
+    "spe": 30,
+    "nature": "Adamant",
+    "evs": {
+      "hp": 244,
+      "atk": 136,
+      "sp_def": 128
+    },
+    "moves": [
+      "Earthquake",
+      "Heavy Slam",
+      "Stealth Rock",
+      "Toxic"
+    ],
+    "held_item": "Leftovers",
+    "usage_pct": 28.646,
+    "archetype": "tank"
+  },
+  {
+    "name": "Xatu",
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "hp": 65,
+    "atk": 75,
+    "def": 70,
+    "sp_atk": 95,
+    "sp_def": 70,
+    "spe": 95,
+    "nature": "Timid",
+    "evs": {
+      "hp": 252,
+      "def": 240,
+      "spe": 16
+    },
+    "moves": [
+      "Roost",
+      "U-turn",
+      "Psychic",
+      "Grass Knot"
+    ],
+    "held_item": "Rocky Helmet",
+    "usage_pct": 21.89,
+    "archetype": "pivot"
+  },
+  {
+    "name": "Skuntank",
+    "types": [
+      "poison",
+      "dark"
+    ],
+    "hp": 103,
+    "atk": 93,
+    "def": 67,
+    "sp_atk": 71,
+    "sp_def": 61,
+    "spe": 84,
+    "nature": "Modest",
+    "evs": {
+      "sp_atk": 252,
+      "sp_def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Pursuit",
+      "Poison Jab",
+      "Sucker Punch",
+      "Crunch"
+    ],
+    "held_item": "Choice Band",
+    "usage_pct": 20.728,
+    "archetype": "tank"
+  },
+  {
+    "name": "Lanturn",
+    "types": [
+      "water",
+      "electric"
+    ],
+    "hp": 125,
+    "atk": 58,
+    "def": 58,
+    "sp_atk": 76,
+    "sp_def": 76,
+    "spe": 67,
+    "nature": "Calm",
+    "evs": {
+      "hp": 40,
+      "def": 140,
+      "sp_def": 208,
+      "spe": 120
+    },
+    "moves": [
+      "Volt Switch",
+      "Scald",
+      "Heal Bell",
+      "Ice Beam"
+    ],
+    "held_item": "Leftovers",
+    "usage_pct": 20.695,
+    "archetype": "pivot"
+  },
+  {
+    "name": "Tauros",
+    "types": [
+      "normal"
+    ],
+    "hp": 75,
+    "atk": 100,
+    "def": 95,
+    "sp_atk": 40,
+    "sp_def": 70,
+    "spe": 110,
+    "nature": "Naive",
+    "evs": {
+      "atk": 252,
+      "sp_atk": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Rock Climb",
+      "Earthquake",
+      "Fire Blast",
+      "Iron Tail"
+    ],
+    "held_item": "Life Orb",
+    "usage_pct": 20.412,
+    "archetype": "glass_cannon"
+  },
+  {
+    "name": "Hitmonchan",
+    "types": [
+      "fighting"
+    ],
+    "hp": 50,
+    "atk": 105,
+    "def": 79,
+    "sp_atk": 35,
+    "sp_def": 110,
+    "spe": 76,
+    "nature": "Adamant",
+    "evs": {
+      "hp": 208,
+      "atk": 252,
+      "spe": 48
+    },
+    "moves": [
+      "Drain Punch",
+      "Mach Punch",
+      "Ice Punch",
+      "Rapid Spin"
+    ],
+    "held_item": "Assault Vest",
+    "usage_pct": 20.151,
+    "archetype": "tank"
+  },
+  {
+    "name": "Archeops",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "hp": 75,
+    "atk": 140,
+    "def": 65,
+    "sp_atk": 112,
+    "sp_def": 65,
+    "spe": 110,
+    "nature": "Jolly",
+    "evs": {
+      "atk": 252,
+      "def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Acrobatics",
+      "Roost",
+      "Taunt",
+      "Stealth Rock"
+    ],
+    "held_item": "Focus Sash",
+    "usage_pct": 19.599,
+    "archetype": "fast_attacker"
+  },
+  {
+    "name": "Rhydon",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "hp": 105,
+    "atk": 130,
+    "def": 120,
+    "sp_atk": 45,
+    "sp_def": 45,
+    "spe": 40,
+    "nature": "Adamant",
+    "evs": {
+      "hp": 252,
+      "atk": 16,
+      "sp_def": 240
+    },
+    "moves": [
+      "Earthquake",
+      "Stealth Rock",
+      "Megahorn",
+      "Rock Blast"
+    ],
+    "held_item": "Eviolite",
+    "usage_pct": 17.16,
+    "archetype": "tank"
+  },
+  {
+    "name": "Samurott",
+    "types": [
+      "water"
+    ],
+    "hp": 95,
+    "atk": 100,
+    "def": 85,
+    "sp_atk": 108,
+    "sp_def": 70,
+    "spe": 70,
+    "nature": "Adamant",
+    "evs": {
+      "atk": 252,
+      "sp_def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Aqua Jet",
+      "Megahorn",
+      "Swords Dance",
+      "Waterfall"
+    ],
+    "held_item": "Lum Berry",
+    "usage_pct": 16.122,
+    "archetype": "setup_sweeper"
+  },
+  {
+    "name": "Hariyama",
+    "types": [
+      "fighting"
+    ],
+    "hp": 144,
+    "atk": 120,
+    "def": 60,
+    "sp_atk": 40,
+    "sp_def": 60,
+    "spe": 50,
+    "nature": "Adamant",
+    "evs": {
+      "atk": 252,
+      "def": 4,
+      "sp_def": 252
+    },
+    "moves": [
+      "Close Combat",
+      "Knock Off",
+      "Bullet Punch",
+      "Fake Out"
+    ],
+    "held_item": "Assault Vest",
+    "usage_pct": 15.917,
+    "archetype": "tank"
+  },
+  {
+    "name": "Vileplume",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "hp": 75,
+    "atk": 80,
+    "def": 85,
+    "sp_atk": 110,
+    "sp_def": 90,
+    "spe": 50,
+    "nature": "Bold",
+    "evs": {
+      "hp": 252,
+      "def": 252,
+      "sp_def": 4
+    },
+    "moves": [
+      "Giga Drain",
+      "Sludge Bomb",
+      "Moonlight",
+      "Sleep Powder"
+    ],
+    "held_item": "Black Sludge",
+    "usage_pct": 15.081,
+    "archetype": "tank"
+  },
+  {
+    "name": "Magmortar",
+    "types": [
+      "fire"
+    ],
+    "hp": 75,
+    "atk": 95,
+    "def": 67,
+    "sp_atk": 125,
+    "sp_def": 95,
+    "spe": 83,
+    "nature": "Hasty",
+    "evs": {
+      "atk": 4,
+      "sp_atk": 252,
+      "spe": 252
+    },
+    "moves": [
+      "Thunderbolt",
+      "Fire Blast",
+      "Earthquake",
+      "Hidden Power Grass"
+    ],
+    "held_item": "Assault Vest",
+    "usage_pct": 14.546,
+    "archetype": "tank"
+  },
+  {
+    "name": "Shiftry",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "hp": 90,
+    "atk": 100,
+    "def": 60,
+    "sp_atk": 90,
+    "sp_def": 60,
+    "spe": 80,
+    "nature": "Adamant",
+    "evs": {
+      "atk": 252,
+      "sp_def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Knock Off",
+      "Sucker Punch",
+      "Swords Dance",
+      "Seed Bomb"
+    ],
+    "held_item": "Life Orb",
+    "usage_pct": 13.574,
+    "archetype": "setup_sweeper"
+  },
+  {
+    "name": "Rotom",
+    "types": [
+      "electric",
+      "ghost"
+    ],
+    "hp": 50,
+    "atk": 50,
+    "def": 77,
+    "sp_atk": 95,
+    "sp_def": 77,
+    "spe": 91,
+    "nature": "Timid",
+    "evs": {
+      "hp": 4,
+      "sp_atk": 252,
+      "spe": 252
+    },
+    "moves": [
+      "Volt Switch",
+      "Shadow Ball",
+      "Thunderbolt",
+      "Trick"
+    ],
+    "held_item": "Choice Scarf",
+    "usage_pct": 13.101,
+    "archetype": "pivot"
+  },
+  {
+    "name": "Jynx",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "hp": 65,
+    "atk": 50,
+    "def": 35,
+    "sp_atk": 115,
+    "sp_def": 95,
+    "spe": 95,
+    "nature": "Timid",
+    "evs": {
+      "sp_atk": 252,
+      "sp_def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Ice Beam",
+      "Psyshock",
+      "Lovely Kiss",
+      "Nasty Plot"
+    ],
+    "held_item": "Focus Sash",
+    "usage_pct": 12.457,
+    "archetype": "setup_sweeper"
+  },
+  {
+    "name": "Liepard",
+    "types": [
+      "dark"
+    ],
+    "hp": 64,
+    "atk": 88,
+    "def": 50,
+    "sp_atk": 88,
+    "sp_def": 50,
+    "spe": 106,
+    "nature": "Jolly",
+    "evs": {
+      "atk": 252,
+      "def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Knock Off",
+      "U-turn",
+      "Encore",
+      "Pursuit"
+    ],
+    "held_item": "Choice Band",
+    "usage_pct": 11.454,
+    "archetype": "pivot"
+  },
+  {
+    "name": "Pelipper",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "hp": 60,
+    "atk": 50,
+    "def": 100,
+    "sp_atk": 95,
+    "sp_def": 70,
+    "spe": 65,
+    "nature": "Bold",
+    "evs": {
+      "hp": 248,
+      "def": 252,
+      "sp_def": 8
+    },
+    "moves": [
+      "Scald",
+      "Defog",
+      "Roost",
+      "U-turn"
+    ],
+    "held_item": "Leftovers",
+    "usage_pct": 11.413,
+    "archetype": "pivot"
+  },
+  {
+    "name": "Golurk",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "hp": 89,
+    "atk": 124,
+    "def": 80,
+    "sp_atk": 55,
+    "sp_def": 80,
+    "spe": 55,
+    "nature": "Adamant",
+    "evs": {
+      "atk": 252,
+      "sp_def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Earthquake",
+      "Dynamic Punch",
+      "Stone Edge",
+      "Shadow Punch"
+    ],
+    "held_item": "Choice Band",
+    "usage_pct": 10.754,
+    "archetype": "tank"
+  },
+  {
+    "name": "Primeape",
+    "types": [
+      "fighting"
+    ],
+    "hp": 65,
+    "atk": 105,
+    "def": 60,
+    "sp_atk": 60,
+    "sp_def": 70,
+    "spe": 95,
+    "nature": "Jolly",
+    "evs": {
+      "atk": 252,
+      "def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Close Combat",
+      "U-turn",
+      "Earthquake",
+      "Stone Edge"
+    ],
+    "held_item": "Choice Scarf",
+    "usage_pct": 10.594,
+    "archetype": "pivot"
+  },
+  {
+    "name": "Garbodor",
+    "types": [
+      "poison"
+    ],
+    "hp": 80,
+    "atk": 95,
+    "def": 82,
+    "sp_atk": 60,
+    "sp_def": 82,
+    "spe": 75,
+    "nature": "Impish",
+    "evs": {
+      "hp": 252,
+      "def": 200,
+      "spe": 56
+    },
+    "moves": [
+      "Gunk Shot",
+      "Spikes",
+      "Toxic Spikes",
+      "Seed Bomb"
+    ],
+    "held_item": "Rocky Helmet",
+    "usage_pct": 9.836,
+    "archetype": "tank"
+  },
+  {
+    "name": "Weezing",
+    "types": [
+      "poison"
+    ],
+    "hp": 65,
+    "atk": 90,
+    "def": 120,
+    "sp_atk": 85,
+    "sp_def": 70,
+    "spe": 60,
+    "nature": "Bold",
+    "evs": {
+      "hp": 252,
+      "def": 200,
+      "spe": 56
+    },
+    "moves": [
+      "Will-O-Wisp",
+      "Sludge Bomb",
+      "Taunt",
+      "Toxic Spikes"
+    ],
+    "held_item": "Rocky Helmet",
+    "usage_pct": 9.567,
+    "archetype": "tank"
+  },
+  {
+    "name": "Malamar",
+    "types": [
+      "dark",
+      "psychic"
+    ],
+    "hp": 86,
+    "atk": 92,
+    "def": 88,
+    "sp_atk": 68,
+    "sp_def": 75,
+    "spe": 73,
+    "nature": "Adamant",
+    "evs": {
+      "hp": 252,
+      "sp_def": 184,
+      "spe": 72
+    },
+    "moves": [
+      "Superpower",
+      "Knock Off",
+      "Rest",
+      "Sleep Talk"
+    ],
+    "held_item": "Leftovers",
+    "usage_pct": 9.405,
+    "archetype": "tank"
+  },
+  {
+    "name": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "hp": 80,
+    "atk": 52,
+    "def": 50,
+    "sp_atk": 90,
+    "sp_def": 50,
+    "spe": 89,
+    "nature": "Timid",
+    "evs": {
+      "sp_atk": 252,
+      "sp_def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Hurricane",
+      "Sleep Powder",
+      "Quiver Dance",
+      "Energy Ball"
+    ],
+    "held_item": "Focus Sash",
+    "usage_pct": 9.255,
+    "archetype": "setup_sweeper"
+  },
+  {
+    "name": "Barbaracle",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "hp": 72,
+    "atk": 105,
+    "def": 115,
+    "sp_atk": 54,
+    "sp_def": 86,
+    "spe": 68,
+    "nature": "Adamant",
+    "evs": {
+      "atk": 252,
+      "sp_def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Razor Shell",
+      "Shell Smash",
+      "Stone Edge",
+      "Stealth Rock"
+    ],
+    "held_item": "Focus Sash",
+    "usage_pct": 9.169,
+    "archetype": "setup_sweeper"
+  },
+  {
+    "name": "Audino-Mega",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "hp": 103,
+    "atk": 60,
+    "def": 126,
+    "sp_atk": 80,
+    "sp_def": 126,
+    "spe": 50,
+    "nature": "Bold",
+    "evs": {
+      "hp": 252,
+      "def": 252,
+      "sp_atk": 4
+    },
+    "moves": [
+      "Dazzling Gleam",
+      "Calm Mind",
+      "Wish",
+      "Protect"
+    ],
+    "held_item": null,
+    "usage_pct": 9.06,
+    "archetype": "tank"
+  },
+  {
+    "name": "Pinsir",
+    "types": [
+      "bug"
+    ],
+    "hp": 65,
+    "atk": 125,
+    "def": 100,
+    "sp_atk": 55,
+    "sp_def": 70,
+    "spe": 85,
+    "nature": "Adamant",
+    "evs": {
+      "atk": 252,
+      "def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "X-Scissor",
+      "Earthquake",
+      "Swords Dance",
+      "Knock Off"
+    ],
+    "held_item": "Lum Berry",
+    "usage_pct": 8.133,
+    "archetype": "setup_sweeper"
+  },
+  {
+    "name": "Kabutops",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "hp": 60,
+    "atk": 115,
+    "def": 105,
+    "sp_atk": 65,
+    "sp_def": 70,
+    "spe": 80,
+    "nature": "Jolly",
+    "evs": {
+      "atk": 252,
+      "def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Stone Edge",
+      "Waterfall",
+      "Aqua Jet",
+      "Superpower"
+    ],
+    "held_item": "Life Orb",
+    "usage_pct": 8.031,
+    "archetype": "tank"
+  },
+  {
+    "name": "Claydol",
+    "types": [
+      "ground",
+      "psychic"
+    ],
+    "hp": 60,
+    "atk": 70,
+    "def": 105,
+    "sp_atk": 70,
+    "sp_def": 120,
+    "spe": 75,
+    "nature": "Bold",
+    "evs": {
+      "hp": 252,
+      "def": 252,
+      "spe": 4
+    },
+    "moves": [
+      "Rapid Spin",
+      "Earth Power",
+      "Stealth Rock",
+      "Toxic"
+    ],
+    "held_item": "Leftovers",
+    "usage_pct": 7.572,
+    "archetype": "tank"
+  },
+  {
+    "name": "Mismagius",
+    "types": [
+      "ghost"
+    ],
+    "hp": 60,
+    "atk": 60,
+    "def": 60,
+    "sp_atk": 105,
+    "sp_def": 105,
+    "spe": 105,
+    "nature": "Timid",
+    "evs": {
+      "hp": 252,
+      "def": 4,
+      "spe": 252
+    },
+    "moves": [
+      "Will-O-Wisp",
+      "Taunt",
+      "Hex",
+      "Pain Split"
+    ],
+    "held_item": "Leftovers",
+    "usage_pct": 7.525,
+    "archetype": "glass_cannon"
+  },
+  {
+    "name": "Mantine",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "hp": 85,
+    "atk": 40,
+    "def": 70,
+    "sp_atk": 80,
+    "sp_def": 140,
+    "spe": 70,
+    "nature": "Calm",
+    "evs": {
+      "hp": 252,
+      "def": 240,
+      "sp_def": 16
+    },
+    "moves": [
+      "Scald",
+      "Air Slash",
+      "Defog",
+      "Toxic"
+    ],
+    "held_item": "Leftovers",
+    "usage_pct": 7.227,
+    "archetype": "tank"
+  },
+  {
+    "name": "Omastar",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "hp": 70,
+    "atk": 60,
+    "def": 125,
+    "sp_atk": 115,
+    "sp_def": 70,
+    "spe": 55,
+    "nature": "Timid",
+    "evs": {
+      "hp": 8,
+      "sp_atk": 248,
+      "spe": 252
+    },
+    "moves": [
+      "Ice Beam",
+      "Scald",
+      "Stealth Rock",
+      "Spikes"
+    ],
+    "held_item": "Focus Sash",
+    "usage_pct": 6.932,
+    "archetype": "tank"
+  },
+  {
+    "name": "Lilligant",
+    "types": [
+      "grass"
+    ],
+    "hp": 70,
+    "atk": 60,
+    "def": 75,
+    "sp_atk": 110,
+    "sp_def": 75,
+    "spe": 90,
+    "nature": "Timid",
+    "evs": {
+      "def": 4,
+      "sp_atk": 252,
+      "spe": 252
+    },
+    "moves": [
+      "Quiver Dance",
+      "Giga Drain",
+      "Sleep Powder",
+      "Hidden Power Fire"
+    ],
+    "held_item": "Life Orb",
+    "usage_pct": 6.724,
+    "archetype": "setup_sweeper"
+  },
+  {
+    "name": "Charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "hp": 78,
+    "atk": 84,
+    "def": 78,
+    "sp_atk": 109,
+    "sp_def": 85,
+    "spe": 100,
+    "nature": "Timid",
+    "evs": {
+      "def": 4,
+      "sp_atk": 252,
+      "spe": 252
+    },
+    "moves": [
+      "Roost",
+      "Fire Blast",
+      "Air Slash",
+      "Hidden Power Grass"
+    ],
+    "held_item": "Life Orb",
+    "usage_pct": 5.983,
+    "archetype": "fast_attacker"
+  }
+]

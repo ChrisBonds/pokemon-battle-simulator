@@ -16,8 +16,8 @@ surf = Move("Surf", "water", 90, 100, "special")
 charizard = Pokemon("Charizard", ["fire", "flying"], 78, 84, 78, 109, 85, 100, [flamethrower])
 blastoise = Pokemon("Blastoise", ["water"], 79, 83, 100, 85, 105, 78, [surf])
 
-t1 = Trainer("Ash", charizard, strategy="greedy")
-t2 = Trainer("Chris", blastoise, strategy="greedy")
+t1 = Trainer("Ash", [charizard], strategy="greedy")
+t2 = Trainer("Chris", [blastoise], strategy="greedy")
 
 result = Battle(t1, t2).run()
 print(result)
