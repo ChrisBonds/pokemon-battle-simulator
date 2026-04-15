@@ -29,10 +29,12 @@ class Trainer:
         name: str,
         team: list[Pokemon],
         strategy: str = "greedy",
+        sigma: float = 0.0,
     ) -> None:
         self.name = name
         self.team = team
         self.strategy = strategy
+        self.sigma = sigma
         self.active_index: int = 0
         self.choice_lock: str | None = None  # set by Choice items; cleared on switch
         self._last_hp: int = -1  # tracks HP at start of turn for stall strategy
@@ -73,6 +75,8 @@ class Trainer:
             return self._stall_action(battle_state)
         elif self.strategy == "setup_sweep":
             return self._setup_sweep_action(battle_state)
+        elif self.strategy == "noisy_greedy":
+            return self._noisy_greedy_action(battle_state)
         else:
             raise ValueError(f"Unknown strategy: {self.strategy!r}")
 
@@ -116,6 +120,55 @@ class Trainer:
                     )
                     if bench_eff >= 2.0:
                         return i  # switch to a counter
+
+        if best_score == 0:
+            return random.choice(self.active.moveset)
+
+        best_moves = [m for s, m in scores if s == best_score]
+        return random.choice(best_moves)
+
+    # ------------------------------------------------------------------
+    # Strategy: noisy_greedy (imperfect information greedy)
+    # ------------------------------------------------------------------
+
+    def _noisy_greedy_action(self, battle_state: BattleState) -> Action:
+        """Greedy with Gaussian noise applied to opponent's defensive stats.
+
+        Uses _expected_damage (stat-based) for move scoring. At sigma=0 the
+        opponent's stats are exact; at sigma>0, atk/def_/sp_atk/sp_def are each
+        independently perturbed by a factor drawn from N(1, sigma). Types remain
+        exact (observable). Switching logic is identical to greedy.
+        """
+        opp_trainer = _opponent(self, battle_state)
+        opp_real = opp_trainer.active
+        opp_proxy = _noisy_defender(opp_real, self.sigma)
+
+        def _score(m: Move) -> float:
+            if m.power is None:
+                return _move_score(m, self.active, opp_real)
+            return _expected_damage(self.active, opp_proxy, m, battle_state.weather)
+
+        scores = [(_score(m), m) for m in self.active.moveset]
+        best_score = max(s for s, _ in scores)
+
+        bench = self.alive_bench_indices()
+
+        if bench:
+            current_best_eff = max(
+                get_effectiveness(m.type, opp_real.types)
+                for m in self.active.moveset
+                if m.power is not None
+            ) if any(m.power for m in self.active.moveset) else 0.0
+
+            if current_best_eff < 1.0:
+                for i in bench:
+                    bench_mon = self.team[i]
+                    bench_eff = max(
+                        (get_effectiveness(m.type, opp_real.types) for m in bench_mon.moveset if m.power),
+                        default=0.0,
+                    )
+                    if bench_eff >= 2.0:
+                        return i
 
         if best_score == 0:
             return random.choice(self.active.moveset)
@@ -296,6 +349,32 @@ def _opponent(trainer: Trainer, state: BattleState) -> Trainer:
 
 def _available_actions(trainer: Trainer) -> list[Action]:
     return list(trainer.active.moveset) + trainer.alive_bench_indices()
+
+
+def _noisy_defender(pokemon: Pokemon, sigma: float):
+    """Return a proxy for pokemon with Gaussian-noisy atk/def/sp_atk/sp_def stats.
+
+    At sigma=0 returns the real pokemon unchanged. Otherwise each relevant stat
+    is independently scaled by max(0.01, N(1, sigma)) so damage estimates are
+    perturbed while types remain exact.
+    """
+    if sigma == 0.0:
+        return pokemon
+
+    noise = {
+        stat: max(0.01, random.gauss(1.0, sigma))
+        for stat in ("atk", "def_", "sp_atk", "sp_def")
+    }
+
+    class _Proxy:
+        types = pokemon.types
+        status = pokemon.status
+        held_item = pokemon.held_item
+
+        def effective_stat(self, stat_name: str) -> float:
+            return pokemon.effective_stat(stat_name) * noise.get(stat_name, 1.0)
+
+    return _Proxy()
 
 
 def _move_score(move: Move, attacker: Pokemon, defender: Pokemon) -> float:

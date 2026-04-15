@@ -212,7 +212,7 @@ def parse_moveset(text: str) -> dict[str, dict]:
 
 
 def fetch_pokemon_data(name: str) -> dict | None:
-    """Fetch base stats + types from PokéAPI."""
+    """Fetch base stats, types, and is_legendary from PokéAPI."""
     api_name = name.lower().replace(" ", "-").replace("'", "")
     # Handle common form names
     api_name = re.sub(r"-mega$", "-mega", api_name)
@@ -230,7 +230,17 @@ def fetch_pokemon_data(name: str) -> dict | None:
             stats[key] = s["base_stat"]
 
     types = [t["type"]["name"] for t in raw["types"]]
-    return {"base_stats": stats, "types": types}
+
+    # Species endpoint carries is_legendary; use the base species name (no form suffix)
+    species_name = re.sub(r"(-mega|-alola|-galar|-hisui|-paldea).*$", "", api_name)
+    try:
+        species_raw = json.loads(fetch_url(f"{POKEAPI_BASE}/pokemon-species/{species_name}"))
+        is_legendary = species_raw.get("is_legendary", False)
+    except Exception as e:
+        print(f"  !! Species fetch failed for {name!r} ({species_name}): {e}, defaulting to False")
+        is_legendary = False
+
+    return {"base_stats": stats, "types": types, "is_legendary": is_legendary}
 
 
 def fetch_move_data(name: str) -> dict | None:
@@ -303,6 +313,7 @@ def build_pokemon_entry(
         "held_item": item,
         "usage_pct": round(usage_pct, 3),
         "archetype": archetype,
+        "is_legendary": poke_data.get("is_legendary", False),
     }
 
 

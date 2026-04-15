@@ -139,16 +139,106 @@ def analyze_evolution(history: list) -> None:
             print(row)
 
 
+def analyze_sigma_sweep(records: list) -> None:
+    """Win rate of noisy_greedy vs greedy as a function of sigma."""
+    sweep = [r for r in records if "sigma" in r]
+    if not sweep:
+        return
+
+    print("\n" + "=" * 60)
+    print("SIGMA SWEEP: noisy_greedy vs greedy")
+    print("=" * 60)
+
+    wins: dict[float, int] = defaultdict(int)
+    totals: dict[float, int] = defaultdict(int)
+
+    for rec in sweep:
+        sigma = rec["sigma"]
+        totals[sigma] += 1
+        if rec["winner_strategy"] == "noisy_greedy":
+            wins[sigma] += 1
+
+    print(f"\n{'sigma':>8}  {'noisy_greedy wins':>18}  {'win rate':>10}")
+    print("-" * 42)
+    for sigma in sorted(totals):
+        n = totals[sigma]
+        w = wins[sigma]
+        print(f"{sigma:>8.2f}  {w:>9} / {n:<8}  {w/n:>9.1%}")
+
+
+def analyze_legendary(records: list, pokemon_path: str) -> None:
+    """Win rate for legendary-heavy teams (>=2 legendaries) vs non-legendary teams."""
+    if not records:
+        return
+
+    # Load is_legendary lookup; no-op if data hasn't been enriched yet
+    if not os.path.exists(pokemon_path):
+        return
+    with open(pokemon_path) as f:
+        poke_list = json.load(f)
+
+    legendary_set = {p["name"] for p in poke_list if p.get("is_legendary", False)}
+    if not legendary_set:
+        print("  (no is_legendary data found in pokemon.json — re-run fetch_data.py)")
+        return
+
+    print("\n" + "=" * 60)
+    print("LEGENDARY TEAM ANALYSIS (>=2 legendaries = 'heavy')")
+    print("=" * 60)
+
+    def is_heavy(team_names: list) -> bool:
+        return sum(1 for n in team_names if n in legendary_set) >= 2
+
+    results: dict[str, dict[str, int]] = {
+        "heavy_vs_light": {"wins": 0, "total": 0},
+        "heavy_vs_heavy": {"wins": 0, "total": 0},
+        "light_vs_light": {"wins": 0, "total": 0},
+    }
+
+    for rec in records:
+        t1 = rec.get("team1", [])
+        t2 = rec.get("team2", [])
+        if not t1 or not t2:
+            continue
+        h1 = is_heavy(t1)
+        h2 = is_heavy(t2)
+        t1_won = rec["winner_strategy"] == rec["team1_strategy"]
+
+        if h1 and not h2:
+            results["heavy_vs_light"]["total"] += 1
+            if t1_won:
+                results["heavy_vs_light"]["wins"] += 1
+        elif h1 and h2:
+            results["heavy_vs_heavy"]["total"] += 1
+            if t1_won:
+                results["heavy_vs_heavy"]["wins"] += 1
+        elif not h1 and not h2:
+            results["light_vs_light"]["total"] += 1
+            if t1_won:
+                results["light_vs_light"]["wins"] += 1
+
+    print(f"\n{'matchup':<20}  {'T1 wins':>10}  {'win rate':>10}")
+    print("-" * 44)
+    for label, d in results.items():
+        if d["total"] == 0:
+            print(f"{label:<20}  {'—':>10}  {'—':>10}")
+        else:
+            print(f"{label:<20}  {d['wins']:>5} / {d['total']:<4}  {d['wins']/d['total']:>9.1%}")
+
+
 def main() -> None:
     default_dir = os.path.join(os.path.dirname(__file__), "..", "data")
     p = argparse.ArgumentParser(description="Analyze self-play and evolution results")
     p.add_argument("--self-play", default=os.path.join(default_dir, "self_play_results.json"))
     p.add_argument("--evolution", default=os.path.join(default_dir, "evolution_results.json"))
+    p.add_argument("--pokemon", default=os.path.join(default_dir, "pokemon.json"))
     args = p.parse_args()
 
     sp = load_json(args.self_play)
     if sp:
         analyze_self_play(sp)
+        analyze_sigma_sweep(sp)
+        analyze_legendary(sp, args.pokemon)
 
     ev = load_json(args.evolution)
     if ev:
