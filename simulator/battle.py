@@ -23,7 +23,7 @@ _SLEEP_WAKE = 0.33
 _WEATHER_CHIP = 1 / 16   # sand/hail end-of-turn chip
 _WEATHER_TURNS_DEFAULT = 5
 
-
+# CHANGE : want to align to gen6 if we are only pulling gen6 pokemon from the API 
 class BattleResult:
     """Outcome of a completed battle."""
 

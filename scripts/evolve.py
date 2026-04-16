@@ -94,7 +94,7 @@ def reproduce(
         if wr >= mean_fitness:
             new_strategies.append(strat)
         else:
-            survivors = [s for s, w in zip(strategies, win_rates) if w >= mean_fitness]
+            survivors = [s for s, w in zip(strategies, win_rates) if w >= mean_fitness] # CHANGE : this line seems redundant. in the if statement above you already check if win rate is greater than mean fitness. just poorly written 
             new_strategies.append(rng.choice(survivors) if survivors else rng.choice(STRATEGIES))
     return [rng.choice(STRATEGIES) if rng.random() < mutation_rate else s for s in new_strategies]
 
@@ -119,7 +119,7 @@ def run_evolution(
 ) -> list[dict]:
     rng = random.Random(seed)
     random.seed(seed)
-
+    # CHANGE : i dont like that roster is loaded from a call to load_all from the directory our static data is stored. it is not a robust call and the behavior of the function is too broad. what if the data is subject to change? what if we want a subset of the data, what if we want to look at loading specific rosters? 
     roster, _ = load_all(data_dir)
 
     # Equal initial frequency of all strategies

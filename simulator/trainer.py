@@ -50,6 +50,7 @@ class Trainer:
             if i != self.active_index and not p.is_fainted
         ]
 
+# CHANGE : again, p is not very descriptive. in general i want to the code to be as self documenting as possible. 
     def is_defeated(self) -> bool:
         return all(p.is_fainted for p in self.team)
 
@@ -212,6 +213,9 @@ class Trainer:
     # Strategy: stall (cooperator — invests in attrition over KO pressure)
     # ------------------------------------------------------------------
 
+    # CHANGE : this strategy is pretty unoptimized. first off, the only staus effects u got are badly poison and burn in the case that the defender is a physical attacker. we should be able to choose between al major status effects, only being able to apply 1 at a time, and then theirs minor status effects and stuff too like confusion and attraction and whatnot so this might need a slight overhaul of the battle engine. additionally, since it looks like we are only pulling gen6 pokemon, we can be more specific between gen6 mechanics and strategies
+    # CHANGE : this stategy also needs to be more verbose with its variables like u should not just be using e, call it effect 
+
     def _stall_action(self, battle_state: BattleState) -> Action:
         """
         Priority: inflict status → recover if low HP → Protect if just took a hit → best damage.
@@ -281,6 +285,7 @@ class Trainer:
     # Strategy: setup_sweep (patient — sets up, then bursts)
     # ------------------------------------------------------------------
 
+# CHANGE : this strategy is written decently well but in order for it to be competitive at all it has it be able to able to use GOOD setup moves, there are a lot of status moves that are better than others. it also has to know whether the status buffs will actually be usable, ie no point in using a sp attk buff if no sp attack moves. so we want a methodology to ROUGHLY dtermine the best status buff we can do 
     def _setup_sweep_action(self, battle_state: BattleState) -> Action:
         """
         Use a setup move when conditions are safe, then go all-out once boosted.

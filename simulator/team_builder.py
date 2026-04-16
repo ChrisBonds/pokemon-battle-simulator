@@ -31,7 +31,8 @@ def build_team(roster: list, archetype: str = "random", rng: random.Random | Non
     """
     if rng is None:
         rng = random.Random()
-
+    
+    # CHANGE : p is not descriptive enough 
     if archetype == "random" or archetype not in _ARCHETYPE_ROLES:
         # Usage-weighted sampling if usage_pct is available
         weights = [getattr(p, "usage_pct", 1.0) for p in roster]
