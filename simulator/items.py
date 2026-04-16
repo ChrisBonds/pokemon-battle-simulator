@@ -1,6 +1,21 @@
-"""Item registry — metadata only; effects are applied in battle.py."""
+"""Item registry — held item metadata and bag item application."""
 
 from __future__ import annotations
+
+import math
+from dataclasses import dataclass
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from simulator.pokemon import Pokemon
+
+
+@dataclass
+class ItemUse:
+    """A bag item action — trainer uses an item from their bag this turn."""
+
+    item_name: str
+    target: str = "self"  # all currently supported bag items target the user's active Pokémon
 
 # Each item entry is a plain dict of flags/values.
 # battle.py and trainer.py read these dicts to decide what to do.
@@ -58,7 +73,46 @@ ITEM_DATA: dict[str, dict] = {
 
 
 def get_item_data(name: str | None) -> dict:
-    """Return item metadata dict; empty dict if name is None or unknown."""
+    """Return held item metadata dict; empty dict if name is None or unknown."""
     if name is None:
         return {}
     return ITEM_DATA.get(name, {})
+
+
+# ---------------------------------------------------------------------------
+# Bag items — consumables used via ItemUse actions during battle
+# ---------------------------------------------------------------------------
+
+BAG_ITEM_DATA: dict[str, dict] = {
+    "Hyper Potion": {"heal_hp": 200},
+    "Full Restore":  {"heal_to_full": True, "cure_status": True},
+    "X Attack":      {"stat": "atk",    "stages": 1},
+    "X Sp. Atk":     {"stat": "sp_atk", "stages": 1},
+    "X Defense":     {"stat": "def_",   "stages": 1},
+}
+
+
+def get_bag_item_data(name: str | None) -> dict:
+    """Return bag item metadata dict; empty dict if name is None or unknown."""
+    if name is None:
+        return {}
+    return BAG_ITEM_DATA.get(name, {})
+
+
+def apply_item(item_name: str, pokemon: "Pokemon") -> None:
+    """Apply a bag item's effect to pokemon in-place."""
+    data = BAG_ITEM_DATA.get(item_name, {})
+    if not data:
+        return
+
+    if data.get("heal_to_full"):
+        pokemon.current_hp = pokemon.hp
+    elif "heal_hp" in data:
+        pokemon.current_hp = min(pokemon.hp, pokemon.current_hp + data["heal_hp"])
+
+    if data.get("cure_status"):
+        pokemon.status = None
+        pokemon.badly_poison_counter = 0
+
+    if "stat" in data:
+        pokemon.apply_stage(data["stat"], data["stages"])

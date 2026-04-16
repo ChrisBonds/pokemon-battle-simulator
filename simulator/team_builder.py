@@ -7,6 +7,8 @@ import json
 import os
 import random
 
+from simulator.genome import FamilyType
+
 
 _ARCHETYPE_ROLES = {
     "stall":     {"wall": 3, "pivot": 2, "setup_sweeper": 1},
@@ -14,13 +16,21 @@ _ARCHETYPE_ROLES = {
     "balanced":  {"wall": 2, "setup_sweeper": 2, "tank": 1, "pivot": 1},
 }
 
-# Strategy → preferred team archetype
+# Strategy → preferred team archetype (kept for backward compatibility with scripts)
 STRATEGY_ARCHETYPE = {
     "stall":        "stall",
     "greedy":       "offense",
     "setup_sweep":  "offense",
     "minimax":      "balanced",
     "random":       "random",
+}
+
+# FamilyType → preferred team archetype
+FAMILY_ARCHETYPE: dict[FamilyType, str] = {
+    FamilyType.GREEDY: "offense",
+    FamilyType.STALL:  "stall",
+    FamilyType.SETUP:  "offense",
+    FamilyType.RANDOM: "random",
 }
 
 

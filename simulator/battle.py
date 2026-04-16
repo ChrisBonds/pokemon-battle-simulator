@@ -10,7 +10,7 @@ from simulator.move import Move
 from simulator.pokemon import Pokemon
 from simulator.trainer import Trainer, BattleState, Action
 from simulator.type_chart import get_effectiveness, weather_modifier, weather_chip_immune
-from simulator.items import get_item_data
+from simulator.items import ItemUse, get_item_data, apply_item
 from simulator.effects import apply_secondary
 
 _CRIT_CHANCE = 1 / 16
@@ -106,22 +106,27 @@ class Battle:
         action1 = self.t1.choose_action(state)
         action2 = self.t2.choose_action(state)
 
-        # Switches execute first (in speed order); moves execute after
-        switch_pairs = []
-        move_pairs = []
+        # Bucket actions: switches first, then items, then moves
+        switch_pairs: list[tuple[Trainer, int]] = []
+        item_pairs: list[tuple[Trainer, ItemUse]] = []
+        move_pairs: list[tuple[Trainer, Move]] = []
 
         for trainer, action in ((self.t1, action1), (self.t2, action2)):
             if isinstance(action, int):
                 switch_pairs.append((trainer, action))
+            elif isinstance(action, ItemUse):
+                item_pairs.append((trainer, action))
             else:
                 move_pairs.append((trainer, action))
 
         # Execute switches (faster trainer switches first)
-        switch_pairs.sort(
-            key=lambda ta: self._effective_speed(ta[0]), reverse=True
-        )
+        switch_pairs.sort(key=lambda ta: self._effective_speed(ta[0]), reverse=True)
         for trainer, idx in switch_pairs:
             self._execute_switch(trainer, idx)
+
+        # Execute bag items (after switches, before moves)
+        for trainer, item_use in item_pairs:
+            self._execute_item_use(trainer, item_use)
 
         # Execute moves: sort by priority desc, then speed desc
         move_pairs.sort(
@@ -175,6 +180,15 @@ class Battle:
         incoming.is_protecting = False
         incoming.protect_used_last_turn = False
         self._emit(f"  {trainer.name} withdrew {old_name} and sent out {trainer.active.name}!")
+
+    def _execute_item_use(self, trainer: Trainer, item_use: ItemUse) -> None:
+        """Apply a bag item and decrement the trainer's bag count."""
+        pokemon = trainer.active
+        apply_item(item_use.item_name, pokemon)
+        trainer.bag[item_use.item_name] -= 1
+        if trainer.bag[item_use.item_name] <= 0:
+            del trainer.bag[item_use.item_name]
+        self._emit(f"  {trainer.name} used {item_use.item_name} on {pokemon.name}!")
 
     def _execute_move(self, trainer: Trainer, opponent: Trainer, move: Move) -> None:
         attacker = trainer.active
@@ -318,6 +332,9 @@ class Battle:
 
     def _calc_damage(self, attacker: Pokemon, defender: Pokemon, move: Move) -> int:
         """Gen 5+ damage formula with stat stages, weather, and items."""
+        if move.power is None:
+            return 0  # weight-based moves (Grass Knot, Heavy Slam) not yet implemented
+
         eff = get_effectiveness(move.type, defender.types)
         if eff == 0:
             return 0
@@ -478,30 +495,13 @@ class Battle:
     # ------------------------------------------------------------------
 
     def _handle_faint_replacement(self, trainer: Trainer) -> None:
-        """Force a replacement switch when the active Pokémon faints."""
-        bench = trainer.alive_bench_indices()
-        if not bench:
+        """Force a replacement switch when the active Pokémon faints — delegates to policy."""
+        if not trainer.alive_bench_indices():
             return  # team fully defeated — battle end detected by _is_over()
 
-        if trainer.strategy == "random":
-            idx = random.choice(bench)
-        elif trainer.strategy == "stall":
-            # Send in the bulkiest remaining Pokémon (highest def + sp_def sum)
-            idx = max(bench, key=lambda i: trainer.team[i].def_ + trainer.team[i].sp_def)
-        elif trainer.strategy in ("greedy", "minimax"):
-            # Pick the bench member with the best type matchup vs opponent
-            opp = self._opponent(trainer).active
-            idx = max(
-                bench,
-                key=lambda i: max(
-                    (get_effectiveness(m.type, opp.types) for m in trainer.team[i].moveset if m.power),
-                    default=0.0,
-                ),
-            )
-        else:
-            idx = bench[0]
-
-        trainer.active_index = idx
+        state = BattleState(self.t1, self.t2, self.weather, self._turn)
+        replacement_index = trainer.choose_replacement(state)
+        trainer.active_index = replacement_index
         trainer.choice_lock = None
         self._emit(f"  {trainer.name} sent out {trainer.active.name}!")
 
@@ -527,8 +527,10 @@ class Battle:
         for trainer in (self.t1, self.t2):
             trainer.active_index = 0
             trainer.choice_lock = None
-            for p in trainer.team:
-                p.reset_battle_state()
+            trainer._last_hp = -1
+            trainer.reset_bag()
+            for pokemon in trainer.team:
+                pokemon.reset_battle_state()
 
     def _is_over(self) -> bool:
         return self.t1.is_defeated() or self.t2.is_defeated()
