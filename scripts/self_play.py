@@ -73,7 +73,7 @@ def run_self_play(
 
     for family1 in FAMILIES:
         for family2 in FAMILIES:
-            wins: dict[str, int] = {family1.value: 0, family2.value: 0}
+            t1_wins = 0
             for _ in range(n_battles):
                 team1 = _get_team(roster, family1, team_mode, rng)
                 team2 = _get_team(roster, family2, team_mode, rng)
@@ -86,13 +86,15 @@ def run_self_play(
 
                 rec = _record_battle(result, family1.value, family2.value, t1_names, t2_names)
                 results.append(rec)
-                wins[rec["winner_family"]] += 1
+                if result.winner.name == "T1":
+                    t1_wins += 1
 
                 done += 1
                 if done % 200 == 0:
                     print(f"  {done}/{total} battles complete...", flush=True)
 
-            print(f"{family1.value:12} vs {family2.value:12} | {family1.value}: {wins[family1.value]:3} | {family2.value}: {wins[family2.value]:3} wins")
+            t2_wins = n_battles - t1_wins
+            print(f"{family1.value:12} vs {family2.value:12} | {family1.value}: {t1_wins:3} | {family2.value}: {t2_wins:3} wins")
 
     os.makedirs(os.path.dirname(os.path.abspath(output)), exist_ok=True)
     with open(output, "w") as f:
