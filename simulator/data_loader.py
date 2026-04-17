@@ -32,17 +32,29 @@ def load_moves(path: str) -> dict[str, Move]:
 
 
 def load_pokemon(path: str, moves_by_name: dict[str, Move]) -> list[Pokemon]:
-    """Load pokemon.json and return instantiated Pokemon objects."""
+    """Load pokemon.json and return instantiated Pokemon objects.
+
+    Supports both new format (move_pool) and old format (moves).
+    move_pool is stored on each Pokemon; team builder samples 4 into moveset.
+    """
     with open(path) as f:
         raw = json.load(f)
 
     roster: list[Pokemon] = []
     for entry in raw:
-        moveset = []
-        for move_name in entry["moves"]:
+        # Support both new (move_pool) and old (moves) field names
+        pool_names: list[str] = entry.get("move_pool") or entry.get("moves") or []
+
+        pool: list[Move] = []
+        for move_name in pool_names:
             if move_name not in moves_by_name:
-                raise KeyError(f"Move {move_name!r} (used by {entry['name']!r}) not found in moves data")
-            moveset.append(moves_by_name[move_name])
+                # Stale data: move exists in pokemon.json but not moves.json — skip with warning
+                print(f"  [warn] Move {move_name!r} (pool of {entry['name']!r}) not in moves.json — skipped")
+                continue
+            pool.append(moves_by_name[move_name])
+
+        # Default moveset is the first 4 from the pool; team builder overwrites this
+        default_moveset = pool[:4]
 
         p = Pokemon(
             name=entry["name"],
@@ -53,11 +65,12 @@ def load_pokemon(path: str, moves_by_name: dict[str, Move]) -> list[Pokemon]:
             sp_atk=entry["sp_atk"],
             sp_def=entry["sp_def"],
             spe=entry["spe"],
-            moveset=moveset,
+            moveset=default_moveset,
             held_item=entry.get("held_item"),
             nature=entry.get("nature", "Hardy"),
             evs=entry.get("evs"),
         )
+        p.move_pool = pool
         p.usage_pct = entry.get("usage_pct", 1.0)
         p.archetype = entry.get("archetype", "tank")
         roster.append(p)
