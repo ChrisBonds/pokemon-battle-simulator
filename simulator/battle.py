@@ -103,7 +103,7 @@ class Battle:
 
     def _run_turn(self) -> None:
         state = BattleState(self.t1, self.t2, self.weather, self._turn)
-        action1 = self.t1.choose_action(state)
+        action1 = self.t1.choose_action(state) # only 1 action per turn
         action2 = self.t2.choose_action(state)
 
         # Bucket actions: switches first, then items, then moves

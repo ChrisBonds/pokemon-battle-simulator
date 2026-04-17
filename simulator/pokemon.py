@@ -104,6 +104,7 @@ class Pokemon:
         self.current_hp: int = self.hp
         self.status: Optional[str] = None
         self.moveset: list[Move] = moveset
+        self.move_pool: list[Move] = moveset  # full pool; team builder samples 4 into moveset
         self.stat_stages: dict[str, int] = {k: 0 for k in _STAT_KEYS}
         self.badly_poison_counter: int = 0
         self.is_protecting: bool = False
