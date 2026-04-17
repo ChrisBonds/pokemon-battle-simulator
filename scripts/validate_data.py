@@ -1,7 +1,7 @@
 """Sanity-check data/pokemon.json after a fetch run.
 
 Prints a summary report: counts, BST distribution, type coverage,
-move pool sizes, archetype distribution, and any flagged Pokémon.
+move pool sizes, and any flagged Pokémon.
 
 Usage:
     python scripts/validate_data.py [--data-dir data/]
@@ -87,16 +87,6 @@ def main() -> None:
     if small_pools:
         flags.append(f"Pokémon with fewer than 6 pool moves: {small_pools}")
         print(f"  Flagged (< 6 moves): {small_pools}")
-    print()
-
-    # ---- Archetype distribution ----
-    print("Archetype Distribution:")
-    archetype_counts: dict[str, int] = defaultdict(int)
-    for p in pool:
-        archetype_counts[p.get("archetype", "unknown")] += 1
-    for archetype, count in sorted(archetype_counts.items(), key=lambda x: -x[1]):
-        bar = "█" * count
-        print(f"  {archetype:<16} {count:>4}  {bar}")
     print()
 
     # ---- Flags ----

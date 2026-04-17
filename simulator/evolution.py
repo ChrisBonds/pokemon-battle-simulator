@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 from simulator.battle import Battle
 from simulator.genome import FamilyType, Genome, mutate, random_genome
 from simulator.pokemon import Pokemon
-from simulator.team_builder import build_team, FAMILY_ARCHETYPE
+from simulator.team_builder import build_team
 from simulator.trainer import Trainer
 
 
@@ -172,8 +172,7 @@ class Population:
 
     def _build_trainer(self, agent: Agent) -> Trainer:
         """Build a fresh Trainer with a newly sampled team for this battle."""
-        archetype = FAMILY_ARCHETYPE.get(agent.family, "random")
-        fresh_team = build_team(self.roster, archetype=archetype, rng=self.rng)
+        fresh_team = build_team(self.roster, rng=self.rng)
         return Trainer(
             name=agent.trainer_name,
             team=fresh_team,

@@ -72,7 +72,6 @@ def load_pokemon(path: str, moves_by_name: dict[str, Move]) -> list[Pokemon]:
         )
         p.move_pool = pool
         p.usage_pct = entry.get("usage_pct", 1.0)
-        p.archetype = entry.get("archetype", "tank")
         roster.append(p)
     return roster
 

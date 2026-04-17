@@ -13066,5 +13066,141 @@
         "name": "damage"
       }
     }
+  },
+  "lovely-kiss": {
+    "accuracy": 75,
+    "damage_class": {
+      "name": "status"
+    },
+    "power": null,
+    "priority": 0,
+    "type": {
+      "name": "normal"
+    },
+    "stat_changes": [],
+    "meta": {
+      "ailment": {
+        "name": "sleep",
+        "url": "https://pokeapi.co/api/v2/move-ailment/2/"
+      },
+      "ailment_chance": 0,
+      "stat_chance": 0,
+      "category": {
+        "name": "ailment",
+        "url": "https://pokeapi.co/api/v2/move-category/1/"
+      }
+    }
+  },
+  "fake-tears": {
+    "accuracy": 100,
+    "damage_class": {
+      "name": "status"
+    },
+    "power": null,
+    "priority": 0,
+    "type": {
+      "name": "dark"
+    },
+    "stat_changes": [
+      {
+        "change": -2,
+        "stat": {
+          "name": "special-defense",
+          "url": "https://pokeapi.co/api/v2/stat/5/"
+        }
+      }
+    ],
+    "meta": {
+      "ailment": {
+        "name": "none",
+        "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+      },
+      "ailment_chance": 0,
+      "stat_chance": 0,
+      "category": {
+        "name": "net-good-stats",
+        "url": "https://pokeapi.co/api/v2/move-category/2/"
+      }
+    }
+  },
+  "heart-stamp": {
+    "accuracy": 100,
+    "damage_class": {
+      "name": "physical"
+    },
+    "power": 60,
+    "priority": 0,
+    "type": {
+      "name": "psychic"
+    },
+    "stat_changes": [],
+    "meta": {
+      "ailment": {
+        "name": "none",
+        "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+      },
+      "ailment_chance": 0,
+      "stat_chance": 0,
+      "category": {
+        "name": "damage",
+        "url": "https://pokeapi.co/api/v2/move-category/0/"
+      }
+    }
+  },
+  "clamp": {
+    "accuracy": 85,
+    "damage_class": {
+      "name": "physical"
+    },
+    "power": 35,
+    "priority": 0,
+    "type": {
+      "name": "water"
+    },
+    "stat_changes": [],
+    "meta": {
+      "ailment": {
+        "name": "trap",
+        "url": "https://pokeapi.co/api/v2/move-ailment/8/"
+      },
+      "ailment_chance": 100,
+      "stat_chance": 0,
+      "category": {
+        "name": "damage-ailment",
+        "url": "https://pokeapi.co/api/v2/move-category/4/"
+      }
+    }
+  },
+  "razor-shell": {
+    "accuracy": 95,
+    "damage_class": {
+      "name": "physical"
+    },
+    "power": 75,
+    "priority": 0,
+    "type": {
+      "name": "water"
+    },
+    "stat_changes": [
+      {
+        "change": -1,
+        "stat": {
+          "name": "defense",
+          "url": "https://pokeapi.co/api/v2/stat/3/"
+        }
+      }
+    ],
+    "meta": {
+      "ailment": {
+        "name": "none",
+        "url": "https://pokeapi.co/api/v2/move-ailment/0/"
+      },
+      "ailment_chance": 0,
+      "stat_chance": 50,
+      "category": {
+        "name": "damage-lower",
+        "url": "https://pokeapi.co/api/v2/move-category/6/"
+      }
+    }
   }
 }

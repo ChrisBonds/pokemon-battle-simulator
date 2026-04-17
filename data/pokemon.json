@@ -1,6 +1,7 @@
 [
   {
     "name": "Pawniard",
+    "api_name": "pawniard",
     "types": [
       "dark",
       "steel"
@@ -12,20 +13,20 @@
     "sp_def": 40,
     "spe": 60,
     "bst": 340,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Foul Play",
       "Dark Pulse",
+      "Foul Play",
       "Iron Head",
-      "Assurance",
-      "Feint Attack",
-      "Snarl",
+      "Sucker Punch",
+      "Pursuit",
+      "Metal Claw",
       "Payback",
       "Knock Off"
     ]
   },
   {
     "name": "Rhyhorn",
+    "api_name": "rhyhorn",
     "types": [
       "ground",
       "rock"
@@ -37,20 +38,20 @@
     "sp_def": 30,
     "spe": 25,
     "bst": 345,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Drill Run",
       "Stone Edge",
-      "Earthquake",
       "Earth Power",
+      "Earthquake",
       "Dig",
-      "Rock Tomb",
-      "Bulldoze",
-      "Rock Slide"
+      "Drill Run",
+      "Smack Down",
+      "Rock Slide",
+      "Rock Blast"
     ]
   },
   {
     "name": "Rufflet",
+    "api_name": "rufflet",
     "types": [
       "normal",
       "flying"
@@ -62,20 +63,20 @@
     "sp_def": 50,
     "spe": 60,
     "bst": 350,
-    "archetype": "pivot",
     "move_pool": [
-      "Fly",
       "Thrash",
-      "Brave Bird",
       "Strength",
-      "Sky Drop",
-      "Round",
-      "Wing Attack",
+      "Fly",
+      "Brave Bird",
+      "Facade",
+      "Slash",
+      "Hidden Power",
       "Aerial Ace"
     ]
   },
   {
     "name": "Gloom",
+    "api_name": "gloom",
     "types": [
       "grass",
       "poison"
@@ -87,20 +88,20 @@
     "sp_def": 75,
     "spe": 40,
     "bst": 395,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Energy Ball",
       "Petal Dance",
-      "Seed Bomb",
       "Solar Beam",
-      "Petal Blizzard",
       "Sludge Bomb",
-      "Absorb",
-      "Mega Drain"
+      "Petal Blizzard",
+      "Energy Ball",
+      "Seed Bomb",
+      "Giga Drain",
+      "Venoshock"
     ]
   },
   {
     "name": "Frillish Male",
+    "api_name": "frillish-male",
     "types": [
       "water",
       "ghost"
@@ -112,20 +113,20 @@
     "sp_def": 85,
     "spe": 40,
     "bst": 335,
-    "archetype": "tank",
     "move_pool": [
-      "Surf",
       "Hydro Pump",
       "Waterfall",
-      "Shadow Ball",
       "Scald",
-      "Dive",
+      "Shadow Ball",
       "Water Spout",
+      "Surf",
+      "Dive",
       "Water Pulse"
     ]
   },
   {
     "name": "Mime Jr",
+    "api_name": "mime-jr",
     "types": [
       "psychic",
       "fairy"
@@ -137,20 +138,20 @@
     "sp_def": 90,
     "spe": 60,
     "bst": 310,
-    "archetype": "tank",
     "move_pool": [
       "Psyshock",
-      "Psychic",
       "Dream Eater",
       "Future Sight",
-      "Psybeam",
+      "Psychic",
       "Confusion",
-      "Wake Up Slap",
-      "Thunderbolt"
+      "Psybeam",
+      "Focus Punch",
+      "Secret Power"
     ]
   },
   {
     "name": "Joltik",
+    "api_name": "joltik",
     "types": [
       "bug",
       "electric"
@@ -162,20 +163,20 @@
     "sp_def": 50,
     "spe": 65,
     "bst": 319,
-    "archetype": "pivot",
     "move_pool": [
-      "X-Scissor",
-      "Leech Life",
-      "Thunderbolt",
-      "Wild Charge",
-      "Discharge",
       "Bug Buzz",
+      "Leech Life",
+      "Discharge",
+      "Wild Charge",
+      "X-Scissor",
+      "Thunderbolt",
       "Fury Cutter",
-      "Infestation"
+      "Bug Bite"
     ]
   },
   {
     "name": "Croagunk",
+    "api_name": "croagunk",
     "types": [
       "poison",
       "fighting"
@@ -187,20 +188,20 @@
     "sp_def": 40,
     "spe": 50,
     "bst": 300,
-    "archetype": "tank",
     "move_pool": [
-      "Belch",
-      "Sludge Bomb",
-      "Dynamic Punch",
-      "Poison Jab",
       "Focus Blast",
-      "Gunk Shot",
+      "Focus Punch",
+      "Poison Jab",
+      "Sludge Bomb",
       "Cross Chop",
-      "Focus Punch"
+      "Belch",
+      "Sludge Wave",
+      "Gunk Shot"
     ]
   },
   {
     "name": "Delibird",
+    "api_name": "delibird",
     "types": [
       "ice",
       "flying"
@@ -212,20 +213,20 @@
     "sp_def": 45,
     "spe": 75,
     "bst": 330,
-    "archetype": "tank",
     "move_pool": [
       "Sky Attack",
       "Blizzard",
       "Ice Beam",
       "Fly",
       "Bounce",
-      "Freeze-Dry",
       "Frost Breath",
-      "Aerial Ace"
+      "Ice Ball",
+      "Icy Wind"
     ]
   },
   {
     "name": "Tyrunt",
+    "api_name": "tyrunt",
     "types": [
       "rock",
       "dragon"
@@ -237,13 +238,12 @@
     "sp_def": 45,
     "spe": 48,
     "bst": 362,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Stone Edge",
-      "Draco Meteor",
-      "Dragon Pulse",
-      "Outrage",
       "Dragon Claw",
+      "Outrage",
+      "Stone Edge",
+      "Dragon Pulse",
+      "Draco Meteor",
       "Rock Slide",
       "Ancient Power",
       "Dragon Tail"
@@ -251,6 +251,7 @@
   },
   {
     "name": "Larvesta",
+    "api_name": "larvesta",
     "types": [
       "bug",
       "fire"
@@ -262,20 +263,20 @@
     "sp_def": 55,
     "spe": 60,
     "bst": 360,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Heat Wave",
-      "Fire Blast",
-      "Leech Life",
       "Overheat",
+      "Fire Blast",
       "Flamethrower",
-      "Bug Buzz",
       "Flare Blitz",
-      "U-turn"
+      "Bug Buzz",
+      "Heat Wave",
+      "Leech Life",
+      "Struggle Bug"
     ]
   },
   {
     "name": "Honedge",
+    "api_name": "honedge",
     "types": [
       "steel",
       "ghost"
@@ -287,20 +288,20 @@
     "sp_def": 37,
     "spe": 28,
     "bst": 325,
-    "archetype": "tank",
     "move_pool": [
       "Flash Cannon",
       "Iron Head",
       "Shadow Claw",
       "Shadow Sneak",
-      "Secret Power",
-      "Brick Break",
       "Rock Slide",
-      "Night Slash"
+      "Retaliate",
+      "Night Slash",
+      "Brick Break"
     ]
   },
   {
     "name": "Snover",
+    "api_name": "snover",
     "types": [
       "grass",
       "ice"
@@ -312,20 +313,20 @@
     "sp_def": 60,
     "spe": 40,
     "bst": 334,
-    "archetype": "tank",
     "move_pool": [
       "Solar Beam",
       "Seed Bomb",
       "Energy Ball",
-      "Blizzard",
-      "Ice Beam",
       "Wood Hammer",
-      "Powder Snow",
-      "Ice Punch"
+      "Ice Beam",
+      "Blizzard",
+      "Avalanche",
+      "Razor Leaf"
     ]
   },
   {
     "name": "Krokorok",
+    "api_name": "krokorok",
     "types": [
       "ground",
       "dark"
@@ -337,20 +338,20 @@
     "sp_def": 45,
     "spe": 74,
     "bst": 351,
-    "archetype": "tank",
     "move_pool": [
-      "Dig",
-      "Earth Power",
-      "Foul Play",
       "Dark Pulse",
-      "Crunch",
+      "Dig",
       "Earthquake",
-      "Mud Slap",
-      "Assurance"
+      "Foul Play",
+      "Earth Power",
+      "Crunch",
+      "Bite",
+      "Snarl"
     ]
   },
   {
     "name": "Chinchou",
+    "api_name": "chinchou",
     "types": [
       "water",
       "electric"
@@ -362,20 +363,20 @@
     "sp_def": 56,
     "spe": 67,
     "bst": 330,
-    "archetype": "pivot",
     "move_pool": [
+      "Surf",
       "Thunderbolt",
+      "Dive",
+      "Hydro Pump",
       "Thunder",
-      "Waterfall",
       "Discharge",
       "Wild Charge",
-      "Scald",
-      "Surf",
-      "Hydro Pump"
+      "Scald"
     ]
   },
   {
     "name": "Litleo",
+    "api_name": "litleo",
     "types": [
       "fire",
       "normal"
@@ -387,20 +388,20 @@
     "sp_def": 54,
     "spe": 72,
     "bst": 369,
-    "archetype": "tank",
     "move_pool": [
-      "Heat Wave",
       "Strength",
-      "Flamethrower",
-      "Hyper Voice",
       "Take Down",
+      "Heat Wave",
       "Overheat",
       "Fire Blast",
-      "Fire Fang"
+      "Flamethrower",
+      "Hyper Voice",
+      "Round"
     ]
   },
   {
     "name": "Beldum",
+    "api_name": "beldum",
     "types": [
       "steel",
       "psychic"
@@ -412,7 +413,6 @@
     "sp_def": 60,
     "spe": 30,
     "bst": 300,
-    "archetype": "tank",
     "move_pool": [
       "Iron Head",
       "Zen Headbutt",
@@ -422,6 +422,7 @@
   },
   {
     "name": "Deino",
+    "api_name": "deino",
     "types": [
       "dark",
       "dragon"
@@ -433,20 +434,20 @@
     "sp_def": 50,
     "spe": 38,
     "bst": 300,
-    "archetype": "tank",
     "move_pool": [
+      "Draco Meteor",
+      "Dragon Pulse",
+      "Crunch",
       "Dragon Rush",
       "Dark Pulse",
-      "Draco Meteor",
-      "Crunch",
-      "Dragon Pulse",
       "Outrage",
-      "Thief",
+      "Bite",
       "Dragon Breath"
     ]
   },
   {
     "name": "Venonat",
+    "api_name": "venonat",
     "types": [
       "bug",
       "poison"
@@ -458,20 +459,20 @@
     "sp_def": 55,
     "spe": 45,
     "bst": 305,
-    "archetype": "tank",
     "move_pool": [
-      "Leech Life",
       "Sludge Bomb",
-      "Bug Bite",
-      "Venoshock",
-      "Struggle Bug",
+      "Leech Life",
+      "Infestation",
       "Poison Fang",
       "Signal Beam",
-      "Infestation"
+      "Struggle Bug",
+      "Venoshock",
+      "Bug Bite"
     ]
   },
   {
     "name": "Tranquill",
+    "api_name": "tranquill",
     "types": [
       "normal",
       "flying"
@@ -483,20 +484,20 @@
     "sp_def": 42,
     "spe": 65,
     "bst": 358,
-    "archetype": "pivot",
     "move_pool": [
-      "Uproar",
-      "Sky Attack",
-      "Razor Wind",
       "Fly",
-      "Quick Attack",
-      "Secret Power",
-      "Round",
-      "Echoed Voice"
+      "Uproar",
+      "Razor Wind",
+      "Sky Attack",
+      "Aerial Ace",
+      "Hidden Power",
+      "Gust",
+      "Secret Power"
     ]
   },
   {
     "name": "Azumarill",
+    "api_name": "azumarill",
     "types": [
       "water",
       "fairy"
@@ -508,20 +509,20 @@
     "sp_def": 80,
     "spe": 50,
     "bst": 420,
-    "archetype": "tank",
     "move_pool": [
-      "Waterfall",
       "Hydro Pump",
-      "Scald",
       "Play Rough",
-      "Aqua Tail",
+      "Waterfall",
+      "Scald",
       "Surf",
+      "Aqua Tail",
       "Dive",
-      "Bubble Beam"
+      "Bubble"
     ]
   },
   {
     "name": "Pignite",
+    "api_name": "pignite",
     "types": [
       "fire",
       "fighting"
@@ -533,20 +534,20 @@
     "sp_def": 55,
     "spe": 55,
     "bst": 418,
-    "archetype": "tank",
     "move_pool": [
-      "Focus Blast",
-      "Heat Wave",
-      "Flamethrower",
-      "Superpower",
-      "Fire Blast",
-      "Fire Pledge",
+      "Focus Punch",
       "Overheat",
-      "Focus Punch"
+      "Fire Pledge",
+      "Flare Blitz",
+      "Superpower",
+      "Heat Wave",
+      "Focus Blast",
+      "Fire Blast"
     ]
   },
   {
     "name": "Stunfisk",
+    "api_name": "stunfisk",
     "types": [
       "ground",
       "electric"
@@ -558,20 +559,20 @@
     "sp_def": 99,
     "spe": 32,
     "bst": 471,
-    "archetype": "tank",
     "move_pool": [
+      "Discharge",
       "Earthquake",
       "Thunderbolt",
+      "Dig",
       "Earth Power",
       "Thunder",
-      "Discharge",
-      "Dig",
-      "Mud Shot",
-      "Electroweb"
+      "Spark",
+      "Bulldoze"
     ]
   },
   {
     "name": "Gourgeist Average",
+    "api_name": "gourgeist-average",
     "types": [
       "ghost",
       "grass"
@@ -583,20 +584,20 @@
     "sp_def": 75,
     "spe": 84,
     "bst": 494,
-    "archetype": "tank",
     "move_pool": [
+      "Shadow Ball",
       "Energy Ball",
-      "Phantom Force",
       "Seed Bomb",
       "Solar Beam",
-      "Shadow Ball",
-      "Bullet Seed",
+      "Phantom Force",
+      "Shadow Sneak",
       "Razor Leaf",
-      "Shadow Sneak"
+      "Giga Drain"
     ]
   },
   {
     "name": "Solrock",
+    "api_name": "solrock",
     "types": [
       "rock",
       "psychic"
@@ -608,20 +609,20 @@
     "sp_def": 65,
     "spe": 70,
     "bst": 460,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Psyshock",
       "Stone Edge",
-      "Dream Eater",
       "Psychic",
       "Zen Headbutt",
-      "Psyshock",
-      "Confusion",
-      "Rock Slide",
-      "Rock Throw"
+      "Dream Eater",
+      "Smack Down",
+      "Rock Throw",
+      "Rock Slide"
     ]
   },
   {
     "name": "Pangoro",
+    "api_name": "pangoro",
     "types": [
       "fighting",
       "dark"
@@ -633,20 +634,20 @@
     "sp_def": 71,
     "spe": 58,
     "bst": 495,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Focus Blast",
-      "Foul Play",
-      "Hammer Arm",
       "Focus Punch",
+      "Superpower",
       "Crunch",
+      "Foul Play",
       "Dark Pulse",
+      "Focus Blast",
       "Sky Uppercut",
-      "Superpower"
+      "Hammer Arm"
     ]
   },
   {
     "name": "Dragalge",
+    "api_name": "dragalge",
     "types": [
       "poison",
       "dragon"
@@ -658,20 +659,20 @@
     "sp_def": 123,
     "spe": 44,
     "bst": 494,
-    "archetype": "tank",
     "move_pool": [
-      "Dragon Pulse",
-      "Outrage",
-      "Sludge Wave",
+      "Toxic",
+      "Protect",
       "Draco Meteor",
+      "Dragon Pulse",
+      "Sludge Wave",
+      "Outrage",
       "Gunk Shot",
-      "Sludge Bomb",
-      "Twister",
-      "Venoshock"
+      "Sludge Bomb"
     ]
   },
   {
     "name": "Mr Mime",
+    "api_name": "mr-mime",
     "types": [
       "psychic",
       "fairy"
@@ -683,20 +684,20 @@
     "sp_def": 120,
     "spe": 90,
     "bst": 460,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Psyshock",
       "Dream Eater",
-      "Zen Headbutt",
+      "Psyshock",
       "Psychic",
       "Future Sight",
       "Dazzling Gleam",
+      "Zen Headbutt",
       "Confusion",
       "Psybeam"
     ]
   },
   {
     "name": "Dewgong",
+    "api_name": "dewgong",
     "types": [
       "water",
       "ice"
@@ -708,20 +709,20 @@
     "sp_def": 95,
     "spe": 70,
     "bst": 475,
-    "archetype": "tank",
     "move_pool": [
       "Surf",
-      "Blizzard",
-      "Dive",
       "Waterfall",
-      "Ice Beam",
+      "Dive",
+      "Blizzard",
       "Aqua Tail",
-      "Brine",
-      "Aqua Jet"
+      "Ice Beam",
+      "Aurora Beam",
+      "Icy Wind"
     ]
   },
   {
     "name": "Bastiodon",
+    "api_name": "bastiodon",
     "types": [
       "rock",
       "steel"
@@ -733,20 +734,20 @@
     "sp_def": 138,
     "spe": 30,
     "bst": 495,
-    "archetype": "tank",
     "move_pool": [
-      "Flash Cannon",
-      "Iron Tail",
+      "Toxic",
+      "Protect",
       "Stone Edge",
       "Iron Head",
-      "Ancient Power",
-      "Smack Down",
+      "Flash Cannon",
+      "Iron Tail",
       "Rock Tomb",
-      "Rock Slide"
+      "Smack Down"
     ]
   },
   {
     "name": "Galvantula",
+    "api_name": "galvantula",
     "types": [
       "bug",
       "electric"
@@ -758,20 +759,20 @@
     "sp_def": 60,
     "spe": 108,
     "bst": 472,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "X-Scissor",
-      "Thunder",
       "Thunderbolt",
-      "Wild Charge",
       "Leech Life",
-      "Discharge",
       "Bug Buzz",
-      "Bug Bite"
+      "Wild Charge",
+      "Thunder",
+      "Discharge",
+      "Struggle Bug"
     ]
   },
   {
     "name": "Swellow",
+    "api_name": "swellow",
     "types": [
       "normal",
       "flying"
@@ -783,20 +784,45 @@
     "sp_def": 50,
     "spe": 125,
     "bst": 455,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Fly",
-      "Brave Bird",
-      "Giga Impact",
       "Sky Attack",
       "Hyper Beam",
-      "Round",
-      "Pluck",
-      "Air Slash"
+      "Fly",
+      "Giga Impact",
+      "Brave Bird",
+      "Wing Attack",
+      "Hidden Power",
+      "Pluck"
+    ]
+  },
+  {
+    "name": "Golurk",
+    "api_name": "golurk",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "hp": 89,
+    "atk": 124,
+    "def": 80,
+    "sp_atk": 55,
+    "sp_def": 80,
+    "spe": 55,
+    "bst": 483,
+    "move_pool": [
+      "Earthquake",
+      "Shadow Ball",
+      "Earth Power",
+      "Phantom Force",
+      "Astonish",
+      "Mud Slap",
+      "Bulldoze",
+      "Shadow Punch"
     ]
   },
   {
     "name": "Abomasnow",
+    "api_name": "abomasnow",
     "types": [
       "grass",
       "ice"
@@ -808,20 +834,20 @@
     "sp_def": 85,
     "spe": 60,
     "bst": 494,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Solar Beam",
-      "Ice Beam",
-      "Wood Hammer",
       "Blizzard",
-      "Seed Bomb",
+      "Wood Hammer",
       "Energy Ball",
-      "Powder Snow",
-      "Giga Drain"
+      "Seed Bomb",
+      "Ice Beam",
+      "Ice Punch",
+      "Powder Snow"
     ]
   },
   {
     "name": "Combusken",
+    "api_name": "combusken",
     "types": [
       "fire",
       "fighting"
@@ -833,20 +859,20 @@
     "sp_def": 60,
     "spe": 55,
     "bst": 405,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Sky Uppercut",
       "Focus Punch",
-      "Focus Blast",
-      "Overheat",
-      "Heat Wave",
-      "Flamethrower",
       "Fire Blast",
+      "Flamethrower",
+      "Heat Wave",
       "Flare Blitz",
-      "Fire Pledge"
+      "Fire Pledge",
+      "Focus Blast"
     ]
   },
   {
     "name": "Zweilous",
+    "api_name": "zweilous",
     "types": [
       "dark",
       "dragon"
@@ -858,20 +884,20 @@
     "sp_def": 70,
     "spe": 58,
     "bst": 420,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Dragon Pulse",
-      "Dragon Rush",
-      "Outrage",
-      "Dark Pulse",
       "Draco Meteor",
+      "Outrage",
+      "Dragon Rush",
+      "Dark Pulse",
       "Crunch",
-      "Dragon Breath",
-      "Dragon Tail"
+      "Dragon Pulse",
+      "Thief",
+      "Bite"
     ]
   },
   {
     "name": "Wigglytuff",
+    "api_name": "wigglytuff",
     "types": [
       "normal",
       "fairy"
@@ -883,20 +909,20 @@
     "sp_def": 50,
     "spe": 45,
     "bst": 435,
-    "archetype": "tank",
     "move_pool": [
-      "Strength",
-      "Hyper Voice",
       "Giga Impact",
       "Hyper Beam",
+      "Strength",
       "Play Rough",
+      "Hyper Voice",
+      "Double-Edge",
       "Dazzling Gleam",
-      "Last Resort",
-      "Double-Edge"
+      "Last Resort"
     ]
   },
   {
     "name": "Magcargo",
+    "api_name": "magcargo",
     "types": [
       "fire",
       "rock"
@@ -908,20 +934,20 @@
     "sp_def": 80,
     "spe": 30,
     "bst": 430,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Lava Plume",
-      "Flamethrower",
       "Overheat",
+      "Stone Edge",
+      "Lava Plume",
       "Fire Blast",
       "Heat Wave",
-      "Stone Edge",
-      "Flame Burst",
-      "Rock Tomb"
+      "Flamethrower",
+      "Flame Charge",
+      "Incinerate"
     ]
   },
   {
     "name": "Golbat",
+    "api_name": "golbat",
     "types": [
       "poison",
       "flying"
@@ -933,20 +959,20 @@
     "sp_def": 75,
     "spe": 90,
     "bst": 455,
-    "archetype": "pivot",
     "move_pool": [
       "Fly",
       "Sludge Bomb",
+      "Aerial Ace",
       "Air Cutter",
       "Poison Fang",
-      "Air Slash",
       "Wing Attack",
-      "Acrobatics",
-      "Aerial Ace"
+      "Air Slash",
+      "Venoshock"
     ]
   },
   {
     "name": "Marshtomp",
+    "api_name": "marshtomp",
     "types": [
       "water",
       "ground"
@@ -958,20 +984,20 @@
     "sp_def": 70,
     "spe": 50,
     "bst": 405,
-    "archetype": "tank",
     "move_pool": [
+      "Water Pledge",
+      "Muddy Water",
+      "Earth Power",
+      "Dig",
       "Scald",
       "Surf",
-      "Earth Power",
-      "Waterfall",
       "Dive",
-      "Muddy Water",
-      "Water Pledge",
-      "Dig"
+      "Waterfall"
     ]
   },
   {
     "name": "Durant",
+    "api_name": "durant",
     "types": [
       "bug",
       "steel"
@@ -983,20 +1009,20 @@
     "sp_def": 48,
     "spe": 109,
     "bst": 484,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Iron Head",
       "Flash Cannon",
+      "Iron Head",
       "X-Scissor",
-      "Struggle Bug",
       "Bug Bite",
       "Fury Cutter",
       "Metal Claw",
-      "Giga Impact"
+      "Struggle Bug",
+      "Crunch"
     ]
   },
   {
     "name": "Dedenne",
+    "api_name": "dedenne",
     "types": [
       "electric",
       "fairy"
@@ -1008,20 +1034,20 @@
     "sp_def": 67,
     "spe": 101,
     "bst": 431,
-    "archetype": "pivot",
     "move_pool": [
+      "Thunderbolt",
       "Play Rough",
+      "Discharge",
       "Thunder",
       "Wild Charge",
-      "Thunderbolt",
-      "Discharge",
-      "Thunder Punch",
-      "Volt Switch",
-      "Electroweb"
+      "Shock Wave",
+      "Nuzzle",
+      "Thunder Punch"
     ]
   },
   {
     "name": "Trevenant",
+    "api_name": "trevenant",
     "types": [
       "ghost",
       "grass"
@@ -1033,20 +1059,20 @@
     "sp_def": 82,
     "spe": 56,
     "bst": 474,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Wood Hammer",
-      "Phantom Force",
-      "Energy Ball",
-      "Seed Bomb",
       "Shadow Ball",
       "Solar Beam",
-      "Giga Drain",
-      "Horn Leech"
+      "Phantom Force",
+      "Energy Ball",
+      "Wood Hammer",
+      "Seed Bomb",
+      "Shadow Claw",
+      "Giga Drain"
     ]
   },
   {
     "name": "Medicham",
+    "api_name": "medicham",
     "types": [
       "fighting",
       "psychic"
@@ -1058,20 +1084,20 @@
     "sp_def": 75,
     "spe": 80,
     "bst": 410,
-    "archetype": "tank",
     "move_pool": [
       "Zen Headbutt",
-      "High Jump Kick",
-      "Psychic",
       "Psyshock",
-      "Focus Blast",
+      "Psychic",
+      "High Jump Kick",
       "Focus Punch",
+      "Focus Blast",
       "Dream Eater",
-      "Rock Smash"
+      "Power Up Punch"
     ]
   },
   {
     "name": "Piloswine",
+    "api_name": "piloswine",
     "types": [
       "ice",
       "ground"
@@ -1083,20 +1109,20 @@
     "sp_def": 60,
     "spe": 50,
     "bst": 450,
-    "archetype": "tank",
     "move_pool": [
-      "Earthquake",
-      "Ice Beam",
       "Earth Power",
-      "Dig",
       "Blizzard",
-      "Ice Fang",
-      "Mud Bomb",
+      "Earthquake",
+      "Dig",
+      "Ice Beam",
+      "Powder Snow",
+      "Mud Slap",
       "Icy Wind"
     ]
   },
   {
     "name": "Altaria",
+    "api_name": "altaria",
     "types": [
       "dragon",
       "flying"
@@ -1108,20 +1134,20 @@
     "sp_def": 105,
     "spe": 80,
     "bst": 490,
-    "archetype": "tank",
     "move_pool": [
-      "Dragon Claw",
-      "Sky Attack",
       "Draco Meteor",
-      "Fly",
-      "Outrage",
       "Dragon Pulse",
-      "Pluck",
-      "Dragon Breath"
+      "Sky Attack",
+      "Outrage",
+      "Dragon Claw",
+      "Fly",
+      "Dragon Breath",
+      "Peck"
     ]
   },
   {
     "name": "Corsola",
+    "api_name": "corsola",
     "types": [
       "water",
       "rock"
@@ -1133,20 +1159,20 @@
     "sp_def": 95,
     "spe": 35,
     "bst": 410,
-    "archetype": "tank",
     "move_pool": [
-      "Head Smash",
-      "Power Gem",
-      "Surf",
       "Stone Edge",
+      "Power Gem",
       "Scald",
+      "Surf",
+      "Head Smash",
+      "Bubble",
       "Rock Blast",
-      "Rock Slide",
-      "Bubble Beam"
+      "Rock Slide"
     ]
   },
   {
     "name": "Venomoth",
+    "api_name": "venomoth",
     "types": [
       "bug",
       "poison"
@@ -1158,20 +1184,20 @@
     "sp_def": 75,
     "spe": 90,
     "bst": 450,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Leech Life",
       "Sludge Bomb",
+      "Leech Life",
       "Bug Buzz",
-      "Signal Beam",
       "U-turn",
+      "Venoshock",
+      "Signal Beam",
       "Silver Wind",
-      "Infestation",
-      "Bug Bite"
+      "Struggle Bug"
     ]
   },
   {
     "name": "Bisharp",
+    "api_name": "bisharp",
     "types": [
       "dark",
       "steel"
@@ -1183,20 +1209,20 @@
     "sp_def": 70,
     "spe": 70,
     "bst": 490,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Foul Play",
-      "Dark Pulse",
       "Iron Head",
-      "Feint Attack",
-      "Payback",
-      "Thief",
+      "Dark Pulse",
       "Assurance",
+      "Night Slash",
+      "Thief",
+      "Metal Claw",
       "Knock Off"
     ]
   },
   {
     "name": "Girafarig",
+    "api_name": "girafarig",
     "types": [
       "normal",
       "psychic"
@@ -1208,20 +1234,45 @@
     "sp_def": 65,
     "spe": 85,
     "bst": 455,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Strength",
+      "Uproar",
+      "Razor Wind",
+      "Psychic",
       "Zen Headbutt",
-      "Psyshock",
       "Future Sight",
       "Dream Eater",
-      "Uproar",
-      "Psychic",
-      "Take Down",
-      "Strength"
+      "Hyper Voice"
+    ]
+  },
+  {
+    "name": "Rotom",
+    "api_name": "rotom",
+    "types": [
+      "electric",
+      "ghost"
+    ],
+    "hp": 50,
+    "atk": 50,
+    "def": 77,
+    "sp_atk": 95,
+    "sp_def": 77,
+    "spe": 91,
+    "bst": 440,
+    "move_pool": [
+      "Thunderbolt",
+      "Shadow Ball",
+      "Discharge",
+      "Thunder",
+      "Shock Wave",
+      "Hex",
+      "Astonish",
+      "Charge Beam"
     ]
   },
   {
     "name": "Breloom",
+    "api_name": "breloom",
     "types": [
       "grass",
       "fighting"
@@ -1233,20 +1284,20 @@
     "sp_def": 60,
     "spe": 70,
     "bst": 460,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Focus Blast",
-      "Focus Punch",
+      "Solar Beam",
       "Seed Bomb",
       "Dynamic Punch",
-      "Solar Beam",
-      "Sky Uppercut",
       "Energy Ball",
-      "Superpower"
+      "Focus Blast",
+      "Superpower",
+      "Focus Punch",
+      "Sky Uppercut"
     ]
   },
   {
     "name": "Talonflame",
+    "api_name": "talonflame",
     "types": [
       "fire",
       "flying"
@@ -1258,20 +1309,20 @@
     "sp_def": 69,
     "spe": 126,
     "bst": 499,
-    "archetype": "pivot",
     "move_pool": [
       "Flamethrower",
-      "Brave Bird",
       "Fire Blast",
+      "Heat Wave",
       "Fly",
       "Overheat",
       "Flare Blitz",
-      "Heat Wave",
-      "Aerial Ace"
+      "Brave Bird",
+      "Acrobatics"
     ]
   },
   {
     "name": "Sealeo",
+    "api_name": "sealeo",
     "types": [
       "ice",
       "water"
@@ -1283,20 +1334,20 @@
     "sp_def": 70,
     "spe": 45,
     "bst": 410,
-    "archetype": "tank",
     "move_pool": [
-      "Blizzard",
       "Surf",
-      "Waterfall",
       "Dive",
-      "Aqua Tail",
+      "Waterfall",
       "Ice Beam",
-      "Frost Breath",
-      "Brine"
+      "Blizzard",
+      "Aqua Tail",
+      "Icy Wind",
+      "Frost Breath"
     ]
   },
   {
     "name": "Klefki",
+    "api_name": "klefki",
     "types": [
       "steel",
       "fairy"
@@ -1308,20 +1359,20 @@
     "sp_def": 87,
     "spe": 75,
     "bst": 470,
-    "archetype": "tank",
     "move_pool": [
-      "Dazzling Gleam",
       "Flash Cannon",
       "Play Rough",
+      "Dazzling Gleam",
       "Draining Kiss",
       "Mirror Shot",
       "Fairy Wind",
       "Psychic",
-      "Facade"
+      "Last Resort"
     ]
   },
   {
     "name": "Gabite",
+    "api_name": "gabite",
     "types": [
       "dragon",
       "ground"
@@ -1333,20 +1384,45 @@
     "sp_def": 55,
     "spe": 82,
     "bst": 410,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Draco Meteor",
       "Outrage",
+      "Dragon Pulse",
       "Earth Power",
       "Dragon Claw",
+      "Earthquake",
       "Dragon Rush",
-      "Dig",
-      "Dragon Pulse",
-      "Earthquake"
+      "Dig"
+    ]
+  },
+  {
+    "name": "Shiftry",
+    "api_name": "shiftry",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "hp": 90,
+    "atk": 100,
+    "def": 60,
+    "sp_atk": 90,
+    "sp_def": 60,
+    "spe": 80,
+    "bst": 480,
+    "move_pool": [
+      "Leaf Storm",
+      "Energy Ball",
+      "Seed Bomb",
+      "Foul Play",
+      "Solar Beam",
+      "Dark Pulse",
+      "Snarl",
+      "Feint Attack"
     ]
   },
   {
     "name": "Toxicroak",
+    "api_name": "toxicroak",
     "types": [
       "poison",
       "fighting"
@@ -1358,20 +1434,20 @@
     "sp_def": 65,
     "spe": 85,
     "bst": 490,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Focus Punch",
-      "Sludge Wave",
       "Belch",
       "Sludge Bomb",
       "Gunk Shot",
       "Poison Jab",
+      "Sludge Wave",
       "Focus Blast",
-      "Power Up Punch"
+      "Low Sweep"
     ]
   },
   {
     "name": "Heliolisk",
+    "api_name": "heliolisk",
     "types": [
       "electric",
       "normal"
@@ -1383,20 +1459,20 @@
     "sp_def": 94,
     "spe": 109,
     "bst": 481,
-    "archetype": "sweeper",
     "move_pool": [
-      "Razor Wind",
       "Thunder",
-      "Thunderbolt",
-      "Hyper Beam",
-      "Wild Charge",
-      "Giga Impact",
       "Hyper Voice",
-      "Snore"
+      "Wild Charge",
+      "Thunderbolt",
+      "Razor Wind",
+      "Giga Impact",
+      "Hyper Beam",
+      "Secret Power"
     ]
   },
   {
     "name": "Crustle",
+    "api_name": "crustle",
     "types": [
       "bug",
       "rock"
@@ -1408,20 +1484,20 @@
     "sp_def": 75,
     "spe": 45,
     "bst": 485,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Rock Wrecker",
       "Stone Edge",
       "X-Scissor",
-      "Bug Bite",
-      "Struggle Bug",
+      "Rock Wrecker",
       "Rock Blast",
+      "Rock Tomb",
+      "Bug Bite",
       "Rock Slide",
-      "Smack Down"
+      "Struggle Bug"
     ]
   },
   {
     "name": "Froslass",
+    "api_name": "froslass",
     "types": [
       "ice",
       "ghost"
@@ -1433,20 +1509,20 @@
     "sp_def": 70,
     "spe": 110,
     "bst": 480,
-    "archetype": "tank",
     "move_pool": [
-      "Blizzard",
       "Shadow Ball",
+      "Blizzard",
       "Ice Beam",
-      "Ominous Wind",
       "Astonish",
+      "Frost Breath",
+      "Powder Snow",
       "Icy Wind",
-      "Ice Shard",
-      "Ice Punch"
+      "Ice Shard"
     ]
   },
   {
     "name": "Slowking",
+    "api_name": "slowking",
     "types": [
       "water",
       "psychic"
@@ -1458,20 +1534,20 @@
     "sp_def": 110,
     "spe": 30,
     "bst": 490,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Surf",
-      "Dive",
-      "Scald",
-      "Zen Headbutt",
-      "Psyshock",
       "Aqua Tail",
+      "Scald",
+      "Dive",
+      "Psyshock",
+      "Dream Eater",
+      "Zen Headbutt",
       "Psychic",
-      "Dream Eater"
+      "Surf"
     ]
   },
   {
     "name": "Togetic",
+    "api_name": "togetic",
     "types": [
       "fairy",
       "flying"
@@ -1483,20 +1559,20 @@
     "sp_def": 105,
     "spe": 40,
     "bst": 405,
-    "archetype": "tank",
     "move_pool": [
       "Dazzling Gleam",
       "Fly",
-      "Fairy Wind",
       "Aerial Ace",
-      "Focus Punch",
-      "Psychic",
+      "Fairy Wind",
+      "Drain Punch",
+      "Last Resort",
       "Fire Blast",
-      "Giga Impact"
+      "Dream Eater"
     ]
   },
   {
     "name": "Camerupt",
+    "api_name": "camerupt",
     "types": [
       "fire",
       "ground"
@@ -1508,20 +1584,20 @@
     "sp_def": 75,
     "spe": 40,
     "bst": 460,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Heat Wave",
-      "Dig",
-      "Fire Blast",
-      "Lava Plume",
       "Overheat",
-      "Earthquake",
+      "Heat Wave",
+      "Flamethrower",
       "Eruption",
+      "Dig",
+      "Earthquake",
+      "Lava Plume",
       "Earth Power"
     ]
   },
   {
     "name": "Lairon",
+    "api_name": "lairon",
     "types": [
       "steel",
       "rock"
@@ -1533,20 +1609,20 @@
     "sp_def": 50,
     "spe": 40,
     "bst": 430,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Iron Tail",
       "Stone Edge",
+      "Iron Tail",
       "Iron Head",
       "Rock Tomb",
       "Rock Slide",
       "Metal Claw",
-      "Secret Power",
-      "Earthquake"
+      "Earth Power",
+      "Uproar"
     ]
   },
   {
     "name": "Spiritomb",
+    "api_name": "spiritomb",
     "types": [
       "ghost",
       "dark"
@@ -1558,20 +1634,20 @@
     "sp_def": 108,
     "spe": 35,
     "bst": 485,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Dark Pulse",
-      "Foul Play",
+      "Toxic",
+      "Hypnosis",
+      "Protect",
       "Shadow Ball",
-      "Shadow Sneak",
-      "Sucker Punch",
-      "Ominous Wind",
-      "Snarl",
-      "Pursuit"
+      "Foul Play",
+      "Dark Pulse",
+      "Thief",
+      "Snarl"
     ]
   },
   {
     "name": "Victreebel",
+    "api_name": "victreebel",
     "types": [
       "grass",
       "poison"
@@ -1583,20 +1659,45 @@
     "sp_def": 70,
     "spe": 70,
     "bst": 490,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Energy Ball",
-      "Leaf Storm",
-      "Solar Beam",
-      "Seed Bomb",
-      "Leaf Blade",
       "Sludge Bomb",
-      "Leaf Tornado",
-      "Venoshock"
+      "Solar Beam",
+      "Leaf Blade",
+      "Seed Bomb",
+      "Leaf Storm",
+      "Giga Drain",
+      "Vine Whip"
+    ]
+  },
+  {
+    "name": "Jynx",
+    "api_name": "jynx",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "hp": 65,
+    "atk": 50,
+    "def": 35,
+    "sp_atk": 115,
+    "sp_def": 95,
+    "spe": 95,
+    "bst": 455,
+    "move_pool": [
+      "Dream Eater",
+      "Psyshock",
+      "Blizzard",
+      "Ice Beam",
+      "Zen Headbutt",
+      "Psychic",
+      "Heart Stamp",
+      "Icy Wind"
     ]
   },
   {
     "name": "Monferno",
+    "api_name": "monferno",
     "types": [
       "fire",
       "fighting"
@@ -1608,20 +1709,45 @@
     "sp_def": 52,
     "spe": 81,
     "bst": 405,
-    "archetype": "pivot",
     "move_pool": [
-      "Focus Punch",
       "Fire Blast",
-      "Focus Blast",
-      "Overheat",
-      "Close Combat",
-      "Heat Wave",
       "Flamethrower",
-      "Flare Blitz"
+      "Heat Wave",
+      "Focus Blast",
+      "Fire Pledge",
+      "Focus Punch",
+      "Flare Blitz",
+      "Overheat"
+    ]
+  },
+  {
+    "name": "Lanturn",
+    "api_name": "lanturn",
+    "types": [
+      "water",
+      "electric"
+    ],
+    "hp": 125,
+    "atk": 58,
+    "def": 58,
+    "sp_atk": 76,
+    "sp_def": 76,
+    "spe": 67,
+    "bst": 460,
+    "move_pool": [
+      "Aqua Tail",
+      "Surf",
+      "Discharge",
+      "Waterfall",
+      "Scald",
+      "Dive",
+      "Thunderbolt",
+      "Hydro Pump"
     ]
   },
   {
     "name": "Chatot",
+    "api_name": "chatot",
     "types": [
       "normal",
       "flying"
@@ -1633,20 +1759,20 @@
     "sp_def": 42,
     "spe": 91,
     "bst": 411,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Agility",
+      "Nasty Plot",
+      "Sky Attack",
       "Uproar",
+      "Fly",
       "Hyper Voice",
       "Boomburst",
-      "Sky Attack",
-      "Fly",
-      "Air Cutter",
-      "Facade",
-      "Hidden Power"
+      "Round"
     ]
   },
   {
     "name": "Forretress",
+    "api_name": "forretress",
     "types": [
       "bug",
       "steel"
@@ -1658,20 +1784,20 @@
     "sp_def": 60,
     "spe": 40,
     "bst": 465,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Flash Cannon",
-      "Mirror Shot",
+      "Signal Beam",
       "Bug Bite",
       "Struggle Bug",
-      "Signal Beam",
-      "Solar Beam",
-      "Drill Run",
-      "Explosion"
+      "Mirror Shot",
+      "Dig",
+      "Strength",
+      "Rock Slide"
     ]
   },
   {
     "name": "Sliggoo",
+    "api_name": "sliggoo",
     "types": [
       "dragon"
     ],
@@ -1682,20 +1808,20 @@
     "sp_def": 113,
     "spe": 60,
     "bst": 452,
-    "archetype": "tank",
     "move_pool": [
-      "Outrage",
-      "Dragon Pulse",
       "Draco Meteor",
+      "Dragon Pulse",
+      "Outrage",
       "Dragon Breath",
-      "Rock Slide",
-      "Thunderbolt",
+      "Muddy Water",
       "Iron Tail",
-      "Body Slam"
+      "Facade",
+      "Sludge Bomb"
     ]
   },
   {
     "name": "Whimsicott",
+    "api_name": "whimsicott",
     "types": [
       "grass",
       "fairy"
@@ -1707,20 +1833,20 @@
     "sp_def": 75,
     "spe": 116,
     "bst": 480,
-    "archetype": "pivot",
     "move_pool": [
       "Dazzling Gleam",
-      "Moonblast",
-      "Seed Bomb",
       "Solar Beam",
+      "Seed Bomb",
+      "Moonblast",
       "Energy Ball",
-      "Giga Drain",
       "Mega Drain",
-      "Hurricane"
+      "Giga Drain",
+      "Secret Power"
     ]
   },
   {
     "name": "Golem",
+    "api_name": "golem",
     "types": [
       "rock",
       "ground"
@@ -1732,20 +1858,20 @@
     "sp_def": 65,
     "spe": 45,
     "bst": 495,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Earth Power",
       "Stone Edge",
       "Dig",
       "Earthquake",
-      "Earth Power",
       "Rock Tomb",
+      "Bulldoze",
       "Smack Down",
-      "Rock Blast",
       "Rock Slide"
     ]
   },
   {
     "name": "Sneasel",
+    "api_name": "sneasel",
     "types": [
       "dark",
       "ice"
@@ -1757,20 +1883,20 @@
     "sp_def": 75,
     "spe": 115,
     "bst": 430,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Dark Pulse",
-      "Blizzard",
-      "Icicle Crash",
       "Ice Beam",
       "Foul Play",
-      "Thief",
-      "Bite",
+      "Blizzard",
+      "Dark Pulse",
+      "Icicle Crash",
+      "Snarl",
+      "Ice Shard",
       "Pursuit"
     ]
   },
   {
     "name": "Shelgon",
+    "api_name": "shelgon",
     "types": [
       "dragon"
     ],
@@ -1781,20 +1907,20 @@
     "sp_def": 50,
     "spe": 50,
     "bst": 420,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Dragon Pulse",
       "Dragon Claw",
       "Outrage",
-      "Dragon Pulse",
       "Draco Meteor",
       "Dragon Breath",
-      "Headbutt",
       "Zen Headbutt",
-      "Rock Slide"
+      "Hyper Voice",
+      "Flamethrower"
     ]
   },
   {
     "name": "Haunter",
+    "api_name": "haunter",
     "types": [
       "ghost",
       "poison"
@@ -1806,20 +1932,20 @@
     "sp_def": 55,
     "spe": 95,
     "bst": 405,
-    "archetype": "fast_attacker",
     "move_pool": [
       "Sludge Bomb",
-      "Poison Jab",
       "Shadow Ball",
-      "Hex",
+      "Poison Jab",
       "Lick",
-      "Shadow Claw",
       "Venoshock",
-      "Shadow Punch"
+      "Shadow Claw",
+      "Shadow Punch",
+      "Hex"
     ]
   },
   {
     "name": "Stantler",
+    "api_name": "stantler",
     "types": [
       "normal"
     ],
@@ -1830,20 +1956,20 @@
     "sp_def": 65,
     "spe": 85,
     "bst": 465,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Uproar",
       "Last Resort",
       "Thrash",
-      "Take Down",
-      "Uproar",
       "Giga Impact",
-      "Hidden Power",
-      "Secret Power",
+      "Take Down",
+      "Rage",
+      "Round",
       "Facade"
     ]
   },
   {
     "name": "Zebstrika",
+    "api_name": "zebstrika",
     "types": [
       "electric"
     ],
@@ -1854,20 +1980,20 @@
     "sp_def": 63,
     "spe": 116,
     "bst": 497,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Wild Charge",
       "Thunderbolt",
       "Discharge",
       "Thunder",
-      "Wild Charge",
-      "Charge Beam",
+      "Volt Switch",
       "Spark",
       "Shock Wave",
-      "Volt Switch"
+      "Charge Beam"
     ]
   },
   {
     "name": "Infernape",
+    "api_name": "infernape",
     "types": [
       "fire",
       "fighting"
@@ -1879,20 +2005,20 @@
     "sp_def": 71,
     "spe": 108,
     "bst": 534,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Close Combat",
-      "Flare Blitz",
-      "Heat Wave",
-      "Flamethrower",
-      "Focus Blast",
-      "Fire Blast",
       "Fire Pledge",
-      "Blast Burn"
+      "Flare Blitz",
+      "Flamethrower",
+      "Focus Punch",
+      "Fire Blast",
+      "Close Combat",
+      "Blast Burn",
+      "Focus Blast"
     ]
   },
   {
     "name": "Gardevoir",
+    "api_name": "gardevoir",
     "types": [
       "psychic",
       "fairy"
@@ -1904,20 +2030,20 @@
     "sp_def": 115,
     "spe": 80,
     "bst": 518,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Psyshock",
       "Future Sight",
+      "Psychic",
       "Moonblast",
       "Zen Headbutt",
       "Dazzling Gleam",
       "Dream Eater",
-      "Psyshock",
-      "Psychic",
-      "Draining Kiss"
+      "Stored Power"
     ]
   },
   {
     "name": "Kingdra",
+    "api_name": "kingdra",
     "types": [
       "water",
       "dragon"
@@ -1929,20 +2055,20 @@
     "sp_def": 95,
     "spe": 85,
     "bst": 540,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Dragon Pulse",
       "Draco Meteor",
-      "Surf",
-      "Outrage",
-      "Dive",
       "Hydro Pump",
+      "Outrage",
+      "Dragon Pulse",
       "Waterfall",
-      "Scald"
+      "Scald",
+      "Surf",
+      "Dive"
     ]
   },
   {
     "name": "Leavanny",
+    "api_name": "leavanny",
     "types": [
       "bug",
       "grass"
@@ -1954,20 +2080,20 @@
     "sp_def": 80,
     "spe": 92,
     "bst": 500,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Solar Beam",
-      "Leaf Storm",
       "Energy Ball",
-      "Seed Bomb",
+      "Solar Beam",
       "X-Scissor",
       "Leaf Blade",
-      "Fell Stinger",
-      "Giga Drain"
+      "Leaf Storm",
+      "Seed Bomb",
+      "Struggle Bug",
+      "Bug Bite"
     ]
   },
   {
     "name": "Gengar",
+    "api_name": "gengar",
     "types": [
       "ghost",
       "poison"
@@ -1979,20 +2105,45 @@
     "sp_def": 75,
     "spe": 110,
     "bst": 500,
-    "archetype": "sweeper",
     "move_pool": [
-      "Shadow Ball",
-      "Sludge Bomb",
       "Poison Jab",
-      "Venoshock",
+      "Sludge Bomb",
+      "Shadow Ball",
       "Lick",
+      "Venoshock",
       "Shadow Punch",
       "Shadow Claw",
       "Hex"
     ]
   },
   {
+    "name": "Barbaracle",
+    "api_name": "barbaracle",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "hp": 72,
+    "atk": 105,
+    "def": 115,
+    "sp_atk": 54,
+    "sp_def": 86,
+    "spe": 68,
+    "bst": 500,
+    "move_pool": [
+      "Scald",
+      "Stone Edge",
+      "Surf",
+      "Rock Slide",
+      "Water Gun",
+      "Clamp",
+      "Ancient Power",
+      "Razor Shell"
+    ]
+  },
+  {
     "name": "Porygon2",
+    "api_name": "porygon2",
     "types": [
       "normal"
     ],
@@ -2003,20 +2154,45 @@
     "sp_def": 95,
     "spe": 60,
     "bst": 515,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Hyper Beam",
+      "Last Resort",
       "Giga Impact",
       "Tri Attack",
-      "Last Resort",
-      "Facade",
-      "Round",
-      "Snore",
-      "Secret Power"
+      "Hyper Beam",
+      "Hidden Power",
+      "Tackle",
+      "Secret Power",
+      "Round"
+    ]
+  },
+  {
+    "name": "Charizard",
+    "api_name": "charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "hp": 78,
+    "atk": 84,
+    "def": 78,
+    "sp_atk": 109,
+    "sp_def": 85,
+    "spe": 100,
+    "bst": 534,
+    "move_pool": [
+      "Inferno",
+      "Fly",
+      "Fire Blast",
+      "Heat Wave",
+      "Overheat",
+      "Flamethrower",
+      "Fire Pledge",
+      "Flare Blitz"
     ]
   },
   {
     "name": "Aggron",
+    "api_name": "aggron",
     "types": [
       "steel",
       "rock"
@@ -2028,20 +2204,20 @@
     "sp_def": 60,
     "spe": 50,
     "bst": 530,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Iron Tail",
+      "Thunder Wave",
+      "Toxic",
+      "Protect",
       "Stone Edge",
-      "Flash Cannon",
       "Iron Head",
-      "Rock Tomb",
-      "Metal Claw",
-      "Smack Down",
+      "Flash Cannon",
+      "Iron Tail",
       "Rock Slide"
     ]
   },
   {
     "name": "Drapion",
+    "api_name": "drapion",
     "types": [
       "poison",
       "dark"
@@ -2053,20 +2229,20 @@
     "sp_def": 75,
     "spe": 95,
     "bst": 500,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Sludge Bomb",
+      "Dark Pulse",
       "Crunch",
       "Poison Jab",
-      "Dark Pulse",
-      "Sludge Bomb",
+      "Snarl",
       "Knock Off",
-      "Bite",
-      "Poison Fang",
-      "Poison Sting"
+      "Payback",
+      "Thief"
     ]
   },
   {
     "name": "Cryogonal",
+    "api_name": "cryogonal",
     "types": [
       "ice"
     ],
@@ -2077,20 +2253,20 @@
     "sp_def": 135,
     "spe": 105,
     "bst": 515,
-    "archetype": "fast_attacker",
     "move_pool": [
-      "Ice Beam",
       "Blizzard",
+      "Ice Beam",
+      "Aurora Beam",
+      "Icy Wind",
       "Frost Breath",
       "Freeze-Dry",
       "Ice Shard",
-      "Icy Wind",
-      "Aurora Beam",
-      "Night Slash"
+      "Slash"
     ]
   },
   {
     "name": "Swampert",
+    "api_name": "swampert",
     "types": [
       "water",
       "ground"
@@ -2102,20 +2278,20 @@
     "sp_def": 90,
     "spe": 60,
     "bst": 535,
-    "archetype": "tank",
     "move_pool": [
       "Muddy Water",
-      "Aqua Tail",
-      "Earth Power",
-      "Earthquake",
+      "Dig",
       "Waterfall",
+      "Surf",
+      "Dive",
+      "Scald",
       "Hydro Cannon",
-      "Water Pledge",
-      "Dig"
+      "Earth Power"
     ]
   },
   {
     "name": "Houndoom",
+    "api_name": "houndoom",
     "types": [
       "dark",
       "fire"
@@ -2127,20 +2303,20 @@
     "sp_def": 80,
     "spe": 95,
     "bst": 500,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Flamethrower",
-      "Dark Pulse",
-      "Inferno",
       "Overheat",
+      "Dark Pulse",
       "Foul Play",
-      "Heat Wave",
+      "Crunch",
+      "Flamethrower",
+      "Inferno",
       "Fire Blast",
-      "Crunch"
+      "Heat Wave"
     ]
   },
   {
     "name": "Rhyperior",
+    "api_name": "rhyperior",
     "types": [
       "ground",
       "rock"
@@ -2152,20 +2328,20 @@
     "sp_def": 55,
     "spe": 40,
     "bst": 535,
-    "archetype": "glass_cannon",
     "move_pool": [
+      "Toxic",
+      "Protect",
       "Dig",
       "Earth Power",
-      "Rock Wrecker",
-      "Stone Edge",
-      "Earthquake",
       "Drill Run",
-      "Rock Slide",
-      "Smack Down"
+      "Earthquake",
+      "Rock Wrecker",
+      "Stone Edge"
     ]
   },
   {
     "name": "Lucario",
+    "api_name": "lucario",
     "types": [
       "fighting",
       "steel"
@@ -2177,20 +2353,20 @@
     "sp_def": 70,
     "spe": 90,
     "bst": 525,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Focus Punch",
       "Aura Sphere",
-      "Iron Tail",
       "Flash Cannon",
+      "Iron Tail",
+      "Focus Punch",
       "Focus Blast",
       "Close Combat",
       "Drain Punch",
-      "Metal Claw"
+      "Brick Break"
     ]
   },
   {
     "name": "Mamoswine",
+    "api_name": "mamoswine",
     "types": [
       "ice",
       "ground"
@@ -2202,20 +2378,20 @@
     "sp_def": 60,
     "spe": 80,
     "bst": 530,
-    "archetype": "tank",
     "move_pool": [
+      "Earth Power",
       "Ice Beam",
       "Dig",
-      "Blizzard",
-      "Earth Power",
       "Earthquake",
-      "Mud Bomb",
-      "Ice Fang",
-      "Mud Slap"
+      "Blizzard",
+      "Icy Wind",
+      "Powder Snow",
+      "Ice Fang"
     ]
   },
   {
     "name": "Chesnaught",
+    "api_name": "chesnaught",
     "types": [
       "grass",
       "fighting"
@@ -2227,20 +2403,20 @@
     "sp_def": 75,
     "spe": 64,
     "bst": 530,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Wood Hammer",
-      "Superpower",
+      "Synthesis",
+      "Leech Seed",
+      "Protect",
       "Energy Ball",
-      "Grass Pledge",
-      "Frenzy Plant",
       "Seed Bomb",
-      "Focus Punch",
+      "Wood Hammer",
+      "Solar Beam",
       "Hammer Arm"
     ]
   },
   {
     "name": "Scyther",
+    "api_name": "scyther",
     "types": [
       "bug",
       "flying"
@@ -2252,20 +2428,20 @@
     "sp_def": 80,
     "spe": 105,
     "bst": 500,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Bug Buzz",
       "X-Scissor",
-      "Air Slash",
-      "Aerial Ace",
-      "Bug Bite",
-      "Wing Attack",
+      "Fury Cutter",
       "Struggle Bug",
-      "U-turn"
+      "Wing Attack",
+      "Silver Wind",
+      "Bug Bite",
+      "Aerial Ace"
     ]
   },
   {
     "name": "Bronzong",
+    "api_name": "bronzong",
     "types": [
       "steel",
       "psychic"
@@ -2277,20 +2453,20 @@
     "sp_def": 116,
     "spe": 33,
     "bst": 500,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Psychic",
-      "Iron Head",
-      "Psyshock",
-      "Future Sight",
-      "Dream Eater",
-      "Zen Headbutt",
+      "Toxic",
+      "Hypnosis",
+      "Protect",
       "Extrasensory",
-      "Flash Cannon"
+      "Future Sight",
+      "Zen Headbutt",
+      "Iron Head",
+      "Psychic"
     ]
   },
   {
     "name": "Tyrantrum",
+    "api_name": "tyrantrum",
     "types": [
       "rock",
       "dragon"
@@ -2302,20 +2478,20 @@
     "sp_def": 59,
     "spe": 71,
     "bst": 521,
-    "archetype": "glass_cannon",
     "move_pool": [
-      "Dragon Claw",
-      "Stone Edge",
       "Head Smash",
-      "Dragon Pulse",
-      "Draco Meteor",
+      "Stone Edge",
       "Outrage",
-      "Ancient Power",
-      "Dragon Tail"
+      "Draco Meteor",
+      "Dragon Pulse",
+      "Dragon Claw",
+      "Dragon Tail",
+      "Ancient Power"
     ]
   },
   {
     "name": "Serperior",
+    "api_name": "serperior",
     "types": [
       "grass"
     ],
@@ -2326,20 +2502,20 @@
     "sp_def": 95,
     "spe": 113,
     "bst": 528,
-    "archetype": "tank",
     "move_pool": [
-      "Solar Beam",
-      "Grass Pledge",
-      "Leaf Storm",
-      "Seed Bomb",
       "Energy Ball",
+      "Grass Pledge",
+      "Seed Bomb",
+      "Solar Beam",
+      "Leaf Storm",
       "Frenzy Plant",
       "Leaf Blade",
-      "Leaf Tornado"
+      "Mega Drain"
     ]
   },
   {
     "name": "Walrein",
+    "api_name": "walrein",
     "types": [
       "ice",
       "water"
@@ -2351,20 +2527,20 @@
     "sp_def": 90,
     "spe": 65,
     "bst": 530,
-    "archetype": "tank",
     "move_pool": [
-      "Waterfall",
       "Dive",
-      "Ice Beam",
-      "Blizzard",
       "Aqua Tail",
+      "Waterfall",
+      "Blizzard",
       "Surf",
-      "Frost Breath",
-      "Aurora Beam"
+      "Ice Beam",
+      "Brine",
+      "Frost Breath"
     ]
   },
   {
     "name": "Dusknoir",
+    "api_name": "dusknoir",
     "types": [
       "ghost"
     ],
@@ -2375,20 +2551,20 @@
     "sp_def": 135,
     "spe": 45,
     "bst": 525,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Toxic",
+      "Will-O-Wisp",
+      "Protect",
       "Shadow Ball",
-      "Shadow Punch",
       "Hex",
       "Astonish",
       "Shadow Sneak",
-      "Future Sight",
-      "Rock Slide",
-      "Blizzard"
+      "Shadow Punch"
     ]
   },
   {
     "name": "Electivire",
+    "api_name": "electivire",
     "types": [
       "electric"
     ],
@@ -2399,20 +2575,20 @@
     "sp_def": 85,
     "spe": 95,
     "bst": 540,
-    "archetype": "pivot",
     "move_pool": [
+      "Discharge",
       "Thunder",
       "Wild Charge",
-      "Discharge",
       "Thunderbolt",
-      "Thunder Punch",
+      "Thunder Shock",
       "Volt Switch",
-      "Charge Beam",
-      "Thunder Shock"
+      "Thunder Punch",
+      "Shock Wave"
     ]
   },
   {
     "name": "Starmie",
+    "api_name": "starmie",
     "types": [
       "water",
       "psychic"
@@ -2424,20 +2600,20 @@
     "sp_def": 85,
     "spe": 115,
     "bst": 520,
-    "archetype": "sweeper",
     "move_pool": [
-      "Surf",
-      "Psychic",
-      "Dive",
-      "Dream Eater",
       "Scald",
       "Waterfall",
-      "Psyshock",
-      "Hydro Pump"
+      "Dream Eater",
+      "Surf",
+      "Psychic",
+      "Hydro Pump",
+      "Dive",
+      "Psyshock"
     ]
   },
   {
     "name": "Porygon Z",
+    "api_name": "porygon-z",
     "types": [
       "normal"
     ],
@@ -2448,20 +2624,20 @@
     "sp_def": 75,
     "spe": 90,
     "bst": 535,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Hyper Beam",
-      "Tri Attack",
-      "Giga Impact",
       "Uproar",
       "Last Resort",
-      "Tackle",
+      "Giga Impact",
+      "Hyper Beam",
+      "Tri Attack",
       "Snore",
-      "Round"
+      "Secret Power",
+      "Tackle"
     ]
   },
   {
     "name": "Torterra",
+    "api_name": "torterra",
     "types": [
       "grass",
       "ground"
@@ -2473,20 +2649,20 @@
     "sp_def": 85,
     "spe": 56,
     "bst": 525,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Seed Bomb",
-      "Leaf Storm",
-      "Energy Ball",
-      "Wood Hammer",
       "Frenzy Plant",
-      "Earth Power",
-      "Grass Pledge",
-      "Earthquake"
+      "Wood Hammer",
+      "Solar Beam",
+      "Earthquake",
+      "Leaf Storm",
+      "Seed Bomb",
+      "Energy Ball",
+      "Grass Pledge"
     ]
   },
   {
     "name": "Milotic",
+    "api_name": "milotic",
     "types": [
       "water"
     ],
@@ -2497,20 +2673,20 @@
     "sp_def": 125,
     "spe": 81,
     "bst": 540,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Recover",
+      "Toxic",
+      "Protect",
       "Waterfall",
-      "Dive",
-      "Surf",
-      "Scald",
       "Hydro Pump",
-      "Aqua Tail",
-      "Water Pulse",
-      "Water Gun"
+      "Scald",
+      "Surf",
+      "Dive"
     ]
   },
   {
     "name": "Machamp",
+    "api_name": "machamp",
     "types": [
       "fighting"
     ],
@@ -2521,20 +2697,20 @@
     "sp_def": 85,
     "spe": 55,
     "bst": 505,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Superpower",
-      "Cross Chop",
-      "Dynamic Punch",
-      "Focus Punch",
       "Submission",
       "Focus Blast",
-      "Rock Smash",
-      "Low Sweep"
+      "Dynamic Punch",
+      "Superpower",
+      "Cross Chop",
+      "Focus Punch",
+      "Karate Chop",
+      "Vital Throw"
     ]
   },
   {
     "name": "Aegislash Shield",
+    "api_name": "aegislash-shield",
     "types": [
       "steel",
       "ghost"
@@ -2546,20 +2722,20 @@
     "sp_def": 140,
     "spe": 60,
     "bst": 500,
-    "archetype": "tank",
     "move_pool": [
-      "Iron Head",
+      "Toxic",
+      "Protect",
       "Shadow Ball",
       "Flash Cannon",
+      "Iron Head",
       "Shadow Claw",
       "Shadow Sneak",
-      "Night Slash",
-      "Hyper Beam",
-      "Sacred Sword"
+      "Facade"
     ]
   },
   {
     "name": "Mandibuzz",
+    "api_name": "mandibuzz",
     "types": [
       "dark",
       "flying"
@@ -2571,20 +2747,20 @@
     "sp_def": 95,
     "spe": 80,
     "bst": 510,
-    "archetype": "pivot",
     "move_pool": [
-      "Foul Play",
+      "Roost",
+      "Toxic",
+      "Protect",
       "Dark Pulse",
-      "Fly",
-      "Sky Attack",
       "Brave Bird",
-      "Payback",
-      "Thief",
-      "Aerial Ace"
+      "Sky Attack",
+      "Fly",
+      "Foul Play"
     ]
   },
   {
     "name": "Alakazam",
+    "api_name": "alakazam",
     "types": [
       "psychic"
     ],
@@ -2595,20 +2771,20 @@
     "sp_def": 95,
     "spe": 120,
     "bst": 500,
-    "archetype": "glass_cannon",
     "move_pool": [
+      "Calm Mind",
       "Zen Headbutt",
-      "Psyshock",
-      "Dream Eater",
       "Future Sight",
+      "Psyshock",
       "Psychic",
-      "Psycho Cut",
-      "Confusion",
-      "Psybeam"
+      "Dream Eater",
+      "Psybeam",
+      "Psycho Cut"
     ]
   },
   {
     "name": "Tangrowth",
+    "api_name": "tangrowth",
     "types": [
       "grass"
     ],
@@ -2619,20 +2795,20 @@
     "sp_def": 50,
     "spe": 50,
     "bst": 535,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Seed Bomb",
-      "Power Whip",
       "Energy Ball",
       "Solar Beam",
-      "Giga Drain",
+      "Power Whip",
+      "Seed Bomb",
       "Absorb",
+      "Giga Drain",
       "Vine Whip",
       "Mega Drain"
     ]
   },
   {
     "name": "Sylveon",
+    "api_name": "sylveon",
     "types": [
       "fairy"
     ],
@@ -2643,20 +2819,20 @@
     "sp_def": 130,
     "spe": 60,
     "bst": 525,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Moonblast",
+      "Toxic",
+      "Protect",
       "Dazzling Gleam",
+      "Moonblast",
       "Fairy Wind",
-      "Draining Kiss",
       "Disarming Voice",
-      "Giga Impact",
-      "Iron Tail",
-      "Psyshock"
+      "Draining Kiss",
+      "Iron Tail"
     ]
   },
   {
     "name": "Gigalith",
+    "api_name": "gigalith",
     "types": [
       "rock"
     ],
@@ -2667,20 +2843,45 @@
     "sp_def": 80,
     "spe": 25,
     "bst": 515,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Power Gem",
+      "Toxic",
+      "Protect",
       "Stone Edge",
-      "Smack Down",
-      "Rock Slide",
+      "Power Gem",
       "Rock Tomb",
       "Rock Blast",
-      "Iron Head",
-      "Strength"
+      "Rock Slide",
+      "Smack Down"
+    ]
+  },
+  {
+    "name": "Archeops",
+    "api_name": "archeops",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "hp": 75,
+    "atk": 140,
+    "def": 65,
+    "sp_atk": 112,
+    "sp_def": 65,
+    "spe": 110,
+    "bst": 567,
+    "move_pool": [
+      "Hone Claws",
+      "Rock Polish",
+      "Bounce",
+      "Stone Edge",
+      "Fly",
+      "Sky Attack",
+      "Wing Attack",
+      "Rock Throw"
     ]
   },
   {
     "name": "Lapras",
+    "api_name": "lapras",
     "types": [
       "water",
       "ice"
@@ -2692,20 +2893,20 @@
     "sp_def": 95,
     "spe": 60,
     "bst": 535,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Aqua Tail",
+      "Ice Beam",
+      "Surf",
       "Blizzard",
-      "Waterfall",
       "Hydro Pump",
       "Dive",
-      "Surf",
-      "Ice Beam",
-      "Water Gun"
+      "Waterfall",
+      "Aqua Tail",
+      "Ice Shard"
     ]
   },
   {
     "name": "Krookodile",
+    "api_name": "krookodile",
     "types": [
       "ground",
       "dark"
@@ -2717,20 +2918,20 @@
     "sp_def": 70,
     "spe": 92,
     "bst": 519,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Foul Play",
       "Dark Pulse",
+      "Foul Play",
+      "Crunch",
       "Earth Power",
       "Dig",
-      "Crunch",
       "Earthquake",
-      "Payback",
+      "Snarl",
       "Knock Off"
     ]
   },
   {
     "name": "Magnezone",
+    "api_name": "magnezone",
     "types": [
       "electric",
       "steel"
@@ -2742,20 +2943,20 @@
     "sp_def": 90,
     "spe": 60,
     "bst": 535,
-    "archetype": "pivot",
     "move_pool": [
-      "Thunderbolt",
-      "Thunder",
-      "Wild Charge",
-      "Zap Cannon",
-      "Discharge",
-      "Flash Cannon",
       "Iron Head",
+      "Zap Cannon",
+      "Thunderbolt",
+      "Wild Charge",
+      "Thunder",
+      "Flash Cannon",
+      "Discharge",
       "Thunder Shock"
     ]
   },
   {
     "name": "Jolteon",
+    "api_name": "jolteon",
     "types": [
       "electric"
     ],
@@ -2766,20 +2967,20 @@
     "sp_def": 95,
     "spe": 130,
     "bst": 525,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Wild Charge",
       "Thunderbolt",
       "Thunder",
       "Discharge",
-      "Thunder Fang",
-      "Charge Beam",
+      "Shock Wave",
       "Volt Switch",
-      "Shock Wave"
+      "Thunder Fang",
+      "Thunder Shock"
     ]
   },
   {
     "name": "Greninja",
+    "api_name": "greninja",
     "types": [
       "water",
       "dark"
@@ -2791,20 +2992,20 @@
     "sp_def": 71,
     "spe": 122,
     "bst": 530,
-    "archetype": "sweeper",
     "move_pool": [
-      "Waterfall",
-      "Surf",
-      "Dive",
-      "Scald",
-      "Hydro Cannon",
-      "Dark Pulse",
       "Hydro Pump",
-      "Water Pledge"
+      "Surf",
+      "Water Pledge",
+      "Hydro Cannon",
+      "Waterfall",
+      "Scald",
+      "Dive",
+      "Dark Pulse"
     ]
   },
   {
     "name": "Seismitoad",
+    "api_name": "seismitoad",
     "types": [
       "water",
       "ground"
@@ -2816,20 +3017,20 @@
     "sp_def": 75,
     "spe": 74,
     "bst": 509,
-    "archetype": "tank",
     "move_pool": [
+      "Hydro Pump",
       "Earthquake",
+      "Earth Power",
       "Dig",
       "Muddy Water",
-      "Earth Power",
-      "Hydro Pump",
-      "Scald",
       "Surf",
-      "Bubble"
+      "Scald",
+      "Bulldoze"
     ]
   },
   {
     "name": "Hippowdon",
+    "api_name": "hippowdon",
     "types": [
       "ground"
     ],
@@ -2840,20 +3041,20 @@
     "sp_def": 72,
     "spe": 47,
     "bst": 525,
-    "archetype": "tank",
     "move_pool": [
-      "Earth Power",
-      "Earthquake",
+      "Toxic",
+      "Protect",
       "Dig",
-      "Sand Tomb",
+      "Earthquake",
+      "Earth Power",
       "Bulldoze",
-      "Iron Head",
-      "Take Down",
-      "Superpower"
+      "Sand Tomb",
+      "Double-Edge"
     ]
   },
   {
     "name": "Venusaur",
+    "api_name": "venusaur",
     "types": [
       "grass",
       "poison"
@@ -2865,20 +3066,20 @@
     "sp_def": 100,
     "spe": 80,
     "bst": 525,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Sludge Bomb",
-      "Petal Blizzard",
-      "Solar Beam",
-      "Frenzy Plant",
-      "Seed Bomb",
-      "Grass Pledge",
       "Petal Dance",
+      "Sludge Bomb",
+      "Seed Bomb",
+      "Frenzy Plant",
+      "Solar Beam",
+      "Grass Pledge",
+      "Petal Blizzard",
       "Energy Ball"
     ]
   },
   {
     "name": "Lickilicky",
+    "api_name": "lickilicky",
     "types": [
       "normal"
     ],
@@ -2889,20 +3090,20 @@
     "sp_def": 95,
     "spe": 50,
     "bst": 515,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Explosion",
+      "Toxic",
+      "Protect",
       "Strength",
+      "Explosion",
       "Giga Impact",
-      "Hyper Beam",
       "Slam",
-      "Secret Power",
-      "Wrap",
-      "Chip Away"
+      "Hyper Beam",
+      "Facade"
     ]
   },
   {
     "name": "Roserade",
+    "api_name": "roserade",
     "types": [
       "grass",
       "poison"
@@ -2914,20 +3115,44 @@
     "sp_def": 105,
     "spe": 90,
     "bst": 515,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Seed Bomb",
       "Poison Jab",
+      "Energy Ball",
       "Sludge Bomb",
       "Solar Beam",
-      "Seed Bomb",
-      "Energy Ball",
-      "Poison Sting",
       "Mega Drain",
-      "Magical Leaf"
+      "Magical Leaf",
+      "Poison Sting"
+    ]
+  },
+  {
+    "name": "Samurott",
+    "api_name": "samurott",
+    "types": [
+      "water"
+    ],
+    "hp": 95,
+    "atk": 100,
+    "def": 85,
+    "sp_atk": 108,
+    "sp_def": 70,
+    "spe": 70,
+    "bst": 528,
+    "move_pool": [
+      "Hydro Pump",
+      "Waterfall",
+      "Scald",
+      "Hydro Cannon",
+      "Water Pledge",
+      "Aqua Tail",
+      "Surf",
+      "Dive"
     ]
   },
   {
     "name": "Rapidash",
+    "api_name": "rapidash",
     "types": [
       "fire"
     ],
@@ -2938,20 +3163,20 @@
     "sp_def": 80,
     "spe": 105,
     "bst": 500,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Inferno",
+      "Overheat",
       "Fire Blast",
       "Flamethrower",
       "Heat Wave",
       "Flare Blitz",
-      "Inferno",
-      "Overheat",
-      "Incinerate",
-      "Fire Spin"
+      "Flame Charge",
+      "Incinerate"
     ]
   },
   {
     "name": "Scizor",
+    "api_name": "scizor",
     "types": [
       "bug",
       "steel"
@@ -2963,20 +3188,20 @@
     "sp_def": 80,
     "spe": 65,
     "bst": 500,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "X-Scissor",
-      "Flash Cannon",
       "Iron Head",
-      "Bug Bite",
+      "Flash Cannon",
       "Steel Wing",
       "U-turn",
+      "Metal Claw",
       "Fury Cutter",
-      "Bullet Punch"
+      "Bug Bite"
     ]
   },
   {
     "name": "Glaceon",
+    "api_name": "glaceon",
     "types": [
       "ice"
     ],
@@ -2987,20 +3212,20 @@
     "sp_def": 95,
     "spe": 65,
     "bst": 525,
-    "archetype": "tank",
     "move_pool": [
-      "Ice Beam",
       "Blizzard",
-      "Ice Shard",
+      "Ice Beam",
       "Frost Breath",
-      "Icy Wind",
+      "Ice Shard",
       "Ice Fang",
-      "Hyper Voice",
-      "Signal Beam"
+      "Icy Wind",
+      "Last Resort",
+      "Iron Tail"
     ]
   },
   {
     "name": "Tyranitar",
+    "api_name": "tyranitar",
     "types": [
       "rock",
       "dark"
@@ -3012,20 +3237,20 @@
     "sp_def": 100,
     "spe": 61,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Stone Edge",
-      "Crunch",
+      "Thunder Wave",
+      "Toxic",
+      "Protect",
       "Dark Pulse",
+      "Stone Edge",
       "Foul Play",
-      "Bite",
-      "Rock Tomb",
-      "Snarl",
-      "Smack Down"
+      "Crunch",
+      "Rock Slide"
     ]
   },
   {
     "name": "Hydreigon",
+    "api_name": "hydreigon",
     "types": [
       "dark",
       "dragon"
@@ -3037,20 +3262,20 @@
     "sp_def": 90,
     "spe": 98,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Dragon Pulse",
-      "Draco Meteor",
-      "Crunch",
       "Dark Pulse",
+      "Draco Meteor",
       "Outrage",
+      "Dragon Pulse",
+      "Crunch",
       "Dragon Rush",
-      "Dragon Tail",
+      "Bite",
       "Dragon Breath"
     ]
   },
   {
     "name": "Thundurus Incarnate",
+    "api_name": "thundurus-incarnate",
     "types": [
       "electric",
       "flying"
@@ -3062,20 +3287,20 @@
     "sp_def": 80,
     "spe": 111,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Discharge",
-      "Thunder",
-      "Thunderbolt",
       "Fly",
+      "Discharge",
+      "Thunderbolt",
       "Wild Charge",
-      "Thunder Punch",
-      "Volt Switch",
-      "Thunder Shock"
+      "Thunder",
+      "Charge Beam",
+      "Thunder Shock",
+      "Shock Wave"
     ]
   },
   {
     "name": "Heatran",
+    "api_name": "heatran",
     "types": [
       "fire",
       "steel"
@@ -3087,20 +3312,20 @@
     "sp_def": 106,
     "spe": 77,
     "bst": 600,
-    "archetype": "tank",
     "move_pool": [
-      "Iron Head",
+      "Toxic",
+      "Will-O-Wisp",
+      "Protect",
+      "Fire Blast",
+      "Overheat",
       "Flamethrower",
       "Heat Wave",
-      "Lava Plume",
-      "Fire Blast",
-      "Flash Cannon",
-      "Magma Storm",
-      "Overheat"
+      "Flash Cannon"
     ]
   },
   {
     "name": "Uxie",
+    "api_name": "uxie",
     "types": [
       "psychic"
     ],
@@ -3111,20 +3336,20 @@
     "sp_def": 130,
     "spe": 95,
     "bst": 580,
-    "archetype": "pivot",
     "move_pool": [
-      "Extrasensory",
-      "Psychic",
+      "Toxic",
+      "Thunder Wave",
+      "Protect",
       "Future Sight",
       "Psyshock",
-      "Dream Eater",
       "Zen Headbutt",
-      "Confusion",
-      "Facade"
+      "Dream Eater",
+      "Extrasensory"
     ]
   },
   {
     "name": "Keldeo Ordinary",
+    "api_name": "keldeo-ordinary",
     "types": [
       "water",
       "fighting"
@@ -3136,20 +3361,20 @@
     "sp_def": 90,
     "spe": 108,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Scald",
-      "Aqua Tail",
-      "Secret Sword",
-      "Hydro Pump",
       "Close Combat",
-      "Surf",
+      "Secret Sword",
+      "Superpower",
+      "Hydro Pump",
+      "Focus Blast",
       "Sacred Sword",
-      "Focus Blast"
+      "Aqua Tail",
+      "Surf"
     ]
   },
   {
     "name": "Latios",
+    "api_name": "latios",
     "types": [
       "dragon",
       "psychic"
@@ -3161,20 +3386,20 @@
     "sp_def": 110,
     "spe": 110,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Outrage",
-      "Dragon Pulse",
       "Draco Meteor",
-      "Psychic",
+      "Dragon Claw",
+      "Psyshock",
+      "Zen Headbutt",
       "Luster Purge",
       "Dream Eater",
-      "Zen Headbutt",
-      "Psyshock"
+      "Outrage",
+      "Dragon Pulse"
     ]
   },
   {
     "name": "Latias",
+    "api_name": "latias",
     "types": [
       "dragon",
       "psychic"
@@ -3186,20 +3411,20 @@
     "sp_def": 130,
     "spe": 110,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Zen Headbutt",
-      "Psychic",
-      "Dream Eater",
-      "Outrage",
-      "Psyshock",
+      "Wish",
+      "Recover",
+      "Protect",
       "Mist Ball",
-      "Dragon Claw",
-      "Dragon Pulse"
+      "Dream Eater",
+      "Psyshock",
+      "Psychic",
+      "Draco Meteor"
     ]
   },
   {
     "name": "Azelf",
+    "api_name": "azelf",
     "types": [
       "psychic"
     ],
@@ -3210,20 +3435,20 @@
     "sp_def": 70,
     "spe": 115,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Psychic",
       "Dream Eater",
-      "Psyshock",
-      "Extrasensory",
+      "Psychic",
       "Future Sight",
       "Zen Headbutt",
+      "Extrasensory",
+      "Psyshock",
       "Confusion",
-      "Last Resort"
+      "U-turn"
     ]
   },
   {
     "name": "Dragonite",
+    "api_name": "dragonite",
     "types": [
       "dragon",
       "flying"
@@ -3235,20 +3460,20 @@
     "sp_def": 100,
     "spe": 80,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Hurricane",
       "Draco Meteor",
-      "Dragon Rush",
-      "Dragon Pulse",
-      "Fly",
       "Dragon Claw",
       "Outrage",
-      "Twister"
+      "Dragon Pulse",
+      "Fly",
+      "Dragon Rush",
+      "Hurricane",
+      "Dragon Tail"
     ]
   },
   {
     "name": "Garchomp",
+    "api_name": "garchomp",
     "types": [
       "dragon",
       "ground"
@@ -3260,20 +3485,20 @@
     "sp_def": 85,
     "spe": 102,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Outrage",
-      "Earthquake",
-      "Earth Power",
-      "Dragon Claw",
-      "Dig",
-      "Dragon Rush",
       "Dragon Pulse",
-      "Draco Meteor"
+      "Earth Power",
+      "Dragon Rush",
+      "Dragon Claw",
+      "Earthquake",
+      "Draco Meteor",
+      "Dig"
     ]
   },
   {
     "name": "Genesect",
+    "api_name": "genesect",
     "types": [
       "bug",
       "steel"
@@ -3285,20 +3510,20 @@
     "sp_def": 95,
     "spe": 99,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Bug Buzz",
       "X-Scissor",
-      "Flash Cannon",
       "Iron Head",
-      "Magnet Bomb",
+      "Flash Cannon",
+      "Metal Claw",
       "Struggle Bug",
-      "Fury Cutter",
-      "Bug Bite"
+      "Magnet Bomb",
+      "Signal Beam"
     ]
   },
   {
     "name": "Articuno",
+    "api_name": "articuno",
     "types": [
       "ice",
       "flying"
@@ -3310,20 +3535,20 @@
     "sp_def": 125,
     "spe": 85,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Sky Attack",
+      "Roost",
+      "Toxic",
+      "Protect",
+      "Hurricane",
+      "Blizzard",
       "Fly",
       "Ice Beam",
-      "Blizzard",
-      "Hurricane",
-      "Powder Snow",
-      "Ice Shard",
-      "Freeze-Dry"
+      "Sky Attack"
     ]
   },
   {
     "name": "Salamence",
+    "api_name": "salamence",
     "types": [
       "dragon",
       "flying"
@@ -3335,20 +3560,20 @@
     "sp_def": 80,
     "spe": 100,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Fly",
       "Draco Meteor",
-      "Dragon Pulse",
       "Dragon Claw",
+      "Dragon Pulse",
+      "Fly",
       "Outrage",
-      "Aerial Ace",
+      "Dragon Breath",
       "Dragon Tail",
-      "Dragon Breath"
+      "Aerial Ace"
     ]
   },
   {
     "name": "Volcanion",
+    "api_name": "volcanion",
     "types": [
       "fire",
       "water"
@@ -3360,20 +3585,20 @@
     "sp_def": 90,
     "spe": 70,
     "bst": 600,
-    "archetype": "tank",
     "move_pool": [
+      "Will-O-Wisp",
+      "Toxic",
+      "Protect",
       "Steam Eruption",
       "Overheat",
-      "Flamethrower",
       "Fire Blast",
-      "Hydro Pump",
       "Scald",
-      "Flare Blitz",
-      "Heat Wave"
+      "Hydro Pump"
     ]
   },
   {
     "name": "Mew",
+    "api_name": "mew",
     "types": [
       "psychic"
     ],
@@ -3384,20 +3609,20 @@
     "sp_def": 100,
     "spe": 100,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Roost",
+      "Synthesis",
+      "Protect",
+      "Dream Eater",
       "Psyshock",
       "Psychic",
       "Zen Headbutt",
-      "Dream Eater",
-      "Giga Drain",
-      "Earthquake",
-      "Thunder Punch",
-      "Focus Blast"
+      "Thunder Punch"
     ]
   },
   {
     "name": "Darkrai",
+    "api_name": "darkrai",
     "types": [
       "dark"
     ],
@@ -3408,20 +3633,20 @@
     "sp_def": 90,
     "spe": 125,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Foul Play",
       "Dark Pulse",
+      "Foul Play",
       "Snarl",
       "Thief",
-      "Knock Off",
       "Payback",
+      "Knock Off",
       "Feint Attack",
-      "X-Scissor"
+      "Secret Power"
     ]
   },
   {
     "name": "Cresselia",
+    "api_name": "cresselia",
     "types": [
       "psychic"
     ],
@@ -3432,20 +3657,20 @@
     "sp_def": 120,
     "spe": 85,
     "bst": 580,
-    "archetype": "tank",
     "move_pool": [
-      "Psyshock",
-      "Psychic",
-      "Future Sight",
-      "Zen Headbutt",
+      "Moonlight",
+      "Toxic",
+      "Protect",
       "Dream Eater",
-      "Psycho Cut",
-      "Confusion",
-      "Solar Beam"
+      "Future Sight",
+      "Psyshock",
+      "Zen Headbutt",
+      "Psychic"
     ]
   },
   {
     "name": "Manaphy",
+    "api_name": "manaphy",
     "types": [
       "water"
     ],
@@ -3456,20 +3681,20 @@
     "sp_def": 100,
     "spe": 100,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Dive",
-      "Waterfall",
+      "Toxic",
+      "Protect",
       "Scald",
+      "Waterfall",
       "Surf",
-      "Bubble",
+      "Dive",
       "Water Pulse",
-      "Whirlpool",
-      "Bubble Beam"
+      "Whirlpool"
     ]
   },
   {
     "name": "Cobalion",
+    "api_name": "cobalion",
     "types": [
       "steel",
       "fighting"
@@ -3481,20 +3706,20 @@
     "sp_def": 72,
     "spe": 108,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Focus Blast",
-      "Superpower",
-      "Close Combat",
+      "Toxic",
+      "Thunder Wave",
+      "Protect",
       "Flash Cannon",
       "Iron Head",
       "Sacred Sword",
-      "Metal Claw",
-      "Double Kick"
+      "Superpower",
+      "Close Combat"
     ]
   },
   {
     "name": "Entei",
+    "api_name": "entei",
     "types": [
       "fire"
     ],
@@ -3505,20 +3730,20 @@
     "sp_def": 75,
     "spe": 100,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Fire Blast",
-      "Flamethrower",
       "Eruption",
-      "Sacred Fire",
+      "Lava Plume",
       "Heat Wave",
       "Overheat",
-      "Lava Plume",
-      "Fire Spin"
+      "Fire Blast",
+      "Sacred Fire",
+      "Flamethrower",
+      "Flame Charge"
     ]
   },
   {
     "name": "Goodra",
+    "api_name": "goodra",
     "types": [
       "dragon"
     ],
@@ -3529,20 +3754,20 @@
     "sp_def": 150,
     "spe": 80,
     "bst": 600,
-    "archetype": "tank",
     "move_pool": [
+      "Toxic",
+      "Protect",
       "Outrage",
       "Dragon Pulse",
       "Draco Meteor",
-      "Dragon Breath",
       "Dragon Tail",
-      "Muddy Water",
-      "Ice Beam",
-      "Earthquake"
+      "Dragon Breath",
+      "Hyper Beam"
     ]
   },
   {
     "name": "Jirachi",
+    "api_name": "jirachi",
     "types": [
       "steel",
       "psychic"
@@ -3554,20 +3779,20 @@
     "sp_def": 100,
     "spe": 100,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Zen Headbutt",
-      "Iron Head",
-      "Dream Eater",
-      "Doom Desire",
-      "Psyshock",
-      "Psychic",
+      "Wish",
+      "Toxic",
+      "Protect",
       "Future Sight",
-      "Flash Cannon"
+      "Psychic",
+      "Flash Cannon",
+      "Iron Head",
+      "Zen Headbutt"
     ]
   },
   {
     "name": "Regirock",
+    "api_name": "regirock",
     "types": [
       "rock"
     ],
@@ -3578,20 +3803,20 @@
     "sp_def": 100,
     "spe": 50,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Thunder Wave",
+      "Toxic",
+      "Protect",
       "Stone Edge",
-      "Ancient Power",
-      "Smack Down",
       "Rock Slide",
       "Rock Tomb",
-      "Rock Throw",
-      "Brick Break",
-      "Hyper Beam"
+      "Smack Down",
+      "Ancient Power"
     ]
   },
   {
     "name": "Terrakion",
+    "api_name": "terrakion",
     "types": [
       "rock",
       "fighting"
@@ -3603,20 +3828,20 @@
     "sp_def": 90,
     "spe": 108,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Close Combat",
-      "Stone Edge",
-      "Superpower",
       "Focus Blast",
       "Sacred Sword",
-      "Rock Slide",
-      "Double Kick",
-      "Rock Smash"
+      "Superpower",
+      "Close Combat",
+      "Stone Edge",
+      "Rock Tomb",
+      "Rock Smash",
+      "Rock Slide"
     ]
   },
   {
     "name": "Shaymin Land",
+    "api_name": "shaymin-land",
     "types": [
       "grass"
     ],
@@ -3627,20 +3852,44 @@
     "sp_def": 100,
     "spe": 100,
     "bst": 600,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Synthesis",
+      "Toxic",
+      "Protect",
+      "Solar Beam",
       "Seed Bomb",
       "Seed Flare",
-      "Solar Beam",
       "Energy Ball",
-      "Magical Leaf",
-      "Giga Drain",
-      "Last Resort",
-      "Earth Power"
+      "Giga Drain"
+    ]
+  },
+  {
+    "name": "Mesprit",
+    "api_name": "mesprit",
+    "types": [
+      "psychic"
+    ],
+    "hp": 80,
+    "atk": 105,
+    "def": 105,
+    "sp_atk": 105,
+    "sp_def": 105,
+    "spe": 80,
+    "bst": 580,
+    "move_pool": [
+      "Thunder Wave",
+      "Toxic",
+      "Protect",
+      "Psyshock",
+      "Psychic",
+      "Extrasensory",
+      "Dream Eater",
+      "Zen Headbutt"
     ]
   },
   {
     "name": "Regigigas",
+    "api_name": "regigigas",
     "types": [
       "normal"
     ],
@@ -3651,20 +3900,20 @@
     "sp_def": 110,
     "spe": 100,
     "bst": 670,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Hyper Beam",
-      "Strength",
+      "Toxic",
+      "Thunder Wave",
       "Giga Impact",
-      "Hidden Power",
+      "Strength",
+      "Hyper Beam",
+      "Retaliate",
       "Round",
-      "Dizzy Punch",
-      "Snore",
-      "Facade"
+      "Secret Power"
     ]
   },
   {
     "name": "Virizion",
+    "api_name": "virizion",
     "types": [
       "grass",
       "fighting"
@@ -3676,20 +3925,20 @@
     "sp_def": 129,
     "spe": 108,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Energy Ball",
-      "Superpower",
-      "Leaf Blade",
-      "Seed Bomb",
-      "Solar Beam",
-      "Focus Blast",
+      "Synthesis",
+      "Toxic",
+      "Protect",
       "Sacred Sword",
-      "Close Combat"
+      "Focus Blast",
+      "Leaf Blade",
+      "Solar Beam",
+      "Superpower"
     ]
   },
   {
     "name": "Tornadus Incarnate",
+    "api_name": "tornadus-incarnate",
     "types": [
       "flying"
     ],
@@ -3700,20 +3949,20 @@
     "sp_def": 80,
     "spe": 111,
     "bst": 580,
-    "archetype": "setup_sweeper",
     "move_pool": [
       "Hurricane",
       "Fly",
-      "Acrobatics",
-      "Sky Drop",
       "Aerial Ace",
-      "Gust",
       "Air Cutter",
-      "Air Slash"
+      "Air Slash",
+      "Gust",
+      "Acrobatics",
+      "Sky Drop"
     ]
   },
   {
     "name": "Mewtwo",
+    "api_name": "mewtwo",
     "types": [
       "psychic"
     ],
@@ -3724,20 +3973,20 @@
     "sp_def": 90,
     "spe": 130,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Future Sight",
-      "Psyshock",
       "Zen Headbutt",
-      "Dream Eater",
+      "Psyshock",
+      "Future Sight",
       "Psychic",
+      "Dream Eater",
       "Psystrike",
-      "Confusion",
-      "Psycho Cut"
+      "Psycho Cut",
+      "Confusion"
     ]
   },
   {
     "name": "Lugia",
+    "api_name": "lugia",
     "types": [
       "psychic",
       "flying"
@@ -3749,20 +3998,20 @@
     "sp_def": 154,
     "spe": 110,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Sky Attack",
-      "Extrasensory",
-      "Aeroblast",
-      "Future Sight",
+      "Recover",
+      "Roost",
+      "Protect",
+      "Dream Eater",
       "Psyshock",
       "Psychic",
       "Fly",
-      "Dream Eater"
+      "Aeroblast"
     ]
   },
   {
     "name": "Ho Oh",
+    "api_name": "ho-oh",
     "types": [
       "fire",
       "flying"
@@ -3774,20 +4023,20 @@
     "sp_def": 154,
     "spe": 90,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Overheat",
-      "Fire Blast",
-      "Sky Attack",
+      "Roost",
+      "Recover",
+      "Protect",
+      "Fly",
       "Sacred Fire",
-      "Flamethrower",
+      "Fire Blast",
       "Brave Bird",
-      "Heat Wave",
-      "Fly"
+      "Overheat"
     ]
   },
   {
     "name": "Yveltal",
+    "api_name": "yveltal",
     "types": [
       "dark",
       "flying"
@@ -3799,20 +4048,20 @@
     "sp_def": 98,
     "spe": 99,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Oblivion Wing",
-      "Foul Play",
-      "Hurricane",
+      "Roost",
+      "Toxic",
+      "Protect",
       "Sky Attack",
+      "Foul Play",
       "Fly",
       "Dark Pulse",
-      "Sucker Punch",
-      "Aerial Ace"
+      "Hurricane"
     ]
   },
   {
     "name": "Dialga",
+    "api_name": "dialga",
     "types": [
       "steel",
       "dragon"
@@ -3824,20 +4073,20 @@
     "sp_def": 100,
     "spe": 90,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Iron Head",
-      "Iron Tail",
-      "Dragon Claw",
-      "Outrage",
+      "Thunder Wave",
+      "Toxic",
+      "Protect",
       "Dragon Pulse",
-      "Draco Meteor",
-      "Flash Cannon",
-      "Roar Of Time"
+      "Iron Tail",
+      "Iron Head",
+      "Dragon Claw",
+      "Flash Cannon"
     ]
   },
   {
     "name": "Rayquaza",
+    "api_name": "rayquaza",
     "types": [
       "dragon",
       "flying"
@@ -3849,20 +4098,20 @@
     "sp_def": 90,
     "spe": 95,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Outrage",
-      "Dragon Ascent",
-      "Fly",
-      "Dragon Pulse",
-      "Draco Meteor",
       "Dragon Claw",
+      "Dragon Pulse",
+      "Dragon Ascent",
+      "Draco Meteor",
+      "Fly",
+      "Outrage",
       "Sky Drop",
       "Air Slash"
     ]
   },
   {
     "name": "Giratina Altered",
+    "api_name": "giratina-altered",
     "types": [
       "ghost",
       "dragon"
@@ -3874,20 +4123,20 @@
     "sp_def": 120,
     "spe": 90,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
+      "Thunder Wave",
+      "Will-O-Wisp",
+      "Protect",
+      "Shadow Ball",
       "Shadow Force",
       "Dragon Claw",
-      "Shadow Ball",
-      "Outrage",
       "Dragon Pulse",
-      "Draco Meteor",
-      "Shadow Claw",
-      "Ominous Wind"
+      "Draco Meteor"
     ]
   },
   {
     "name": "Palkia",
+    "api_name": "palkia",
     "types": [
       "water",
       "dragon"
@@ -3899,20 +4148,20 @@
     "sp_def": 120,
     "spe": 100,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Draco Meteor",
-      "Outrage",
+      "Thunder Wave",
+      "Toxic",
+      "Protect",
+      "Hydro Pump",
       "Aqua Tail",
-      "Dragon Claw",
-      "Spacial Rend",
       "Dragon Pulse",
-      "Surf",
+      "Spacial Rend",
       "Dive"
     ]
   },
   {
     "name": "Zekrom",
+    "api_name": "zekrom",
     "types": [
       "dragon",
       "electric"
@@ -3924,20 +4173,20 @@
     "sp_def": 100,
     "spe": 90,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Draco Meteor",
-      "Thunder",
-      "Dragon Pulse",
-      "Dragon Claw",
+      "Roost",
+      "Thunder Wave",
+      "Protect",
       "Fusion Bolt",
-      "Bolt Strike",
+      "Thunder",
       "Wild Charge",
-      "Thunderbolt"
+      "Dragon Claw",
+      "Outrage"
     ]
   },
   {
     "name": "Reshiram",
+    "api_name": "reshiram",
     "types": [
       "dragon",
       "fire"
@@ -3949,16 +4198,15 @@
     "sp_def": 120,
     "spe": 90,
     "bst": 680,
-    "archetype": "setup_sweeper",
     "move_pool": [
-      "Flamethrower",
-      "Heat Wave",
-      "Dragon Pulse",
+      "Roost",
+      "Toxic",
+      "Protect",
       "Overheat",
-      "Fire Blast",
       "Blue Flare",
-      "Outrage",
-      "Fusion Flare"
+      "Dragon Pulse",
+      "Dragon Claw",
+      "Heat Wave"
     ]
   }
 ]

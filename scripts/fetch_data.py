@@ -242,7 +242,20 @@ RECOVERY_MOVES_API = {
     "slack-off", "shore-up", "synthesis", "wish", "heal-order",
 }
 
+STALL_STATUS_MOVES_API = {
+    "toxic", "will-o-wisp", "thunder-wave", "glare", "stun-spore",
+    "sleep-powder", "spore", "hypnosis", "dark-void", "sing", "lovely-kiss",
+    "leech-seed",
+}
+
+STALL_PROTECT_MOVES_API = {
+    "protect", "detect", "kings-shield", "spiky-shield", "baneful-bunker",
+}
+
 PIVOT_MOVES_API = {"u-turn", "volt-switch", "flip-turn", "parting-shot"}
+
+# Each family claims its top-n best-fit Pokémon; the rest are labeled "random"
+FAMILY_QUOTAS: dict[str, int] = {"stall": 40, "setup": 35, "greedy": 60}
 
 # PokéAPI priority field is authoritative; this supplements missing entries
 PRIORITY_OVERRIDE: dict[str, int] = {
@@ -270,6 +283,25 @@ def api_name_to_display(api_name: str) -> str:
     if api_name in DISPLAY_NAME_EXCEPTIONS:
         return DISPLAY_NAME_EXCEPTIONS[api_name]
     return " ".join(word.capitalize() for word in api_name.split("-"))
+
+
+def _slim_move_data(raw: dict) -> dict:
+    """Extract only the fields our engine needs from a raw PokéAPI move response."""
+    meta = raw.get("meta") or {}
+    return {
+        "accuracy":     raw.get("accuracy"),
+        "damage_class": {"name": raw["damage_class"]["name"]},
+        "power":        raw.get("power"),
+        "priority":     raw.get("priority") or 0,
+        "type":         {"name": raw["type"]["name"]},
+        "stat_changes": raw.get("stat_changes") or [],
+        "meta": {
+            "ailment":        meta.get("ailment") or {"name": "none"},
+            "ailment_chance": meta.get("ailment_chance") or 0,
+            "stat_chance":    meta.get("stat_chance") or 0,
+            "category":       meta.get("category") or {"name": "damage"},
+        },
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -406,7 +438,7 @@ def select_stratified_pool(
 
 
 # ---------------------------------------------------------------------------
-# Phase 3/4 — Learnset fetch and move pool construction
+# Phase 3 — Learnset fetch and move caching
 # ---------------------------------------------------------------------------
 
 def fetch_gen6_learnset(pokemon_api_name: str) -> list[str]:
@@ -457,16 +489,16 @@ def ensure_move_cached(
     cache_path: str,
     delay: float,
 ) -> dict | None:
-    """Fetch and cache a move if not already present. Returns raw API data."""
+    """Fetch, slim, and cache a move if not already present. Returns cached data."""
     if api_name in move_cache:
         return move_cache[api_name]
     raw = fetch_raw_move(api_name)
     if raw is None:
         return None
-    move_cache[api_name] = raw
+    move_cache[api_name] = _slim_move_data(raw)
     save_move_cache(move_cache, cache_path)
     time.sleep(delay)
-    return raw
+    return move_cache[api_name]
 
 
 def derive_secondary_effects(display_name: str, api_name: str, raw_move: dict) -> list[dict]:
@@ -589,44 +621,201 @@ def build_move_pool(
 
 
 # ---------------------------------------------------------------------------
-# Phase 5 — Archetype derivation
+# Phase 4 — Family fitness scoring and score-and-claim assignment
 # ---------------------------------------------------------------------------
 
-def derive_archetype(
+def score_family_fitness(
     base_stats: dict[str, int],
     gen6_learnset_api_names: list[str],
-) -> str:
-    """Assign a behavioral archetype from base stats and learnset."""
-    hp      = base_stats["hp"]
-    atk     = base_stats["atk"]
-    def_    = base_stats["def"]
-    sp_atk  = base_stats["sp_atk"]
-    sp_def  = base_stats["sp_def"]
-    spe     = base_stats["spe"]
+) -> dict[str, float]:
+    """Return fitness scores for each family label based on stats and learnset."""
+    hp     = base_stats["hp"]
+    def_   = base_stats["def"]
+    sp_def = base_stats["sp_def"]
+    atk    = base_stats["atk"]
+    sp_atk = base_stats["sp_atk"]
+    spe    = base_stats["spe"]
+    offense = max(atk, sp_atk)
 
-    bulk_score = hp * (def_ + sp_def) / 250
-    offense    = max(atk, sp_atk)
-    learnset   = set(gen6_learnset_api_names)
+    learnset_set = set(gen6_learnset_api_names)
+    has_setup_in_learnset = bool(learnset_set & SETUP_MOVES_API)
 
-    has_recovery = bool(learnset & RECOVERY_MOVES_API)
-    has_setup    = bool(learnset & SETUP_MOVES_API)
-    has_pivot    = bool(learnset & PIVOT_MOVES_API)
+    stall_fitness  = float((def_ + sp_def) + hp * 0.5)
+    setup_fitness  = float((offense + spe * 0.3) * 1.1) if has_setup_in_learnset else 0.0
+    greedy_fitness = float(offense * 0.8 + spe * 0.5)
 
-    if bulk_score > 18000 and has_recovery:
-        return "wall"
-    if offense >= 120 and min(def_, sp_def) < 60:
-        return "glass_cannon"
-    if has_setup and offense >= 85:
-        return "setup_sweeper"
-    if spe >= 100 and offense >= 100:
-        return "sweeper"
-    if has_pivot:
-        return "pivot"
-    if bulk_score > 15000:
-        return "tank"
-    if spe >= 90 and offense >= 95:
-        return "fast_attacker"
-    return "tank"
+    return {"stall": stall_fitness, "setup": setup_fitness, "greedy": greedy_fitness}
+
+
+def assign_family_labels(
+    all_fitness: list[tuple[str, dict[str, float]]],
+    quotas: dict[str, int],
+) -> dict[str, str]:
+    """Score-and-claim: each family claims its top-n best-fit Pokémon.
+
+    Each Pokémon is a candidate for only its argmax family.
+    Overflow and zero-score entries are labeled 'random'.
+    """
+    family_candidates: dict[str, list[tuple[str, float]]] = {f: [] for f in quotas}
+
+    for poke_name, scores in all_fitness:
+        best_family = max(scores, key=scores.__getitem__)
+        best_score = scores[best_family]
+        if best_score > 0.0:
+            family_candidates[best_family].append((poke_name, best_score))
+
+    labels: dict[str, str] = {}
+    for family in quotas:
+        family_candidates[family].sort(key=lambda x: -x[1])
+        for poke_name, _ in family_candidates[family][: quotas[family]]:
+            labels[poke_name] = family
+
+    for poke_name, _ in all_fitness:
+        if poke_name not in labels:
+            labels[poke_name] = "random"
+
+    return labels
+
+
+# ---------------------------------------------------------------------------
+# Phase 5 — Family-aware move pool construction
+# ---------------------------------------------------------------------------
+
+def _build_stall_pool(
+    gen6_learnset_api_names: list[str],
+    pokemon_types: list[str],
+    move_cache: dict[str, dict],
+    rng: random.Random,
+) -> list[str]:
+    """Stall pool: up to 2 status/recovery + up to 1 protect + STAB/coverage fill."""
+    available = [m for m in gen6_learnset_api_names if m in move_cache]
+    pool: list[str] = []
+
+    # Guaranteed slots: prefer recovery over status (recovery is more reliable)
+    recovery_candidates = [m for m in available if m in RECOVERY_MOVES_API]
+    status_candidates   = [m for m in available if m in STALL_STATUS_MOVES_API]
+    rng.shuffle(recovery_candidates)
+    rng.shuffle(status_candidates)
+    guaranteed_status = (recovery_candidates + status_candidates)[:2]
+    pool.extend(guaranteed_status)
+
+    # Guaranteed: one protect variant
+    protect_candidates = [m for m in available if m in STALL_PROTECT_MOVES_API and m not in pool]
+    if protect_candidates:
+        pool.append(protect_candidates[0])
+
+    # Fill remaining slots with best STAB/coverage
+    remaining = [m for m in available if m not in pool]
+    scored = [(m, _base_move_score(m, pokemon_types, move_cache[m])) for m in remaining]
+    rng.shuffle(scored)
+    scored.sort(key=lambda x: -x[1])
+    covered_types: set[str] = set()
+    for move_name, score in scored:
+        if len(pool) >= 8:
+            break
+        raw = move_cache[move_name]
+        if score == 3 and raw["type"]["name"] in covered_types:
+            continue
+        pool.append(move_name)
+        if raw["damage_class"]["name"] != "status" and raw.get("power"):
+            covered_types.add(raw["type"]["name"])
+
+    if len(pool) < 6:
+        fillers = [m for m in available if m not in pool]
+        pool.extend(fillers[: 6 - len(pool)])
+
+    return pool[:8]
+
+
+def _build_setup_pool(
+    gen6_learnset_api_names: list[str],
+    pokemon_types: list[str],
+    move_cache: dict[str, dict],
+    rng: random.Random,
+) -> list[str]:
+    """Setup pool: up to 2 setup moves + STAB/coverage fill."""
+    available = [m for m in gen6_learnset_api_names if m in move_cache]
+    pool: list[str] = []
+
+    # Guaranteed: setup moves
+    setup_candidates = [m for m in available if m in SETUP_MOVES_API]
+    rng.shuffle(setup_candidates)
+    pool.extend(setup_candidates[:2])
+
+    # Fill with best STAB/coverage
+    remaining = [m for m in available if m not in pool]
+    scored = [(m, _base_move_score(m, pokemon_types, move_cache[m])) for m in remaining]
+    rng.shuffle(scored)
+    scored.sort(key=lambda x: -x[1])
+    covered_types: set[str] = set()
+    for move_name, score in scored:
+        if len(pool) >= 8:
+            break
+        raw = move_cache[move_name]
+        if score == 3 and raw["type"]["name"] in covered_types:
+            continue
+        pool.append(move_name)
+        if raw["damage_class"]["name"] != "status" and raw.get("power"):
+            covered_types.add(raw["type"]["name"])
+
+    if len(pool) < 6:
+        fillers = [m for m in available if m not in pool]
+        pool.extend(fillers[: 6 - len(pool)])
+
+    return pool[:8]
+
+
+def _build_greedy_pool(
+    gen6_learnset_api_names: list[str],
+    pokemon_types: list[str],
+    move_cache: dict[str, dict],
+    rng: random.Random,
+) -> list[str]:
+    """Greedy pool: best damaging moves only, no dedicated status slots."""
+    available = [m for m in gen6_learnset_api_names if m in move_cache]
+
+    damaging = [
+        m for m in available
+        if move_cache[m]["damage_class"]["name"] != "status" and move_cache[m].get("power")
+    ]
+    scored = [(m, _base_move_score(m, pokemon_types, move_cache[m])) for m in damaging]
+    rng.shuffle(scored)
+    scored.sort(key=lambda x: -x[1])
+
+    pool: list[str] = []
+    covered_types: set[str] = set()
+    for move_name, score in scored:
+        if len(pool) >= 8:
+            break
+        raw = move_cache[move_name]
+        if score == 3 and raw["type"]["name"] in covered_types:
+            continue
+        pool.append(move_name)
+        covered_types.add(raw["type"]["name"])
+
+    # Pad with any available moves if too few damaging moves
+    if len(pool) < 6:
+        fillers = [m for m in available if m not in pool]
+        pool.extend(fillers[: 6 - len(pool)])
+
+    return pool[:8]
+
+
+def build_family_aware_pool(
+    family: str,
+    gen6_learnset_api_names: list[str],
+    pokemon_types: list[str],
+    move_cache: dict[str, dict],
+    rng: random.Random,
+) -> list[str]:
+    """Dispatch to the appropriate family-specific pool builder."""
+    if family == "stall":
+        return _build_stall_pool(gen6_learnset_api_names, pokemon_types, move_cache, rng)
+    if family == "setup":
+        return _build_setup_pool(gen6_learnset_api_names, pokemon_types, move_cache, rng)
+    if family == "greedy":
+        return _build_greedy_pool(gen6_learnset_api_names, pokemon_types, move_cache, rng)
+    return build_move_pool(gen6_learnset_api_names, pokemon_types, move_cache, rng)
 
 
 # ---------------------------------------------------------------------------
@@ -637,23 +826,24 @@ def build_pokemon_entry(
     census_entry: dict,
     gen6_learnset_api_names: list[str],
     move_pool_api_names: list[str],
+    family: str,
 ) -> dict:
     """Build the final pokemon.json entry for one Pokémon."""
     base = census_entry["base_stats"]
-    archetype = derive_archetype(base, gen6_learnset_api_names)
     move_pool_display = [api_name_to_display(m) for m in move_pool_api_names]
 
     return {
-        "name":     census_entry["name"],
-        "types":    census_entry["types"],
-        "hp":       base["hp"],
-        "atk":      base["atk"],
-        "def":      base["def"],
-        "sp_atk":   base["sp_atk"],
-        "sp_def":   base["sp_def"],
-        "spe":      base["spe"],
-        "bst":      census_entry["bst"],
-        "archetype": archetype,
+        "name":      census_entry["name"],
+        "api_name":  census_entry["api_name"],
+        "types":     census_entry["types"],
+        "hp":        base["hp"],
+        "atk":       base["atk"],
+        "def":       base["def"],
+        "sp_atk":    base["sp_atk"],
+        "sp_def":    base["sp_def"],
+        "spe":       base["spe"],
+        "bst":       census_entry["bst"],
+        "archetype": family,
         "move_pool": move_pool_display,
     }
 
@@ -694,10 +884,11 @@ def main() -> None:
     out_dir = os.path.abspath(args.out_dir)
     os.makedirs(out_dir, exist_ok=True)
 
-    census_path    = os.path.join(out_dir, "pokemon_census.json")
+    census_path     = os.path.join(out_dir, "pokemon_census.json")
+    learnsets_path  = os.path.join(out_dir, "pokemon_learnsets.json")
     move_cache_path = os.path.join(out_dir, "moves_cache.json")
-    pokemon_path   = os.path.join(out_dir, "pokemon.json")
-    moves_path     = os.path.join(out_dir, "moves.json")
+    pokemon_path    = os.path.join(out_dir, "pokemon.json")
+    moves_path      = os.path.join(out_dir, "moves.json")
 
     rng = random.Random(args.seed)
 
@@ -710,79 +901,82 @@ def main() -> None:
     print("\nSelecting stratified pool...")
     selected_pool = select_stratified_pool(viable_census, BST_BINS, rng)
 
-    # ---- Load existing output (for resumability) ----
-    existing_pokemon: list[dict] = []
-    if not args.force and os.path.exists(pokemon_path):
-        with open(pokemon_path) as f:
-            existing_pokemon = json.load(f)
-        print(f"\nFound {len(existing_pokemon)} existing entries in {pokemon_path}")
-
-    existing_names = {p["name"] for p in existing_pokemon}
-    to_fetch = [p for p in selected_pool if p["name"] not in existing_names]
-    print(f"Need to fetch learnsets for {len(to_fetch)} Pokémon")
-
     # ---- Load move cache ----
     move_cache = load_move_cache(move_cache_path)
     print(f"Move cache: {len(move_cache)} moves already cached")
 
-    # ---- Phase 3/4: Learnset + move pool per Pokémon ----
+    # ---- Phase 3: Learnsets (persisted to pokemon_learnsets.json for resumability) ----
+    learnsets_cache: dict[str, list[str]] = {}
+    if not args.force and os.path.exists(learnsets_path):
+        with open(learnsets_path) as f:
+            learnsets_cache = json.load(f)
+        print(f"Loaded {len(learnsets_cache)} cached learnsets from {learnsets_path}")
+
+    learnset_data: list[tuple[dict, list[str]]] = []  # (census_entry, gen6_learnset)
+    total = len(selected_pool)
+
+    for idx, census_entry in enumerate(selected_pool):
+        poke_name    = census_entry["name"]
+        poke_api_name = census_entry["api_name"]
+
+        if poke_api_name in learnsets_cache:
+            gen6_learnset = learnsets_cache[poke_api_name]
+        else:
+            print(f"\n[{idx + 1}/{total}] Fetching learnset: {poke_name}")
+            gen6_learnset = fetch_gen6_learnset(poke_api_name)
+            time.sleep(REQUEST_DELAY)
+            if not gen6_learnset:
+                print(f"  !! No Gen 6 learnset — skipping {poke_name}")
+                continue
+            learnsets_cache[poke_api_name] = gen6_learnset
+            with open(learnsets_path, "w") as f:
+                json.dump(learnsets_cache, f, indent=2)
+
+        # Cache any uncached moves from the learnset
+        uncached = [m for m in gen6_learnset if m not in move_cache]
+        if uncached:
+            print(f"  [{poke_name}] Caching {len(uncached)} moves...")
+            for move_api_name in uncached:
+                ensure_move_cached(move_api_name, move_cache, move_cache_path, REQUEST_DELAY)
+
+        learnset_data.append((census_entry, gen6_learnset))
+
+    print(f"\nLearnsets collected for {len(learnset_data)} Pokémon")
+
+    # ---- Phase 4: Score-and-claim family assignment ----
+    print("\nAssigning family labels...")
+    all_fitness = [
+        (entry["name"], score_family_fitness(entry["base_stats"], learnset))
+        for entry, learnset in learnset_data
+    ]
+    family_labels = assign_family_labels(all_fitness, FAMILY_QUOTAS)
+    family_counts = {
+        f: sum(1 for v in family_labels.values() if v == f)
+        for f in list(FAMILY_QUOTAS) + ["random"]
+    }
+    print(f"Family distribution: {family_counts}")
+
+    # ---- Phase 5: Build family-aware pools and entries ----
+    print("\nBuilding family-aware move pools...")
     new_pokemon_entries: list[dict] = []
     all_move_pool_api_names: set[str] = set()
 
-    # Collect api_names from existing entries too
-    existing_moves_json: list[dict] = []
-    if os.path.exists(moves_path):
-        with open(moves_path) as f:
-            existing_moves_json = json.load(f)
-    existing_move_display_names = {m["name"] for m in existing_moves_json}
-
-    # Display names → api_names reverse map for existing pool moves
-    display_to_api: dict[str, str] = {}
-    for entry in existing_pokemon:
-        for display_name in entry.get("move_pool", []):
-            api_n = display_name.lower().replace(" ", "-").replace("'", "")
-            display_to_api[display_name] = api_n
-            all_move_pool_api_names.add(api_n)
-
-    for idx, census_entry in enumerate(to_fetch):
+    for census_entry, gen6_learnset in learnset_data:
         poke_name = census_entry["name"]
-        poke_api_name = census_entry["api_name"]
-        print(f"\n[{idx + 1}/{len(to_fetch)}] {poke_name} (BST {census_entry['bst']}, {census_entry['types']})")
-
-        # Fetch Gen 6 learnset
-        gen6_learnset = fetch_gen6_learnset(poke_api_name)
-        time.sleep(REQUEST_DELAY)
-        print(f"  Gen 6 learnset: {len(gen6_learnset)} moves")
-
-        if not gen6_learnset:
-            print(f"  !! No Gen 6 learnset found — skipping {poke_name}")
-            continue
-
-        # Fetch any uncached move data from the learnset
-        uncached = [m for m in gen6_learnset if m not in move_cache]
-        if uncached:
-            print(f"  Fetching {len(uncached)} uncached moves...")
-        for move_api_name in uncached:
-            ensure_move_cached(move_api_name, move_cache, move_cache_path, REQUEST_DELAY)
-
-        # Build scored move pool
-        pool_api_names = build_move_pool(
-            gen6_learnset, census_entry["types"], move_cache, rng
+        family = family_labels[poke_name]
+        pool_api_names = build_family_aware_pool(
+            family, gen6_learnset, census_entry["types"], move_cache, rng
         )
         if len(pool_api_names) < 6:
             print(f"  !! WARNING: only {len(pool_api_names)} moves in pool for {poke_name}")
-
         all_move_pool_api_names.update(pool_api_names)
-
-        poke_entry = build_pokemon_entry(census_entry, gen6_learnset, pool_api_names)
-        new_pokemon_entries.append(poke_entry)
-        print(f"  archetype={poke_entry['archetype']}, pool={poke_entry['move_pool']}")
+        entry = build_pokemon_entry(census_entry, gen6_learnset, pool_api_names, family)
+        new_pokemon_entries.append(entry)
 
     # ---- Write pokemon.json ----
-    combined_pokemon = existing_pokemon + new_pokemon_entries
     with open(pokemon_path, "w") as f:
-        json.dump(combined_pokemon, f, indent=2)
-    print(f"\nWrote {len(combined_pokemon)} Pokémon → {pokemon_path}")
+        json.dump(new_pokemon_entries, f, indent=2)
+    print(f"\nWrote {len(new_pokemon_entries)} Pokémon → {pokemon_path}")
 
     # ---- Rebuild moves.json from all pool moves ----
     print(f"\nBuilding moves.json for {len(all_move_pool_api_names)} pool moves...")
@@ -792,9 +986,10 @@ def main() -> None:
         if raw is None:
             raw = fetch_raw_move(move_api_name)
             if raw is None:
-                print(f"  !! Could not fetch move data for {move_api_name!r} — skipping")
+                print(f"  !! Could not fetch {move_api_name!r} — skipping")
                 continue
-            move_cache[move_api_name] = raw
+            move_cache[move_api_name] = _slim_move_data(raw)
+            save_move_cache(move_cache, move_cache_path)
             time.sleep(REQUEST_DELAY)
         display = api_name_to_display(move_api_name)
         move_entries.append(build_move_entry(display, move_api_name, raw))

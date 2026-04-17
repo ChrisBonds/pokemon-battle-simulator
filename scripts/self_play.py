@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from simulator.battle import Battle
 from simulator.data_loader import load_all
 from simulator.genome import FamilyType, Genome, random_genome
-from simulator.team_builder import build_team, FAMILY_ARCHETYPE, STRATEGY_ARCHETYPE
+from simulator.team_builder import build_team
 from simulator.trainer import Trainer
 
 FAMILIES = [FamilyType.RANDOM, FamilyType.GREEDY, FamilyType.STALL, FamilyType.SETUP]
@@ -30,13 +30,7 @@ DEFAULT_UNCERTAINTIES = [0.0, 0.1, 0.2, 0.3, 0.5, 0.75, 1.0]
 
 
 def _get_team(roster: list, family: FamilyType, team_mode: str, rng: random.Random) -> list:
-    if team_mode == "matched":
-        archetype = FAMILY_ARCHETYPE.get(family, "random")
-    elif team_mode == "fixed":
-        archetype = "balanced"
-    else:
-        archetype = "random"
-    return build_team(roster, archetype=archetype, rng=rng)
+    return build_team(roster, rng=rng)
 
 
 def _record_battle(result, family1: str, family2: str, t1_team_names: list, t2_team_names: list) -> dict:
