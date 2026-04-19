@@ -12,6 +12,7 @@ class FamilyType(Enum):
     STALL = "stall"
     SETUP = "setup"
     RANDOM = "random"
+    MINIMAX = "minimax"
 
 
 @dataclass

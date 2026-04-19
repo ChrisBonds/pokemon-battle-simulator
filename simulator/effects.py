@@ -26,6 +26,7 @@ def apply_secondary(move: "Move", attacker: "Pokemon", defender: "Pokemon", batt
             stat = effect["stat"]
             stages = effect["stages"]
             desc = target.apply_stage(stat, stages)
+            attacker.stat_stages_gained += abs(stages)
             stat_display = stat.replace("_", "").upper()
             battle._emit(f"  {target.name}'s {stat_display} {desc}")
 

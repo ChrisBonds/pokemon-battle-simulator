@@ -1,0 +1,1955 @@
+{
+  "config": {
+    "generations": 50,
+    "agents_per_family": 8,
+    "seed": 42
+  },
+  "gen0_roster": {
+    "pokemon_frequency": {
+      "Girafarig": 6,
+      "Walrein": 5,
+      "Hydreigon": 5,
+      "Toxicroak": 4,
+      "Magcargo": 3,
+      "Mamoswine": 3,
+      "Trevenant": 3,
+      "Bronzong": 3,
+      "Roserade": 3,
+      "Rufflet": 3,
+      "Gourgeist Average": 3,
+      "Articuno": 3,
+      "Rotom": 3,
+      "Wigglytuff": 3,
+      "Dewgong": 3,
+      "Reshiram": 3,
+      "Camerupt": 3,
+      "Chatot": 3,
+      "Shiftry": 2,
+      "Venonat": 2,
+      "Houndoom": 2,
+      "Dragonite": 2,
+      "Pawniard": 2,
+      "Terrakion": 2,
+      "Gloom": 2,
+      "Chinchou": 2,
+      "Lucario": 2,
+      "Scyther": 2,
+      "Infernape": 2,
+      "Whimsicott": 2,
+      "Deino": 2,
+      "Swellow": 2,
+      "Gardevoir": 2,
+      "Marshtomp": 2,
+      "Dedenne": 2,
+      "Durant": 2,
+      "Salamence": 2,
+      "Venomoth": 2,
+      "Thundurus Incarnate": 2,
+      "Abomasnow": 2,
+      "Zekrom": 2,
+      "Croagunk": 2,
+      "Tyranitar": 2,
+      "Torterra": 2,
+      "Cobalion": 2,
+      "Joltik": 2,
+      "Leavanny": 2,
+      "Medicham": 2,
+      "Virizion": 2,
+      "Larvesta": 2,
+      "Barbaracle": 2,
+      "Breloom": 2,
+      "Scizor": 2,
+      "Haunter": 2,
+      "Volcanion": 2,
+      "Rhyperior": 2,
+      "Klefki": 2,
+      "Krookodile": 2,
+      "Lugia": 1,
+      "Golurk": 1,
+      "Altaria": 1,
+      "Keldeo Ordinary": 1,
+      "Heliolisk": 1,
+      "Zweilous": 1,
+      "Genesect": 1,
+      "Azumarill": 1,
+      "Corsola": 1,
+      "Stunfisk": 1,
+      "Giratina Altered": 1,
+      "Heatran": 1,
+      "Froslass": 1,
+      "Drapion": 1,
+      "Gabite": 1,
+      "Greninja": 1,
+      "Crustle": 1,
+      "Starmie": 1,
+      "Litleo": 1,
+      "Jynx": 1,
+      "Kingdra": 1,
+      "Galvantula": 1,
+      "Honedge": 1,
+      "Krokorok": 1,
+      "Spiritomb": 1,
+      "Rayquaza": 1,
+      "Dragalge": 1,
+      "Talonflame": 1,
+      "Seismitoad": 1,
+      "Slowking": 1,
+      "Tyrunt": 1,
+      "Latios": 1,
+      "Bastiodon": 1,
+      "Frillish Male": 1,
+      "Tranquill": 1,
+      "Combusken": 1,
+      "Latias": 1,
+      "Yveltal": 1,
+      "Snover": 1,
+      "Victreebel": 1,
+      "Garchomp": 1,
+      "Dialga": 1,
+      "Golem": 1,
+      "Chesnaught": 1,
+      "Aegislash Shield": 1,
+      "Solrock": 1,
+      "Lanturn": 1,
+      "Delibird": 1,
+      "Togetic": 1,
+      "Aggron": 1
+    },
+    "type_distribution": {
+      "grass": 28,
+      "dragon": 28,
+      "flying": 27,
+      "water": 26,
+      "dark": 23,
+      "fighting": 23,
+      "steel": 22,
+      "fire": 21,
+      "ground": 21,
+      "ice": 20,
+      "psychic": 20,
+      "poison": 20,
+      "normal": 20,
+      "bug": 19,
+      "rock": 18,
+      "ghost": 18,
+      "electric": 17,
+      "fairy": 13
+    },
+    "mean_bst": 486.8645833333333,
+    "total_slots": 192,
+    "by_family": {
+      "greedy": {
+        "pokemon_frequency": {
+          "Walrein": 2,
+          "Venonat": 2,
+          "Mamoswine": 2,
+          "Articuno": 2,
+          "Girafarig": 2,
+          "Shiftry": 1,
+          "Lugia": 1,
+          "Magcargo": 1,
+          "Golurk": 1,
+          "Toxicroak": 1,
+          "Trevenant": 1,
+          "Bronzong": 1,
+          "Houndoom": 1,
+          "Altaria": 1,
+          "Infernape": 1,
+          "Corsola": 1,
+          "Whimsicott": 1,
+          "Stunfisk": 1,
+          "Giratina Altered": 1,
+          "Deino": 1,
+          "Swellow": 1,
+          "Roserade": 1,
+          "Gardevoir": 1,
+          "Heatran": 1,
+          "Kingdra": 1,
+          "Galvantula": 1,
+          "Virizion": 1,
+          "Honedge": 1,
+          "Camerupt": 1,
+          "Victreebel": 1,
+          "Lucario": 1,
+          "Garchomp": 1,
+          "Larvesta": 1,
+          "Barbaracle": 1,
+          "Klefki": 1,
+          "Rhyperior": 1,
+          "Chesnaught": 1,
+          "Rufflet": 1,
+          "Reshiram": 1,
+          "Togetic": 1,
+          "Dewgong": 1,
+          "Aggron": 1,
+          "Rotom": 1
+        },
+        "type_distribution": {
+          "grass": 7,
+          "ice": 7,
+          "flying": 7,
+          "fire": 7,
+          "ground": 7,
+          "water": 6,
+          "steel": 6,
+          "dragon": 6,
+          "psychic": 5,
+          "rock": 5,
+          "ghost": 5,
+          "poison": 5,
+          "fighting": 5,
+          "bug": 4,
+          "fairy": 4,
+          "normal": 4,
+          "dark": 3,
+          "electric": 3
+        },
+        "mean_bst": 490.7708333333333,
+        "total_slots": 48
+      },
+      "stall": {
+        "pokemon_frequency": {
+          "Rufflet": 2,
+          "Gloom": 2,
+          "Chinchou": 2,
+          "Gourgeist Average": 2,
+          "Krookodile": 2,
+          "Terrakion": 1,
+          "Zweilous": 1,
+          "Genesect": 1,
+          "Infernape": 1,
+          "Marshtomp": 1,
+          "Froslass": 1,
+          "Dragonite": 1,
+          "Dedenne": 1,
+          "Durant": 1,
+          "Reshiram": 1,
+          "Venomoth": 1,
+          "Cobalion": 1,
+          "Trevenant": 1,
+          "Jynx": 1,
+          "Pawniard": 1,
+          "Girafarig": 1,
+          "Dragalge": 1,
+          "Talonflame": 1,
+          "Seismitoad": 1,
+          "Dialga": 1,
+          "Joltik": 1,
+          "Walrein": 1,
+          "Golem": 1,
+          "Breloom": 1,
+          "Klefki": 1,
+          "Chatot": 1,
+          "Medicham": 1,
+          "Zekrom": 1,
+          "Toxicroak": 1,
+          "Salamence": 1,
+          "Leavanny": 1,
+          "Dewgong": 1,
+          "Aegislash Shield": 1,
+          "Camerupt": 1,
+          "Solrock": 1,
+          "Lanturn": 1,
+          "Hydreigon": 1,
+          "Delibird": 1
+        },
+        "type_distribution": {
+          "dragon": 8,
+          "flying": 7,
+          "grass": 7,
+          "steel": 7,
+          "water": 7,
+          "fighting": 6,
+          "electric": 6,
+          "ground": 6,
+          "dark": 5,
+          "poison": 5,
+          "bug": 5,
+          "ice": 5,
+          "ghost": 5,
+          "normal": 4,
+          "fire": 4,
+          "psychic": 4,
+          "rock": 3,
+          "fairy": 2
+        },
+        "mean_bst": 478.6666666666667,
+        "total_slots": 48
+      },
+      "setup": {
+        "pokemon_frequency": {
+          "Rotom": 2,
+          "Girafarig": 2,
+          "Toxicroak": 2,
+          "Hydreigon": 2,
+          "Thundurus Incarnate": 2,
+          "Scizor": 2,
+          "Chatot": 2,
+          "Dragonite": 1,
+          "Keldeo Ordinary": 1,
+          "Pawniard": 1,
+          "Roserade": 1,
+          "Heliolisk": 1,
+          "Mamoswine": 1,
+          "Drapion": 1,
+          "Scyther": 1,
+          "Gardevoir": 1,
+          "Magcargo": 1,
+          "Gabite": 1,
+          "Crustle": 1,
+          "Abomasnow": 1,
+          "Breloom": 1,
+          "Marshtomp": 1,
+          "Spiritomb": 1,
+          "Rayquaza": 1,
+          "Dedenne": 1,
+          "Shiftry": 1,
+          "Slowking": 1,
+          "Tyrunt": 1,
+          "Camerupt": 1,
+          "Torterra": 1,
+          "Wigglytuff": 1,
+          "Combusken": 1,
+          "Walrein": 1,
+          "Haunter": 1,
+          "Deino": 1,
+          "Articuno": 1,
+          "Durant": 1,
+          "Virizion": 1,
+          "Volcanion": 1,
+          "Bronzong": 1,
+          "Whimsicott": 1
+        },
+        "type_distribution": {
+          "flying": 8,
+          "dragon": 7,
+          "dark": 7,
+          "grass": 7,
+          "fighting": 6,
+          "electric": 6,
+          "normal": 6,
+          "water": 5,
+          "steel": 5,
+          "poison": 5,
+          "ground": 5,
+          "bug": 5,
+          "psychic": 5,
+          "ice": 4,
+          "ghost": 4,
+          "fairy": 4,
+          "fire": 4,
+          "rock": 3
+        },
+        "mean_bst": 487.75,
+        "total_slots": 48
+      },
+      "random": {
+        "pokemon_frequency": {
+          "Hydreigon": 2,
+          "Wigglytuff": 2,
+          "Croagunk": 2,
+          "Tyranitar": 2,
+          "Lucario": 1,
+          "Scyther": 1,
+          "Magcargo": 1,
+          "Gourgeist Average": 1,
+          "Azumarill": 1,
+          "Greninja": 1,
+          "Salamence": 1,
+          "Terrakion": 1,
+          "Venomoth": 1,
+          "Bronzong": 1,
+          "Zekrom": 1,
+          "Walrein": 1,
+          "Torterra": 1,
+          "Roserade": 1,
+          "Cobalion": 1,
+          "Starmie": 1,
+          "Joltik": 1,
+          "Litleo": 1,
+          "Leavanny": 1,
+          "Dewgong": 1,
+          "Swellow": 1,
+          "Medicham": 1,
+          "Reshiram": 1,
+          "Larvesta": 1,
+          "Barbaracle": 1,
+          "Krokorok": 1,
+          "Girafarig": 1,
+          "Trevenant": 1,
+          "Abomasnow": 1,
+          "Latios": 1,
+          "Houndoom": 1,
+          "Bastiodon": 1,
+          "Frillish Male": 1,
+          "Tranquill": 1,
+          "Latias": 1,
+          "Haunter": 1,
+          "Volcanion": 1,
+          "Rhyperior": 1,
+          "Yveltal": 1,
+          "Snover": 1
+        },
+        "type_distribution": {
+          "dark": 8,
+          "water": 8,
+          "dragon": 7,
+          "rock": 7,
+          "grass": 7,
+          "fighting": 6,
+          "fire": 6,
+          "normal": 6,
+          "psychic": 6,
+          "bug": 5,
+          "flying": 5,
+          "poison": 5,
+          "steel": 4,
+          "ghost": 4,
+          "ice": 4,
+          "fairy": 3,
+          "ground": 3,
+          "electric": 2
+        },
+        "mean_bst": 490.2708333333333,
+        "total_slots": 48
+      }
+    }
+  },
+  "final_roster": {
+    "pokemon_frequency": {
+      "Yveltal": 12,
+      "Aegislash Shield": 10,
+      "Camerupt": 10,
+      "Terrakion": 6,
+      "Lucario": 6,
+      "Keldeo Ordinary": 6,
+      "Rayquaza": 6,
+      "Reshiram": 6,
+      "Lugia": 5,
+      "Giratina Altered": 5,
+      "Volcanion": 5,
+      "Infernape": 5,
+      "Dialga": 5,
+      "Walrein": 5,
+      "Gourgeist Average": 5,
+      "Heatran": 5,
+      "Garchomp": 5,
+      "Trevenant": 4,
+      "Toxicroak": 4,
+      "Bronzong": 3,
+      "Kingdra": 3,
+      "Hydreigon": 3,
+      "Stunfisk": 3,
+      "Salamence": 3,
+      "Wigglytuff": 2,
+      "Houndoom": 2,
+      "Cobalion": 2,
+      "Bastiodon": 2,
+      "Golurk": 1,
+      "Mamoswine": 1,
+      "Roserade": 1,
+      "Genesect": 1,
+      "Articuno": 1,
+      "Scyther": 1,
+      "Gardevoir": 1,
+      "Latias": 1,
+      "Thundurus Incarnate": 1,
+      "Talonflame": 1,
+      "Frillish Male": 1,
+      "Scizor": 1,
+      "Haunter": 1,
+      "Whimsicott": 1,
+      "Durant": 1,
+      "Lanturn": 1
+    },
+    "type_distribution": {
+      "dragon": 37,
+      "steel": 36,
+      "fire": 34,
+      "flying": 30,
+      "fighting": 29,
+      "ghost": 27,
+      "water": 21,
+      "ground": 20,
+      "dark": 17,
+      "grass": 11,
+      "psychic": 10,
+      "rock": 8,
+      "ice": 7,
+      "poison": 6,
+      "electric": 5,
+      "fairy": 4,
+      "bug": 4,
+      "normal": 2
+    },
+    "mean_bst": 565.5714285714286,
+    "total_slots": 154,
+    "by_family": {
+      "greedy": {
+        "pokemon_frequency": {
+          "Lucario": 4,
+          "Giratina Altered": 3,
+          "Volcanion": 3,
+          "Infernape": 3,
+          "Lugia": 2,
+          "Kingdra": 2,
+          "Aegislash Shield": 2,
+          "Heatran": 2,
+          "Camerupt": 2,
+          "Garchomp": 2,
+          "Golurk": 1,
+          "Wigglytuff": 1,
+          "Terrakion": 1,
+          "Yveltal": 1,
+          "Bronzong": 1,
+          "Houndoom": 1,
+          "Mamoswine": 1,
+          "Stunfisk": 1,
+          "Articuno": 1,
+          "Rayquaza": 1,
+          "Durant": 1,
+          "Trevenant": 1
+        },
+        "type_distribution": {
+          "fire": 11,
+          "steel": 10,
+          "fighting": 8,
+          "dragon": 8,
+          "ground": 7,
+          "ghost": 7,
+          "flying": 5,
+          "water": 5,
+          "psychic": 3,
+          "dark": 2,
+          "ice": 2,
+          "normal": 1,
+          "fairy": 1,
+          "rock": 1,
+          "electric": 1,
+          "bug": 1,
+          "grass": 1
+        },
+        "mean_bst": 559.4324324324324,
+        "total_slots": 37
+      },
+      "stall": {
+        "pokemon_frequency": {
+          "Aegislash Shield": 7,
+          "Yveltal": 4,
+          "Dialga": 4,
+          "Gourgeist Average": 3,
+          "Toxicroak": 3,
+          "Rayquaza": 2,
+          "Hydreigon": 2,
+          "Trevenant": 2,
+          "Bastiodon": 2,
+          "Bronzong": 2,
+          "Terrakion": 1,
+          "Genesect": 1,
+          "Reshiram": 1,
+          "Cobalion": 1,
+          "Frillish Male": 1,
+          "Garchomp": 1,
+          "Stunfisk": 1,
+          "Giratina Altered": 1,
+          "Camerupt": 1,
+          "Lanturn": 1,
+          "Lugia": 1
+        },
+        "type_distribution": {
+          "steel": 17,
+          "ghost": 14,
+          "dragon": 11,
+          "flying": 7,
+          "dark": 6,
+          "fighting": 5,
+          "grass": 5,
+          "rock": 3,
+          "ground": 3,
+          "psychic": 3,
+          "poison": 3,
+          "fire": 2,
+          "water": 2,
+          "electric": 2,
+          "bug": 1
+        },
+        "mean_bst": 559.9047619047619,
+        "total_slots": 42
+      },
+      "setup": {
+        "pokemon_frequency": {
+          "Keldeo Ordinary": 5,
+          "Walrein": 3,
+          "Terrakion": 3,
+          "Yveltal": 3,
+          "Camerupt": 3,
+          "Heatran": 2,
+          "Reshiram": 2,
+          "Rayquaza": 2,
+          "Salamence": 2,
+          "Roserade": 1,
+          "Infernape": 1,
+          "Dialga": 1,
+          "Aegislash Shield": 1,
+          "Scyther": 1,
+          "Gardevoir": 1,
+          "Latias": 1,
+          "Giratina Altered": 1,
+          "Scizor": 1,
+          "Cobalion": 1,
+          "Volcanion": 1,
+          "Whimsicott": 1,
+          "Garchomp": 1
+        },
+        "type_distribution": {
+          "fighting": 10,
+          "dragon": 10,
+          "water": 9,
+          "fire": 9,
+          "flying": 8,
+          "steel": 6,
+          "ground": 4,
+          "ice": 3,
+          "rock": 3,
+          "dark": 3,
+          "grass": 2,
+          "ghost": 2,
+          "bug": 2,
+          "psychic": 2,
+          "fairy": 2,
+          "poison": 1
+        },
+        "mean_bst": 580.4473684210526,
+        "total_slots": 38
+      },
+      "random": {
+        "pokemon_frequency": {
+          "Yveltal": 4,
+          "Camerupt": 4,
+          "Reshiram": 3,
+          "Lucario": 2,
+          "Walrein": 2,
+          "Gourgeist Average": 2,
+          "Lugia": 2,
+          "Wigglytuff": 1,
+          "Terrakion": 1,
+          "Trevenant": 1,
+          "Toxicroak": 1,
+          "Kingdra": 1,
+          "Houndoom": 1,
+          "Hydreigon": 1,
+          "Garchomp": 1,
+          "Stunfisk": 1,
+          "Heatran": 1,
+          "Thundurus Incarnate": 1,
+          "Infernape": 1,
+          "Rayquaza": 1,
+          "Volcanion": 1,
+          "Talonflame": 1,
+          "Salamence": 1,
+          "Haunter": 1,
+          "Keldeo Ordinary": 1
+        },
+        "type_distribution": {
+          "fire": 12,
+          "flying": 10,
+          "dragon": 8,
+          "fighting": 6,
+          "dark": 6,
+          "ground": 6,
+          "water": 5,
+          "ghost": 4,
+          "steel": 3,
+          "grass": 3,
+          "ice": 2,
+          "poison": 2,
+          "electric": 2,
+          "psychic": 2,
+          "normal": 1,
+          "fairy": 1,
+          "rock": 1
+        },
+        "mean_bst": 562.8648648648649,
+        "total_slots": 37
+      }
+    }
+  },
+  "gen0_bst_histogram": {
+    "300-349": 16,
+    "350-399": 11,
+    "400-449": 26,
+    "450-499": 55,
+    "500-549": 44,
+    "550-599": 12,
+    "600-649": 18,
+    "650-699": 10
+  },
+  "final_bst_histogram": {
+    "300-349": 1,
+    "400-449": 3,
+    "450-499": 33,
+    "500-549": 39,
+    "550-599": 16,
+    "600-649": 23,
+    "650-699": 39
+  },
+  "species_dropped": [
+    "Abomasnow",
+    "Aggron",
+    "Altaria",
+    "Azumarill",
+    "Barbaracle",
+    "Breloom",
+    "Chatot",
+    "Chesnaught",
+    "Chinchou",
+    "Combusken",
+    "Corsola",
+    "Croagunk",
+    "Crustle",
+    "Dedenne",
+    "Deino",
+    "Delibird",
+    "Dewgong",
+    "Dragalge",
+    "Dragonite",
+    "Drapion",
+    "Froslass",
+    "Gabite",
+    "Galvantula",
+    "Girafarig",
+    "Gloom",
+    "Golem",
+    "Greninja",
+    "Heliolisk",
+    "Honedge",
+    "Joltik",
+    "Jynx",
+    "Klefki",
+    "Krokorok",
+    "Krookodile",
+    "Larvesta",
+    "Latios",
+    "Leavanny",
+    "Litleo",
+    "Magcargo",
+    "Marshtomp",
+    "Medicham",
+    "Pawniard",
+    "Rhyperior",
+    "Rotom",
+    "Rufflet",
+    "Seismitoad",
+    "Shiftry",
+    "Slowking",
+    "Snover",
+    "Solrock",
+    "Spiritomb",
+    "Starmie",
+    "Swellow",
+    "Togetic",
+    "Torterra",
+    "Tranquill",
+    "Tyranitar",
+    "Tyrunt",
+    "Venomoth",
+    "Venonat",
+    "Victreebel",
+    "Virizion",
+    "Zekrom",
+    "Zweilous"
+  ],
+  "species_gained_relative_prominence": [],
+  "final_gen_performance": {
+    "pokemon_stats": [
+      {
+        "name": "Yveltal",
+        "family": "stall",
+        "bst": 680,
+        "types": [
+          "dark",
+          "flying"
+        ],
+        "kos": 632,
+        "turns_active": 2347,
+        "stat_stages": 10
+      },
+      {
+        "name": "Aegislash Shield",
+        "family": "stall",
+        "bst": 500,
+        "types": [
+          "steel",
+          "ghost"
+        ],
+        "kos": 313,
+        "turns_active": 2379,
+        "stat_stages": 196
+      },
+      {
+        "name": "Camerupt",
+        "family": "stall",
+        "bst": 460,
+        "types": [
+          "fire",
+          "ground"
+        ],
+        "kos": 216,
+        "turns_active": 772,
+        "stat_stages": 95
+      },
+      {
+        "name": "Keldeo Ordinary",
+        "family": "setup",
+        "bst": 580,
+        "types": [
+          "water",
+          "fighting"
+        ],
+        "kos": 172,
+        "turns_active": 732,
+        "stat_stages": 618
+      },
+      {
+        "name": "Infernape",
+        "family": "greedy",
+        "bst": 534,
+        "types": [
+          "fire",
+          "fighting"
+        ],
+        "kos": 160,
+        "turns_active": 377,
+        "stat_stages": 26
+      },
+      {
+        "name": "Dialga",
+        "family": "stall",
+        "bst": 680,
+        "types": [
+          "steel",
+          "dragon"
+        ],
+        "kos": 159,
+        "turns_active": 901,
+        "stat_stages": 5
+      },
+      {
+        "name": "Heatran",
+        "family": "setup",
+        "bst": 600,
+        "types": [
+          "fire",
+          "steel"
+        ],
+        "kos": 159,
+        "turns_active": 882,
+        "stat_stages": 593
+      },
+      {
+        "name": "Garchomp",
+        "family": "stall",
+        "bst": 600,
+        "types": [
+          "dragon",
+          "ground"
+        ],
+        "kos": 158,
+        "turns_active": 364,
+        "stat_stages": 104
+      },
+      {
+        "name": "Lucario",
+        "family": "greedy",
+        "bst": 525,
+        "types": [
+          "fighting",
+          "steel"
+        ],
+        "kos": 148,
+        "turns_active": 595,
+        "stat_stages": 46
+      },
+      {
+        "name": "Terrakion",
+        "family": "setup",
+        "bst": 580,
+        "types": [
+          "rock",
+          "fighting"
+        ],
+        "kos": 141,
+        "turns_active": 439,
+        "stat_stages": 113
+      },
+      {
+        "name": "Toxicroak",
+        "family": "stall",
+        "bst": 490,
+        "types": [
+          "poison",
+          "fighting"
+        ],
+        "kos": 132,
+        "turns_active": 615,
+        "stat_stages": 30
+      },
+      {
+        "name": "Volcanion",
+        "family": "setup",
+        "bst": 600,
+        "types": [
+          "fire",
+          "water"
+        ],
+        "kos": 131,
+        "turns_active": 418,
+        "stat_stages": 226
+      },
+      {
+        "name": "Rayquaza",
+        "family": "setup",
+        "bst": 680,
+        "types": [
+          "dragon",
+          "flying"
+        ],
+        "kos": 107,
+        "turns_active": 325,
+        "stat_stages": 96
+      },
+      {
+        "name": "Giratina Altered",
+        "family": "stall",
+        "bst": 680,
+        "types": [
+          "ghost",
+          "dragon"
+        ],
+        "kos": 103,
+        "turns_active": 347,
+        "stat_stages": 30
+      },
+      {
+        "name": "Walrein",
+        "family": "setup",
+        "bst": 530,
+        "types": [
+          "ice",
+          "water"
+        ],
+        "kos": 99,
+        "turns_active": 396,
+        "stat_stages": 18
+      },
+      {
+        "name": "Lugia",
+        "family": "stall",
+        "bst": 680,
+        "types": [
+          "psychic",
+          "flying"
+        ],
+        "kos": 92,
+        "turns_active": 1227,
+        "stat_stages": 2
+      },
+      {
+        "name": "Reshiram",
+        "family": "setup",
+        "bst": 680,
+        "types": [
+          "dragon",
+          "fire"
+        ],
+        "kos": 86,
+        "turns_active": 722,
+        "stat_stages": 180
+      },
+      {
+        "name": "Gourgeist Average",
+        "family": "stall",
+        "bst": 494,
+        "types": [
+          "ghost",
+          "grass"
+        ],
+        "kos": 64,
+        "turns_active": 366,
+        "stat_stages": 11
+      },
+      {
+        "name": "Kingdra",
+        "family": "random",
+        "bst": 540,
+        "types": [
+          "water",
+          "dragon"
+        ],
+        "kos": 64,
+        "turns_active": 252,
+        "stat_stages": 40
+      },
+      {
+        "name": "Bronzong",
+        "family": "stall",
+        "bst": 500,
+        "types": [
+          "steel",
+          "psychic"
+        ],
+        "kos": 63,
+        "turns_active": 679,
+        "stat_stages": 0
+      },
+      {
+        "name": "Bastiodon",
+        "family": "stall",
+        "bst": 495,
+        "types": [
+          "rock",
+          "steel"
+        ],
+        "kos": 52,
+        "turns_active": 676,
+        "stat_stages": 6
+      },
+      {
+        "name": "Hydreigon",
+        "family": "stall",
+        "bst": 600,
+        "types": [
+          "dark",
+          "dragon"
+        ],
+        "kos": 51,
+        "turns_active": 170,
+        "stat_stages": 23
+      },
+      {
+        "name": "Cobalion",
+        "family": "setup",
+        "bst": 580,
+        "types": [
+          "steel",
+          "fighting"
+        ],
+        "kos": 40,
+        "turns_active": 260,
+        "stat_stages": 79
+      },
+      {
+        "name": "Salamence",
+        "family": "setup",
+        "bst": 600,
+        "types": [
+          "dragon",
+          "flying"
+        ],
+        "kos": 40,
+        "turns_active": 165,
+        "stat_stages": 42
+      },
+      {
+        "name": "Houndoom",
+        "family": "random",
+        "bst": 500,
+        "types": [
+          "dark",
+          "fire"
+        ],
+        "kos": 37,
+        "turns_active": 124,
+        "stat_stages": 48
+      },
+      {
+        "name": "Stunfisk",
+        "family": "stall",
+        "bst": 471,
+        "types": [
+          "ground",
+          "electric"
+        ],
+        "kos": 35,
+        "turns_active": 203,
+        "stat_stages": 6
+      },
+      {
+        "name": "Golurk",
+        "family": "greedy",
+        "bst": 483,
+        "types": [
+          "ground",
+          "ghost"
+        ],
+        "kos": 34,
+        "turns_active": 66,
+        "stat_stages": 1
+      },
+      {
+        "name": "Mamoswine",
+        "family": "greedy",
+        "bst": 530,
+        "types": [
+          "ice",
+          "ground"
+        ],
+        "kos": 27,
+        "turns_active": 74,
+        "stat_stages": 0
+      },
+      {
+        "name": "Wigglytuff",
+        "family": "random",
+        "bst": 435,
+        "types": [
+          "normal",
+          "fairy"
+        ],
+        "kos": 25,
+        "turns_active": 169,
+        "stat_stages": 1
+      },
+      {
+        "name": "Gardevoir",
+        "family": "setup",
+        "bst": 518,
+        "types": [
+          "psychic",
+          "fairy"
+        ],
+        "kos": 25,
+        "turns_active": 267,
+        "stat_stages": 68
+      },
+      {
+        "name": "Whimsicott",
+        "family": "setup",
+        "bst": 480,
+        "types": [
+          "grass",
+          "fairy"
+        ],
+        "kos": 25,
+        "turns_active": 55,
+        "stat_stages": 14
+      },
+      {
+        "name": "Latias",
+        "family": "setup",
+        "bst": 600,
+        "types": [
+          "dragon",
+          "psychic"
+        ],
+        "kos": 21,
+        "turns_active": 45,
+        "stat_stages": 23
+      },
+      {
+        "name": "Articuno",
+        "family": "greedy",
+        "bst": 580,
+        "types": [
+          "ice",
+          "flying"
+        ],
+        "kos": 19,
+        "turns_active": 58,
+        "stat_stages": 0
+      },
+      {
+        "name": "Trevenant",
+        "family": "greedy",
+        "bst": 474,
+        "types": [
+          "ghost",
+          "grass"
+        ],
+        "kos": 19,
+        "turns_active": 142,
+        "stat_stages": 3
+      },
+      {
+        "name": "Scizor",
+        "family": "setup",
+        "bst": 500,
+        "types": [
+          "bug",
+          "steel"
+        ],
+        "kos": 15,
+        "turns_active": 23,
+        "stat_stages": 4
+      },
+      {
+        "name": "Thundurus Incarnate",
+        "family": "random",
+        "bst": 580,
+        "types": [
+          "electric",
+          "flying"
+        ],
+        "kos": 14,
+        "turns_active": 82,
+        "stat_stages": 0
+      },
+      {
+        "name": "Genesect",
+        "family": "stall",
+        "bst": 600,
+        "types": [
+          "bug",
+          "steel"
+        ],
+        "kos": 14,
+        "turns_active": 87,
+        "stat_stages": 5
+      },
+      {
+        "name": "Roserade",
+        "family": "setup",
+        "bst": 515,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "kos": 12,
+        "turns_active": 33,
+        "stat_stages": 0
+      },
+      {
+        "name": "Lanturn",
+        "family": "stall",
+        "bst": 460,
+        "types": [
+          "water",
+          "electric"
+        ],
+        "kos": 6,
+        "turns_active": 60,
+        "stat_stages": 0
+      },
+      {
+        "name": "Scyther",
+        "family": "setup",
+        "bst": 500,
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "kos": 5,
+        "turns_active": 76,
+        "stat_stages": 14
+      },
+      {
+        "name": "Haunter",
+        "family": "random",
+        "bst": 405,
+        "types": [
+          "ghost",
+          "poison"
+        ],
+        "kos": 3,
+        "turns_active": 69,
+        "stat_stages": 0
+      },
+      {
+        "name": "Durant",
+        "family": "greedy",
+        "bst": 484,
+        "types": [
+          "bug",
+          "steel"
+        ],
+        "kos": 0,
+        "turns_active": 0,
+        "stat_stages": 0
+      },
+      {
+        "name": "Talonflame",
+        "family": "random",
+        "bst": 499,
+        "types": [
+          "fire",
+          "flying"
+        ],
+        "kos": 0,
+        "turns_active": 0,
+        "stat_stages": 0
+      },
+      {
+        "name": "Frillish Male",
+        "family": "stall",
+        "bst": 335,
+        "types": [
+          "water",
+          "ghost"
+        ],
+        "kos": 0,
+        "turns_active": 0,
+        "stat_stages": 0
+      }
+    ],
+    "top_10_by_kos": [
+      {
+        "name": "Yveltal",
+        "family": "stall",
+        "bst": 680,
+        "types": [
+          "dark",
+          "flying"
+        ],
+        "kos": 632,
+        "turns_active": 2347,
+        "stat_stages": 10
+      },
+      {
+        "name": "Aegislash Shield",
+        "family": "stall",
+        "bst": 500,
+        "types": [
+          "steel",
+          "ghost"
+        ],
+        "kos": 313,
+        "turns_active": 2379,
+        "stat_stages": 196
+      },
+      {
+        "name": "Camerupt",
+        "family": "stall",
+        "bst": 460,
+        "types": [
+          "fire",
+          "ground"
+        ],
+        "kos": 216,
+        "turns_active": 772,
+        "stat_stages": 95
+      },
+      {
+        "name": "Keldeo Ordinary",
+        "family": "setup",
+        "bst": 580,
+        "types": [
+          "water",
+          "fighting"
+        ],
+        "kos": 172,
+        "turns_active": 732,
+        "stat_stages": 618
+      },
+      {
+        "name": "Infernape",
+        "family": "greedy",
+        "bst": 534,
+        "types": [
+          "fire",
+          "fighting"
+        ],
+        "kos": 160,
+        "turns_active": 377,
+        "stat_stages": 26
+      },
+      {
+        "name": "Dialga",
+        "family": "stall",
+        "bst": 680,
+        "types": [
+          "steel",
+          "dragon"
+        ],
+        "kos": 159,
+        "turns_active": 901,
+        "stat_stages": 5
+      },
+      {
+        "name": "Heatran",
+        "family": "setup",
+        "bst": 600,
+        "types": [
+          "fire",
+          "steel"
+        ],
+        "kos": 159,
+        "turns_active": 882,
+        "stat_stages": 593
+      },
+      {
+        "name": "Garchomp",
+        "family": "stall",
+        "bst": 600,
+        "types": [
+          "dragon",
+          "ground"
+        ],
+        "kos": 158,
+        "turns_active": 364,
+        "stat_stages": 104
+      },
+      {
+        "name": "Lucario",
+        "family": "greedy",
+        "bst": 525,
+        "types": [
+          "fighting",
+          "steel"
+        ],
+        "kos": 148,
+        "turns_active": 595,
+        "stat_stages": 46
+      },
+      {
+        "name": "Terrakion",
+        "family": "setup",
+        "bst": 580,
+        "types": [
+          "rock",
+          "fighting"
+        ],
+        "kos": 141,
+        "turns_active": 439,
+        "stat_stages": 113
+      }
+    ],
+    "top_10_by_survival": [
+      {
+        "name": "Aegislash Shield",
+        "family": "stall",
+        "bst": 500,
+        "types": [
+          "steel",
+          "ghost"
+        ],
+        "kos": 313,
+        "turns_active": 2379,
+        "stat_stages": 196
+      },
+      {
+        "name": "Yveltal",
+        "family": "stall",
+        "bst": 680,
+        "types": [
+          "dark",
+          "flying"
+        ],
+        "kos": 632,
+        "turns_active": 2347,
+        "stat_stages": 10
+      },
+      {
+        "name": "Lugia",
+        "family": "stall",
+        "bst": 680,
+        "types": [
+          "psychic",
+          "flying"
+        ],
+        "kos": 92,
+        "turns_active": 1227,
+        "stat_stages": 2
+      },
+      {
+        "name": "Dialga",
+        "family": "stall",
+        "bst": 680,
+        "types": [
+          "steel",
+          "dragon"
+        ],
+        "kos": 159,
+        "turns_active": 901,
+        "stat_stages": 5
+      },
+      {
+        "name": "Heatran",
+        "family": "setup",
+        "bst": 600,
+        "types": [
+          "fire",
+          "steel"
+        ],
+        "kos": 159,
+        "turns_active": 882,
+        "stat_stages": 593
+      },
+      {
+        "name": "Camerupt",
+        "family": "stall",
+        "bst": 460,
+        "types": [
+          "fire",
+          "ground"
+        ],
+        "kos": 216,
+        "turns_active": 772,
+        "stat_stages": 95
+      },
+      {
+        "name": "Keldeo Ordinary",
+        "family": "setup",
+        "bst": 580,
+        "types": [
+          "water",
+          "fighting"
+        ],
+        "kos": 172,
+        "turns_active": 732,
+        "stat_stages": 618
+      },
+      {
+        "name": "Reshiram",
+        "family": "setup",
+        "bst": 680,
+        "types": [
+          "dragon",
+          "fire"
+        ],
+        "kos": 86,
+        "turns_active": 722,
+        "stat_stages": 180
+      },
+      {
+        "name": "Bronzong",
+        "family": "stall",
+        "bst": 500,
+        "types": [
+          "steel",
+          "psychic"
+        ],
+        "kos": 63,
+        "turns_active": 679,
+        "stat_stages": 0
+      },
+      {
+        "name": "Bastiodon",
+        "family": "stall",
+        "bst": 495,
+        "types": [
+          "rock",
+          "steel"
+        ],
+        "kos": 52,
+        "turns_active": 676,
+        "stat_stages": 6
+      }
+    ]
+  },
+  "final_gen_moves": {
+    "top_moves_by_usage": [
+      {
+        "name": "Overheat",
+        "usage": 731,
+        "type": "fire",
+        "category": "special",
+        "power": 130,
+        "accuracy": 90
+      },
+      {
+        "name": "Dragon Pulse",
+        "usage": 683,
+        "type": "dragon",
+        "category": "special",
+        "power": 85,
+        "accuracy": 100
+      },
+      {
+        "name": "Roost",
+        "usage": 670,
+        "type": "flying",
+        "category": "status",
+        "power": null,
+        "accuracy": null
+      },
+      {
+        "name": "Shadow Ball",
+        "usage": 573,
+        "type": "ghost",
+        "category": "special",
+        "power": 80,
+        "accuracy": 100
+      },
+      {
+        "name": "Protect",
+        "usage": 544,
+        "type": "normal",
+        "category": "status",
+        "power": null,
+        "accuracy": null
+      },
+      {
+        "name": "Flash Cannon",
+        "usage": 464,
+        "type": "steel",
+        "category": "special",
+        "power": 80,
+        "accuracy": 100
+      },
+      {
+        "name": "Outrage",
+        "usage": 444,
+        "type": "dragon",
+        "category": "physical",
+        "power": 120,
+        "accuracy": 100
+      },
+      {
+        "name": "Aeroblast",
+        "usage": 399,
+        "type": "flying",
+        "category": "special",
+        "power": 100,
+        "accuracy": 95
+      },
+      {
+        "name": "Foul Play",
+        "usage": 397,
+        "type": "dark",
+        "category": "physical",
+        "power": 95,
+        "accuracy": 100
+      },
+      {
+        "name": "Sky Attack",
+        "usage": 393,
+        "type": "flying",
+        "category": "physical",
+        "power": 140,
+        "accuracy": 90
+      },
+      {
+        "name": "Earthquake",
+        "usage": 373,
+        "type": "ground",
+        "category": "physical",
+        "power": 100,
+        "accuracy": 100
+      },
+      {
+        "name": "Stone Edge",
+        "usage": 330,
+        "type": "rock",
+        "category": "physical",
+        "power": 100,
+        "accuracy": 80
+      },
+      {
+        "name": "Focus Punch",
+        "usage": 319,
+        "type": "fighting",
+        "category": "physical",
+        "power": 150,
+        "accuracy": 100
+      },
+      {
+        "name": "Surf",
+        "usage": 318,
+        "type": "water",
+        "category": "special",
+        "power": 90,
+        "accuracy": 100
+      },
+      {
+        "name": "Moonblast",
+        "usage": 288,
+        "type": "fairy",
+        "category": "special",
+        "power": 95,
+        "accuracy": 100
+      },
+      {
+        "name": "Draco Meteor",
+        "usage": 279,
+        "type": "dragon",
+        "category": "special",
+        "power": 130,
+        "accuracy": 90
+      },
+      {
+        "name": "Iron Head",
+        "usage": 276,
+        "type": "steel",
+        "category": "physical",
+        "power": 80,
+        "accuracy": 100
+      },
+      {
+        "name": "Toxic",
+        "usage": 276,
+        "type": "poison",
+        "category": "status",
+        "power": null,
+        "accuracy": 90
+      },
+      {
+        "name": "Superpower",
+        "usage": 275,
+        "type": "fighting",
+        "category": "physical",
+        "power": 120,
+        "accuracy": 100
+      },
+      {
+        "name": "Close Combat",
+        "usage": 273,
+        "type": "fighting",
+        "category": "physical",
+        "power": 120,
+        "accuracy": 100
+      },
+      {
+        "name": "Future Sight",
+        "usage": 243,
+        "type": "psychic",
+        "category": "special",
+        "power": 120,
+        "accuracy": 100
+      },
+      {
+        "name": "Fly",
+        "usage": 235,
+        "type": "flying",
+        "category": "physical",
+        "power": 90,
+        "accuracy": 95
+      },
+      {
+        "name": "Ice Beam",
+        "usage": 193,
+        "type": "ice",
+        "category": "special",
+        "power": 90,
+        "accuracy": 100
+      },
+      {
+        "name": "Thunder Wave",
+        "usage": 187,
+        "type": "electric",
+        "category": "status",
+        "power": null,
+        "accuracy": 90
+      },
+      {
+        "name": "Dream Eater",
+        "usage": 147,
+        "type": "psychic",
+        "category": "special",
+        "power": 100,
+        "accuracy": 100
+      },
+      {
+        "name": "Shadow Force",
+        "usage": 138,
+        "type": "ghost",
+        "category": "physical",
+        "power": 120,
+        "accuracy": 100
+      },
+      {
+        "name": "Dragon Claw",
+        "usage": 137,
+        "type": "dragon",
+        "category": "physical",
+        "power": 80,
+        "accuracy": 100
+      },
+      {
+        "name": "Eruption",
+        "usage": 137,
+        "type": "fire",
+        "category": "special",
+        "power": 150,
+        "accuracy": 100
+      },
+      {
+        "name": "Flamethrower",
+        "usage": 133,
+        "type": "fire",
+        "category": "special",
+        "power": 90,
+        "accuracy": 100
+      },
+      {
+        "name": "Blast Burn",
+        "usage": 131,
+        "type": "fire",
+        "category": "special",
+        "power": 150,
+        "accuracy": 90
+      }
+    ],
+    "category_usage_totals": {
+      "special": 6219,
+      "status": 1885,
+      "physical": 4591
+    },
+    "type_usage_totals": {
+      "flying": 1829,
+      "dragon": 1589,
+      "fire": 1380,
+      "fighting": 976,
+      "ghost": 947,
+      "normal": 755,
+      "steel": 741,
+      "ground": 602,
+      "water": 596,
+      "dark": 569,
+      "psychic": 543,
+      "poison": 493,
+      "electric": 400,
+      "rock": 347,
+      "fairy": 343,
+      "grass": 265,
+      "ice": 255,
+      "bug": 65
+    },
+    "moveset_category_composition": {
+      "special": 263,
+      "status": 86,
+      "physical": 267
+    },
+    "moveset_type_composition": {
+      "fire": 72,
+      "dragon": 62,
+      "fighting": 61,
+      "flying": 58,
+      "normal": 49,
+      "ghost": 42,
+      "water": 41,
+      "steel": 40,
+      "ground": 34,
+      "poison": 32,
+      "dark": 25,
+      "grass": 25,
+      "psychic": 20,
+      "electric": 20,
+      "rock": 12,
+      "ice": 10,
+      "bug": 8,
+      "fairy": 5
+    },
+    "top_30_moves_in_active_movesets": [
+      {
+        "name": "Protect",
+        "slots": 36
+      },
+      {
+        "name": "Overheat",
+        "slots": 20
+      },
+      {
+        "name": "Dragon Pulse",
+        "slots": 20
+      },
+      {
+        "name": "Flash Cannon",
+        "slots": 19
+      },
+      {
+        "name": "Fly",
+        "slots": 19
+      },
+      {
+        "name": "Toxic",
+        "slots": 18
+      },
+      {
+        "name": "Iron Head",
+        "slots": 16
+      },
+      {
+        "name": "Outrage",
+        "slots": 15
+      },
+      {
+        "name": "Shadow Ball",
+        "slots": 15
+      },
+      {
+        "name": "Focus Punch",
+        "slots": 14
+      },
+      {
+        "name": "Earthquake",
+        "slots": 13
+      },
+      {
+        "name": "Close Combat",
+        "slots": 13
+      },
+      {
+        "name": "Roost",
+        "slots": 11
+      },
+      {
+        "name": "Sky Attack",
+        "slots": 11
+      },
+      {
+        "name": "Foul Play",
+        "slots": 11
+      },
+      {
+        "name": "Dragon Claw",
+        "slots": 11
+      },
+      {
+        "name": "Draco Meteor",
+        "slots": 10
+      },
+      {
+        "name": "Superpower",
+        "slots": 10
+      },
+      {
+        "name": "Earth Power",
+        "slots": 9
+      },
+      {
+        "name": "Surf",
+        "slots": 9
+      },
+      {
+        "name": "Dig",
+        "slots": 9
+      },
+      {
+        "name": "Heat Wave",
+        "slots": 9
+      },
+      {
+        "name": "Focus Blast",
+        "slots": 8
+      },
+      {
+        "name": "Stone Edge",
+        "slots": 8
+      },
+      {
+        "name": "Fire Blast",
+        "slots": 8
+      },
+      {
+        "name": "Seed Bomb",
+        "slots": 8
+      },
+      {
+        "name": "Shadow Sneak",
+        "slots": 8
+      },
+      {
+        "name": "Thunder Wave",
+        "slots": 8
+      },
+      {
+        "name": "Flamethrower",
+        "slots": 8
+      },
+      {
+        "name": "Dark Pulse",
+        "slots": 7
+      }
+    ]
+  }
+}

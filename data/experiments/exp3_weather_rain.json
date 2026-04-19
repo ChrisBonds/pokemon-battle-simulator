@@ -1,0 +1,3572 @@
+[
+  {
+    "generation": 0,
+    "family_win_rates": {
+      "setup": 0.0,
+      "stall": 0.0,
+      "random": 0.0,
+      "greedy": 0.0
+    },
+    "population_diversity": 0.5155112569017302,
+    "avg_turns": 0.0,
+    "avg_winner_hp_fraction": 0.0,
+    "mean_roster_bst": {
+      "setup": 475.9791666666667,
+      "stall": 469.3541666666667,
+      "random": 491.2291666666667,
+      "greedy": 477.5625
+    },
+    "roster_diversity": {
+      "setup": 0.8541666666666666,
+      "stall": 0.8125,
+      "random": 0.875,
+      "greedy": 0.9166666666666666
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7655827098759224,
+        "hp_heal_threshold": 0.4579317674113745,
+        "item_use_chance": 0.6616298772294573,
+        "uncertainty": 0.0,
+        "aggression": 0.7000000000000001,
+        "protect_threshold": 0.15,
+        "status_priority": 0.09999999999999999,
+        "setup_willingness": 0.5871452166886378,
+        "boost_threshold": 2.75
+      },
+      "stall": {
+        "switch_threshold": 0.7561870645841456,
+        "hp_heal_threshold": 0.4747368377171956,
+        "item_use_chance": 0.4730297874733573,
+        "uncertainty": 0.0,
+        "aggression": 0.39999999999999997,
+        "protect_threshold": 0.3759825020332853,
+        "status_priority": 0.6929811210710345,
+        "setup_willingness": 0.09999999999999999,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.4478927844492167,
+        "hp_heal_threshold": 0.42771720494885074,
+        "item_use_chance": 0.5020025998677443,
+        "uncertainty": 0.10797756026564719,
+        "aggression": 0.5855610324276903,
+        "protect_threshold": 0.3170583552768741,
+        "status_priority": 0.3140438072761772,
+        "setup_willingness": 0.33592009535975315,
+        "boost_threshold": 3.125
+      },
+      "greedy": {
+        "switch_threshold": 0.45000000000000007,
+        "hp_heal_threshold": 0.35000000000000003,
+        "item_use_chance": 0.5017927091029282,
+        "uncertainty": 0.10039670247395001,
+        "aggression": 0.8173279682543919,
+        "protect_threshold": 0.25,
+        "status_priority": 0.19999999999999998,
+        "setup_willingness": 0.19999999999999998,
+        "boost_threshold": 3.0
+      }
+    }
+  },
+  {
+    "generation": 1,
+    "family_win_rates": {
+      "setup": 0.6693548387096774,
+      "stall": 0.4637096774193548,
+      "random": 0.28225806451612906,
+      "greedy": 0.5846774193548387
+    },
+    "population_diversity": 0.5031586160161822,
+    "avg_turns": 17.860887096774192,
+    "avg_winner_hp_fraction": 0.29891750560923824,
+    "mean_roster_bst": {
+      "setup": 477.9583333333333,
+      "stall": 483.4375,
+      "random": 498.2291666666667,
+      "greedy": 491.7708333333333
+    },
+    "roster_diversity": {
+      "setup": 0.8541666666666666,
+      "stall": 0.875,
+      "random": 0.8958333333333334,
+      "greedy": 0.9375
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7354414338258813,
+        "hp_heal_threshold": 0.46969287159255063,
+        "item_use_chance": 0.7201407160070784,
+        "uncertainty": 0.011626037043848106,
+        "aggression": 0.7125846208845554,
+        "protect_threshold": 0.1428236015996781,
+        "status_priority": 0.10914929825690715,
+        "setup_willingness": 0.5875508834268481,
+        "boost_threshold": 3.375
+      },
+      "stall": {
+        "switch_threshold": 0.7928056190161721,
+        "hp_heal_threshold": 0.4414527536427937,
+        "item_use_chance": 0.5011555205910768,
+        "uncertainty": 0.010375237846501205,
+        "aggression": 0.41561933854185895,
+        "protect_threshold": 0.4242976175797188,
+        "status_priority": 0.7244877983898188,
+        "setup_willingness": 0.09516589001593623,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.5918043589911812,
+        "hp_heal_threshold": 0.36732304505855873,
+        "item_use_chance": 0.5714713558995373,
+        "uncertainty": 0.14539671882411168,
+        "aggression": 0.5650813308254001,
+        "protect_threshold": 0.22019691884956652,
+        "status_priority": 0.3046423264867997,
+        "setup_willingness": 0.4625723359542267,
+        "boost_threshold": 2.875
+      },
+      "greedy": {
+        "switch_threshold": 0.46868341973413113,
+        "hp_heal_threshold": 0.36868773755168116,
+        "item_use_chance": 0.45304536857990724,
+        "uncertainty": 0.11746916161187708,
+        "aggression": 0.829748501153681,
+        "protect_threshold": 0.234742903506193,
+        "status_priority": 0.16682518740457747,
+        "setup_willingness": 0.20009517820149791,
+        "boost_threshold": 3.0
+      }
+    }
+  },
+  {
+    "generation": 2,
+    "family_win_rates": {
+      "setup": 0.6451612903225806,
+      "stall": 0.47580645161290325,
+      "random": 0.2620967741935484,
+      "greedy": 0.6169354838709677
+    },
+    "population_diversity": 0.5044529205146661,
+    "avg_turns": 18.090725806451612,
+    "avg_winner_hp_fraction": 0.28417309800570634,
+    "mean_roster_bst": {
+      "setup": 487.8958333333333,
+      "stall": 484.4791666666667,
+      "random": 507.625,
+      "greedy": 499.5833333333333
+    },
+    "roster_diversity": {
+      "setup": 0.8125,
+      "stall": 0.875,
+      "random": 0.8541666666666666,
+      "greedy": 0.8958333333333334
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7448608995113469,
+        "hp_heal_threshold": 0.5017939085466586,
+        "item_use_chance": 0.7401857610060713,
+        "uncertainty": 0.017929677328506262,
+        "aggression": 0.7228095175258947,
+        "protect_threshold": 0.15292678684757066,
+        "status_priority": 0.11075523051156948,
+        "setup_willingness": 0.6351774385295048,
+        "boost_threshold": 3.625
+      },
+      "stall": {
+        "switch_threshold": 0.7880323293936954,
+        "hp_heal_threshold": 0.44869038868942407,
+        "item_use_chance": 0.5433695887918247,
+        "uncertainty": 0.019760198221454587,
+        "aggression": 0.414968780482542,
+        "protect_threshold": 0.42983368947587486,
+        "status_priority": 0.723722324726261,
+        "setup_willingness": 0.10592945769355305,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.38549917316565163,
+        "hp_heal_threshold": 0.35958543666696685,
+        "item_use_chance": 0.4036063903930868,
+        "uncertainty": 0.13305684708028911,
+        "aggression": 0.5734803016872161,
+        "protect_threshold": 0.29620402411744257,
+        "status_priority": 0.26060595633791334,
+        "setup_willingness": 0.47595787878909135,
+        "boost_threshold": 2.875
+      },
+      "greedy": {
+        "switch_threshold": 0.4638744188028053,
+        "hp_heal_threshold": 0.34049768308919093,
+        "item_use_chance": 0.4521727797266322,
+        "uncertainty": 0.10281700795612136,
+        "aggression": 0.7816101207447004,
+        "protect_threshold": 0.24657199694169707,
+        "status_priority": 0.19300506617454594,
+        "setup_willingness": 0.18259298305587934,
+        "boost_threshold": 3.0
+      }
+    }
+  },
+  {
+    "generation": 3,
+    "family_win_rates": {
+      "setup": 0.6653225806451613,
+      "stall": 0.4959677419354839,
+      "random": 0.25,
+      "greedy": 0.5887096774193549
+    },
+    "population_diversity": 0.5144396647791722,
+    "avg_turns": 18.612903225806452,
+    "avg_winner_hp_fraction": 0.2674032483241136,
+    "mean_roster_bst": {
+      "setup": 488.8958333333333,
+      "stall": 497.0625,
+      "random": 516.7083333333334,
+      "greedy": 506.8125
+    },
+    "roster_diversity": {
+      "setup": 0.8333333333333334,
+      "stall": 0.8541666666666666,
+      "random": 0.8125,
+      "greedy": 0.875
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7585073361864147,
+        "hp_heal_threshold": 0.4839720517248037,
+        "item_use_chance": 0.7636608586574545,
+        "uncertainty": 0.026138025068933944,
+        "aggression": 0.720149334650762,
+        "protect_threshold": 0.16110018941214369,
+        "status_priority": 0.12280827084601409,
+        "setup_willingness": 0.6680312696501745,
+        "boost_threshold": 3.625
+      },
+      "stall": {
+        "switch_threshold": 0.7890093340753161,
+        "hp_heal_threshold": 0.4174691919643964,
+        "item_use_chance": 0.5486934658288616,
+        "uncertainty": 0.016192367616914997,
+        "aggression": 0.4231109130919282,
+        "protect_threshold": 0.4382884328430431,
+        "status_priority": 0.7702687695038771,
+        "setup_willingness": 0.07865395024133234,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.607909855581276,
+        "hp_heal_threshold": 0.30135271515480405,
+        "item_use_chance": 0.519233664454839,
+        "uncertainty": 0.10042705297624113,
+        "aggression": 0.40224940723779185,
+        "protect_threshold": 0.15702026789629792,
+        "status_priority": 0.3384729584522106,
+        "setup_willingness": 0.4365182895839605,
+        "boost_threshold": 2.0
+      },
+      "greedy": {
+        "switch_threshold": 0.44345879065022986,
+        "hp_heal_threshold": 0.34955960274783976,
+        "item_use_chance": 0.5179864083304805,
+        "uncertainty": 0.051267389826914596,
+        "aggression": 0.8517931010479174,
+        "protect_threshold": 0.23118780271100714,
+        "status_priority": 0.19191790668876846,
+        "setup_willingness": 0.20143802270096264,
+        "boost_threshold": 3.25
+      }
+    }
+  },
+  {
+    "generation": 4,
+    "family_win_rates": {
+      "setup": 0.6290322580645161,
+      "stall": 0.5362903225806451,
+      "random": 0.18548387096774194,
+      "greedy": 0.6491935483870968
+    },
+    "population_diversity": 0.5120939051945373,
+    "avg_turns": 18.110887096774192,
+    "avg_winner_hp_fraction": 0.27535352813749214,
+    "mean_roster_bst": {
+      "setup": 496.6875,
+      "stall": 499.1458333333333,
+      "random": 516.625,
+      "greedy": 506.9166666666667
+    },
+    "roster_diversity": {
+      "setup": 0.7708333333333334,
+      "stall": 0.875,
+      "random": 0.8125,
+      "greedy": 0.8333333333333334
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.8006041293000434,
+        "hp_heal_threshold": 0.478568426710847,
+        "item_use_chance": 0.6872322126790265,
+        "uncertainty": 0.01796051759864264,
+        "aggression": 0.709347830539654,
+        "protect_threshold": 0.17086911055527504,
+        "status_priority": 0.10692066465461653,
+        "setup_willingness": 0.6440447413900404,
+        "boost_threshold": 2.875
+      },
+      "stall": {
+        "switch_threshold": 0.790513393790266,
+        "hp_heal_threshold": 0.4215189567996653,
+        "item_use_chance": 0.5265388164799003,
+        "uncertainty": 0.014304782375224413,
+        "aggression": 0.41355394444275717,
+        "protect_threshold": 0.3881227060549734,
+        "status_priority": 0.7512008739438747,
+        "setup_willingness": 0.08131380837650141,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.6424524851905081,
+        "hp_heal_threshold": 0.3061922030634918,
+        "item_use_chance": 0.5283260545958738,
+        "uncertainty": 0.08653962736773271,
+        "aggression": 0.3983640295267322,
+        "protect_threshold": 0.1710259542311376,
+        "status_priority": 0.35705084085284977,
+        "setup_willingness": 0.4375488595775972,
+        "boost_threshold": 2.125
+      },
+      "greedy": {
+        "switch_threshold": 0.45629710673021245,
+        "hp_heal_threshold": 0.34313147444903375,
+        "item_use_chance": 0.6242434321906303,
+        "uncertainty": 0.032255102760568505,
+        "aggression": 0.831350614596123,
+        "protect_threshold": 0.25978378504793176,
+        "status_priority": 0.18601610110517774,
+        "setup_willingness": 0.20915892402192415,
+        "boost_threshold": 3.0
+      }
+    }
+  },
+  {
+    "generation": 5,
+    "family_win_rates": {
+      "setup": 0.5887096774193549,
+      "stall": 0.5161290322580645,
+      "random": 0.23790322580645162,
+      "greedy": 0.657258064516129
+    },
+    "population_diversity": 0.5269422504211261,
+    "avg_turns": 18.655241935483872,
+    "avg_winner_hp_fraction": 0.2676614885787313,
+    "mean_roster_bst": {
+      "setup": 502.3541666666667,
+      "stall": 499.875,
+      "random": 521.625,
+      "greedy": 515.9791666666666
+    },
+    "roster_diversity": {
+      "setup": 0.75,
+      "stall": 0.8541666666666666,
+      "random": 0.8333333333333334,
+      "greedy": 0.8125
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7591051121483803,
+        "hp_heal_threshold": 0.4590062807406046,
+        "item_use_chance": 0.7377236652596441,
+        "uncertainty": 0.01797478444747218,
+        "aggression": 0.7139159903857402,
+        "protect_threshold": 0.16663059973192829,
+        "status_priority": 0.14221827117795272,
+        "setup_willingness": 0.7064936884020053,
+        "boost_threshold": 3.25
+      },
+      "stall": {
+        "switch_threshold": 0.8213284897167528,
+        "hp_heal_threshold": 0.4248986583526413,
+        "item_use_chance": 0.4832727923153027,
+        "uncertainty": 0.030174157840297137,
+        "aggression": 0.412311572353865,
+        "protect_threshold": 0.4056167006245654,
+        "status_priority": 0.7582713851241735,
+        "setup_willingness": 0.04877379444340006,
+        "boost_threshold": 3.75
+      },
+      "random": {
+        "switch_threshold": 0.7038890945399273,
+        "hp_heal_threshold": 0.31115467353794146,
+        "item_use_chance": 0.5443975552235946,
+        "uncertainty": 0.10507664380378479,
+        "aggression": 0.3503834783237462,
+        "protect_threshold": 0.13809032940389565,
+        "status_priority": 0.3899552156891314,
+        "setup_willingness": 0.40951714110596393,
+        "boost_threshold": 2.0
+      },
+      "greedy": {
+        "switch_threshold": 0.45096026265955824,
+        "hp_heal_threshold": 0.3479639762325359,
+        "item_use_chance": 0.6294976357672752,
+        "uncertainty": 0.026330127685087752,
+        "aggression": 0.8493058093621677,
+        "protect_threshold": 0.2228036249637922,
+        "status_priority": 0.19977565782158568,
+        "setup_willingness": 0.18030637131188726,
+        "boost_threshold": 3.125
+      }
+    }
+  },
+  {
+    "generation": 6,
+    "family_win_rates": {
+      "setup": 0.6653225806451613,
+      "stall": 0.4717741935483871,
+      "random": 0.2056451612903226,
+      "greedy": 0.657258064516129
+    },
+    "population_diversity": 0.5149566821155991,
+    "avg_turns": 18.41532258064516,
+    "avg_winner_hp_fraction": 0.2579375520061302,
+    "mean_roster_bst": {
+      "setup": 504.1041666666667,
+      "stall": 503.75,
+      "random": 519.2083333333334,
+      "greedy": 516.3958333333334
+    },
+    "roster_diversity": {
+      "setup": 0.7708333333333334,
+      "stall": 0.9166666666666666,
+      "random": 0.7916666666666666,
+      "greedy": 0.8125
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7599510836472103,
+        "hp_heal_threshold": 0.4173240084962267,
+        "item_use_chance": 0.6812196764101603,
+        "uncertainty": 0.03233251518105962,
+        "aggression": 0.7060905998007176,
+        "protect_threshold": 0.17246790154427388,
+        "status_priority": 0.16761693298510702,
+        "setup_willingness": 0.7318476877978592,
+        "boost_threshold": 2.75
+      },
+      "stall": {
+        "switch_threshold": 0.8087543380315032,
+        "hp_heal_threshold": 0.4141741704990174,
+        "item_use_chance": 0.5111788353943669,
+        "uncertainty": 0.023659217624605055,
+        "aggression": 0.43338277023026617,
+        "protect_threshold": 0.42788834476003795,
+        "status_priority": 0.739032960636392,
+        "setup_willingness": 0.07625007056159448,
+        "boost_threshold": 3.625
+      },
+      "random": {
+        "switch_threshold": 0.6113457248757144,
+        "hp_heal_threshold": 0.3407960349125661,
+        "item_use_chance": 0.5130269139934935,
+        "uncertainty": 0.08633549390045137,
+        "aggression": 0.37330270965124807,
+        "protect_threshold": 0.1533409078791158,
+        "status_priority": 0.3476195060504545,
+        "setup_willingness": 0.47439111994563793,
+        "boost_threshold": 1.875
+      },
+      "greedy": {
+        "switch_threshold": 0.4489189780642971,
+        "hp_heal_threshold": 0.3498167623088694,
+        "item_use_chance": 0.6661692380546461,
+        "uncertainty": 0.01474947152915589,
+        "aggression": 0.8766934888020991,
+        "protect_threshold": 0.2150129806353701,
+        "status_priority": 0.23185517326900767,
+        "setup_willingness": 0.15694713008539404,
+        "boost_threshold": 3.375
+      }
+    }
+  },
+  {
+    "generation": 7,
+    "family_win_rates": {
+      "setup": 0.6008064516129032,
+      "stall": 0.4717741935483871,
+      "random": 0.20161290322580644,
+      "greedy": 0.7258064516129032
+    },
+    "population_diversity": 0.5254264894811511,
+    "avg_turns": 18.840725806451612,
+    "avg_winner_hp_fraction": 0.2693686276711874,
+    "mean_roster_bst": {
+      "setup": 511.8958333333333,
+      "stall": 515.0208333333334,
+      "random": 526.0,
+      "greedy": 522.4791666666666
+    },
+    "roster_diversity": {
+      "setup": 0.7708333333333334,
+      "stall": 0.875,
+      "random": 0.7916666666666666,
+      "greedy": 0.7916666666666666
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7393792867442373,
+        "hp_heal_threshold": 0.4364837055789459,
+        "item_use_chance": 0.741433482575331,
+        "uncertainty": 0.028816459306610302,
+        "aggression": 0.7376494697918693,
+        "protect_threshold": 0.15781294900588924,
+        "status_priority": 0.16977845636014072,
+        "setup_willingness": 0.7217678144775239,
+        "boost_threshold": 3.5
+      },
+      "stall": {
+        "switch_threshold": 0.8162228039141751,
+        "hp_heal_threshold": 0.4208997219503108,
+        "item_use_chance": 0.5021733882468814,
+        "uncertainty": 0.016405347523183976,
+        "aggression": 0.4118548897950413,
+        "protect_threshold": 0.41847795428700724,
+        "status_priority": 0.7395242647105702,
+        "setup_willingness": 0.08503851138757985,
+        "boost_threshold": 3.75
+      },
+      "random": {
+        "switch_threshold": 0.545733823264934,
+        "hp_heal_threshold": 0.3120634879647117,
+        "item_use_chance": 0.5130777078887303,
+        "uncertainty": 0.10481717269518502,
+        "aggression": 0.4090995518630986,
+        "protect_threshold": 0.14405158188250292,
+        "status_priority": 0.33252397700263747,
+        "setup_willingness": 0.49795995804360965,
+        "boost_threshold": 1.625
+      },
+      "greedy": {
+        "switch_threshold": 0.44527923913633033,
+        "hp_heal_threshold": 0.32545016347968925,
+        "item_use_chance": 0.6456743618043616,
+        "uncertainty": 0.029456344231003906,
+        "aggression": 0.8498063808572056,
+        "protect_threshold": 0.2241976739308611,
+        "status_priority": 0.20330791103691442,
+        "setup_willingness": 0.15548530447978395,
+        "boost_threshold": 3.375
+      }
+    }
+  },
+  {
+    "generation": 8,
+    "family_win_rates": {
+      "setup": 0.625,
+      "stall": 0.46774193548387094,
+      "random": 0.18548387096774194,
+      "greedy": 0.7217741935483871
+    },
+    "population_diversity": 0.5143974981324588,
+    "avg_turns": 18.657258064516128,
+    "avg_winner_hp_fraction": 0.28315067241408665,
+    "mean_roster_bst": {
+      "setup": 517.3333333333334,
+      "stall": 515.3333333333334,
+      "random": 519.0,
+      "greedy": 529.7708333333334
+    },
+    "roster_diversity": {
+      "setup": 0.7708333333333334,
+      "stall": 0.8333333333333334,
+      "random": 0.8125,
+      "greedy": 0.7708333333333334
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.73377299727143,
+        "hp_heal_threshold": 0.47600772144156284,
+        "item_use_chance": 0.6485895333515399,
+        "uncertainty": 0.015248924475816519,
+        "aggression": 0.7754092923188237,
+        "protect_threshold": 0.18404189322788067,
+        "status_priority": 0.21403807324446478,
+        "setup_willingness": 0.669257709279964,
+        "boost_threshold": 2.75
+      },
+      "stall": {
+        "switch_threshold": 0.8049118518327625,
+        "hp_heal_threshold": 0.41509680713837904,
+        "item_use_chance": 0.44783562694486884,
+        "uncertainty": 0.03986997925913077,
+        "aggression": 0.45118731521816996,
+        "protect_threshold": 0.4469574044295018,
+        "status_priority": 0.7811575514243358,
+        "setup_willingness": 0.09203067957463076,
+        "boost_threshold": 3.625
+      },
+      "random": {
+        "switch_threshold": 0.7288356511283862,
+        "hp_heal_threshold": 0.29029523828579695,
+        "item_use_chance": 0.6460166571871475,
+        "uncertainty": 0.15807437284636372,
+        "aggression": 0.39093619244642064,
+        "protect_threshold": 0.1119184451846772,
+        "status_priority": 0.3788843639360925,
+        "setup_willingness": 0.3704593723470473,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.45779319863606915,
+        "hp_heal_threshold": 0.3291391887870535,
+        "item_use_chance": 0.6766746598440727,
+        "uncertainty": 0.04618652544221166,
+        "aggression": 0.8398033435919079,
+        "protect_threshold": 0.23035844428016583,
+        "status_priority": 0.20626274023078145,
+        "setup_willingness": 0.1489810873854957,
+        "boost_threshold": 3.625
+      }
+    }
+  },
+  {
+    "generation": 9,
+    "family_win_rates": {
+      "setup": 0.6451612903225806,
+      "stall": 0.45161290322580644,
+      "random": 0.2056451612903226,
+      "greedy": 0.6975806451612904
+    },
+    "population_diversity": 0.5060348606384136,
+    "avg_turns": 19.080645161290324,
+    "avg_winner_hp_fraction": 0.29597617782718116,
+    "mean_roster_bst": {
+      "setup": 518.0,
+      "stall": 521.6666666666666,
+      "random": 522.5833333333334,
+      "greedy": 528.1041666666666
+    },
+    "roster_diversity": {
+      "setup": 0.7083333333333334,
+      "stall": 0.8333333333333334,
+      "random": 0.7708333333333334,
+      "greedy": 0.8125
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.73863082863428,
+        "hp_heal_threshold": 0.44501124511685997,
+        "item_use_chance": 0.6794778661530823,
+        "uncertainty": 0.02002472040203099,
+        "aggression": 0.7356053465948226,
+        "protect_threshold": 0.183099420883584,
+        "status_priority": 0.20125432992782746,
+        "setup_willingness": 0.7316959726689751,
+        "boost_threshold": 3.25
+      },
+      "stall": {
+        "switch_threshold": 0.8427293690997102,
+        "hp_heal_threshold": 0.4543993302816996,
+        "item_use_chance": 0.4602448903991746,
+        "uncertainty": 0.029399071793268255,
+        "aggression": 0.4301459708584205,
+        "protect_threshold": 0.40896480125263623,
+        "status_priority": 0.7585208902087882,
+        "setup_willingness": 0.09672109505612322,
+        "boost_threshold": 3.625
+      },
+      "random": {
+        "switch_threshold": 0.8212952403328079,
+        "hp_heal_threshold": 0.2619521432724682,
+        "item_use_chance": 0.664722038393226,
+        "uncertainty": 0.16474513107508956,
+        "aggression": 0.36691580585026795,
+        "protect_threshold": 0.10300363567114826,
+        "status_priority": 0.37207419979977896,
+        "setup_willingness": 0.33311485605639757,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.42785242263021206,
+        "hp_heal_threshold": 0.3316558550214371,
+        "item_use_chance": 0.6804863614564405,
+        "uncertainty": 0.04537022963769577,
+        "aggression": 0.8583703222662445,
+        "protect_threshold": 0.20004578803440765,
+        "status_priority": 0.2190249020161848,
+        "setup_willingness": 0.1472742790117088,
+        "boost_threshold": 3.375
+      }
+    }
+  },
+  {
+    "generation": 10,
+    "family_win_rates": {
+      "setup": 0.6129032258064516,
+      "stall": 0.5080645161290323,
+      "random": 0.16532258064516128,
+      "greedy": 0.7137096774193549
+    },
+    "population_diversity": 0.5182600473467713,
+    "avg_turns": 18.93548387096774,
+    "avg_winner_hp_fraction": 0.2953182784552269,
+    "mean_roster_bst": {
+      "setup": 521.1041666666666,
+      "stall": 523.9166666666666,
+      "random": 527.7708333333334,
+      "greedy": 528.7291666666666
+    },
+    "roster_diversity": {
+      "setup": 0.7083333333333334,
+      "stall": 0.7916666666666666,
+      "random": 0.75,
+      "greedy": 0.8125
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.712793276867625,
+        "hp_heal_threshold": 0.477995321445318,
+        "item_use_chance": 0.7392197065125441,
+        "uncertainty": 0.023876073581069315,
+        "aggression": 0.7793315287510842,
+        "protect_threshold": 0.21481530233740007,
+        "status_priority": 0.2024908647224855,
+        "setup_willingness": 0.6841090949577187,
+        "boost_threshold": 3.5
+      },
+      "stall": {
+        "switch_threshold": 0.8365479712412348,
+        "hp_heal_threshold": 0.3901980682758575,
+        "item_use_chance": 0.43014780784722284,
+        "uncertainty": 0.020342770408300234,
+        "aggression": 0.48009669162231206,
+        "protect_threshold": 0.4072100784618997,
+        "status_priority": 0.7741889665521011,
+        "setup_willingness": 0.08740880033347559,
+        "boost_threshold": 3.625
+      },
+      "random": {
+        "switch_threshold": 0.810662550937294,
+        "hp_heal_threshold": 0.3091154766761891,
+        "item_use_chance": 0.6261280082821418,
+        "uncertainty": 0.16679512544167124,
+        "aggression": 0.3464228268453828,
+        "protect_threshold": 0.10006772904806482,
+        "status_priority": 0.4198984764071343,
+        "setup_willingness": 0.3139445266749309,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.48330619799392494,
+        "hp_heal_threshold": 0.32740084373219563,
+        "item_use_chance": 0.6848876312790378,
+        "uncertainty": 0.027421717653587738,
+        "aggression": 0.8453519406013942,
+        "protect_threshold": 0.19730642855581676,
+        "status_priority": 0.21058025146473439,
+        "setup_willingness": 0.12139056128879441,
+        "boost_threshold": 3.625
+      }
+    }
+  },
+  {
+    "generation": 11,
+    "family_win_rates": {
+      "setup": 0.5846774193548387,
+      "stall": 0.5524193548387096,
+      "random": 0.1935483870967742,
+      "greedy": 0.6693548387096774
+    },
+    "population_diversity": 0.5086943870921217,
+    "avg_turns": 19.048387096774192,
+    "avg_winner_hp_fraction": 0.2852829222545151,
+    "mean_roster_bst": {
+      "setup": 520.9791666666666,
+      "stall": 524.9583333333334,
+      "random": 534.8958333333334,
+      "greedy": 539.8125
+    },
+    "roster_diversity": {
+      "setup": 0.7083333333333334,
+      "stall": 0.7291666666666666,
+      "random": 0.7083333333333334,
+      "greedy": 0.7916666666666666
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7005589737235631,
+        "hp_heal_threshold": 0.4604737977807094,
+        "item_use_chance": 0.8099398685137636,
+        "uncertainty": 0.036450841257008565,
+        "aggression": 0.7566242228922522,
+        "protect_threshold": 0.2172704146059616,
+        "status_priority": 0.21265411704086887,
+        "setup_willingness": 0.7283194575578793,
+        "boost_threshold": 4.25
+      },
+      "stall": {
+        "switch_threshold": 0.8232923625963261,
+        "hp_heal_threshold": 0.39433144410814763,
+        "item_use_chance": 0.5529058516679264,
+        "uncertainty": 0.014947497539183403,
+        "aggression": 0.40633444588094786,
+        "protect_threshold": 0.4419774817561711,
+        "status_priority": 0.7368618669900644,
+        "setup_willingness": 0.10487796779130802,
+        "boost_threshold": 3.75
+      },
+      "random": {
+        "switch_threshold": 0.8084067754433819,
+        "hp_heal_threshold": 0.2855480940742864,
+        "item_use_chance": 0.6374951465152331,
+        "uncertainty": 0.1751944806686303,
+        "aggression": 0.35029407541408947,
+        "protect_threshold": 0.12315332010243074,
+        "status_priority": 0.40663019691528784,
+        "setup_willingness": 0.3504886413642331,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.48672199908332775,
+        "hp_heal_threshold": 0.3641679564747962,
+        "item_use_chance": 0.7211629801652012,
+        "uncertainty": 0.020876207843847056,
+        "aggression": 0.8762767684171666,
+        "protect_threshold": 0.24063083162462579,
+        "status_priority": 0.19718493539740872,
+        "setup_willingness": 0.10191452480674804,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 12,
+    "family_win_rates": {
+      "setup": 0.5443548387096774,
+      "stall": 0.49193548387096775,
+      "random": 0.22580645161290322,
+      "greedy": 0.7379032258064516
+    },
+    "population_diversity": 0.49800540683516364,
+    "avg_turns": 19.318548387096776,
+    "avg_winner_hp_fraction": 0.29264977620002813,
+    "mean_roster_bst": {
+      "setup": 525.0625,
+      "stall": 525.4791666666666,
+      "random": 532.9787234042553,
+      "greedy": 544.1666666666666
+    },
+    "roster_diversity": {
+      "setup": 0.6875,
+      "stall": 0.7708333333333334,
+      "random": 0.6666666666666666,
+      "greedy": 0.7291666666666666
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7255334993417162,
+        "hp_heal_threshold": 0.4472971275934803,
+        "item_use_chance": 0.7636574468061061,
+        "uncertainty": 0.030074405880485544,
+        "aggression": 0.7249726318535137,
+        "protect_threshold": 0.21980315183123766,
+        "status_priority": 0.197094973892194,
+        "setup_willingness": 0.7395411532056603,
+        "boost_threshold": 3.5
+      },
+      "stall": {
+        "switch_threshold": 0.8142528930492408,
+        "hp_heal_threshold": 0.37481149090427074,
+        "item_use_chance": 0.5987722675048319,
+        "uncertainty": 0.024737480392198048,
+        "aggression": 0.4031161170445818,
+        "protect_threshold": 0.471822187249845,
+        "status_priority": 0.7154465415215413,
+        "setup_willingness": 0.11328215410960693,
+        "boost_threshold": 3.5
+      },
+      "random": {
+        "switch_threshold": 0.7931482517578315,
+        "hp_heal_threshold": 0.2864575474848717,
+        "item_use_chance": 0.62175978128696,
+        "uncertainty": 0.15777476412306882,
+        "aggression": 0.3263331203363473,
+        "protect_threshold": 0.13625379306858862,
+        "status_priority": 0.4286117837662689,
+        "setup_willingness": 0.3033895266138712,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.44468630639116696,
+        "hp_heal_threshold": 0.31888409779242227,
+        "item_use_chance": 0.712017417589992,
+        "uncertainty": 0.03935072116040274,
+        "aggression": 0.8912347152892496,
+        "protect_threshold": 0.29890465399052807,
+        "status_priority": 0.17672945847395677,
+        "setup_willingness": 0.12928210392734218,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 13,
+    "family_win_rates": {
+      "setup": 0.5524193548387096,
+      "stall": 0.5483870967741935,
+      "random": 0.18548387096774194,
+      "greedy": 0.7137096774193549
+    },
+    "population_diversity": 0.4921419331208656,
+    "avg_turns": 19.467741935483872,
+    "avg_winner_hp_fraction": 0.29139426929515666,
+    "mean_roster_bst": {
+      "setup": 533.5625,
+      "stall": 533.3958333333334,
+      "random": 536.3617021276596,
+      "greedy": 536.8541666666666
+    },
+    "roster_diversity": {
+      "setup": 0.6875,
+      "stall": 0.75,
+      "random": 0.7083333333333334,
+      "greedy": 0.75
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7467653333308646,
+        "hp_heal_threshold": 0.4167208987075175,
+        "item_use_chance": 0.6382797472469399,
+        "uncertainty": 0.054763426016982614,
+        "aggression": 0.6913192727126949,
+        "protect_threshold": 0.24709191452426377,
+        "status_priority": 0.21369950777391752,
+        "setup_willingness": 0.7249443245607106,
+        "boost_threshold": 2.5
+      },
+      "stall": {
+        "switch_threshold": 0.8340578586628746,
+        "hp_heal_threshold": 0.30768172573930835,
+        "item_use_chance": 0.6050888284770861,
+        "uncertainty": 0.01877507644515386,
+        "aggression": 0.4483549859089699,
+        "protect_threshold": 0.49130718651735716,
+        "status_priority": 0.7231187176519462,
+        "setup_willingness": 0.10288714415707992,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8256672912597491,
+        "hp_heal_threshold": 0.2684270059338088,
+        "item_use_chance": 0.6190485807059866,
+        "uncertainty": 0.17010266057243287,
+        "aggression": 0.3066459751336661,
+        "protect_threshold": 0.15037200449581384,
+        "status_priority": 0.4242951221157069,
+        "setup_willingness": 0.3351554576655166,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.47352623134405636,
+        "hp_heal_threshold": 0.32814985490723697,
+        "item_use_chance": 0.7295580906961814,
+        "uncertainty": 0.03635533179762548,
+        "aggression": 0.9182280027714816,
+        "protect_threshold": 0.3121607790473428,
+        "status_priority": 0.1909131709954656,
+        "setup_willingness": 0.08699055713330398,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 14,
+    "family_win_rates": {
+      "setup": 0.5604838709677419,
+      "stall": 0.5362903225806451,
+      "random": 0.1774193548387097,
+      "greedy": 0.7258064516129032
+    },
+    "population_diversity": 0.4778633579836731,
+    "avg_turns": 19.504032258064516,
+    "avg_winner_hp_fraction": 0.28973856538621684,
+    "mean_roster_bst": {
+      "setup": 536.0833333333334,
+      "stall": 531.6666666666666,
+      "random": 546.8723404255319,
+      "greedy": 545.25
+    },
+    "roster_diversity": {
+      "setup": 0.6458333333333334,
+      "stall": 0.7291666666666666,
+      "random": 0.6458333333333334,
+      "greedy": 0.7083333333333334
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7182174705850349,
+        "hp_heal_threshold": 0.4350408399002228,
+        "item_use_chance": 0.6659455318930558,
+        "uncertainty": 0.06119400944645806,
+        "aggression": 0.7063589501824438,
+        "protect_threshold": 0.24575856276307825,
+        "status_priority": 0.19998181889077124,
+        "setup_willingness": 0.7036061655323067,
+        "boost_threshold": 2.875
+      },
+      "stall": {
+        "switch_threshold": 0.8146630227305225,
+        "hp_heal_threshold": 0.3267454047456572,
+        "item_use_chance": 0.6122089789669898,
+        "uncertainty": 0.013018038803948416,
+        "aggression": 0.4509465963739028,
+        "protect_threshold": 0.4514912554402787,
+        "status_priority": 0.7271897734307232,
+        "setup_willingness": 0.1150400165868883,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.7991036960742606,
+        "hp_heal_threshold": 0.28944064347429427,
+        "item_use_chance": 0.6236678151377018,
+        "uncertainty": 0.16962475456211906,
+        "aggression": 0.3354976151353068,
+        "protect_threshold": 0.09469186166939983,
+        "status_priority": 0.4068707774847482,
+        "setup_willingness": 0.3395099094984741,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4570206477640895,
+        "hp_heal_threshold": 0.34540274860030573,
+        "item_use_chance": 0.7464562366120573,
+        "uncertainty": 0.03212235794074616,
+        "aggression": 0.8999389967662215,
+        "protect_threshold": 0.3186731245267499,
+        "status_priority": 0.19657434919907896,
+        "setup_willingness": 0.1201358901987489,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 15,
+    "family_win_rates": {
+      "setup": 0.5967741935483871,
+      "stall": 0.4959677419354839,
+      "random": 0.18548387096774194,
+      "greedy": 0.7217741935483871
+    },
+    "population_diversity": 0.47742221005449326,
+    "avg_turns": 19.87298387096774,
+    "avg_winner_hp_fraction": 0.29217515635408026,
+    "mean_roster_bst": {
+      "setup": 535.9791666666666,
+      "stall": 537.2083333333334,
+      "random": 546.8478260869565,
+      "greedy": 548.7916666666666
+    },
+    "roster_diversity": {
+      "setup": 0.5833333333333334,
+      "stall": 0.6875,
+      "random": 0.6458333333333334,
+      "greedy": 0.6666666666666666
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7345986601645965,
+        "hp_heal_threshold": 0.4132909281978835,
+        "item_use_chance": 0.590497311490291,
+        "uncertainty": 0.08238223617241945,
+        "aggression": 0.7054413899495764,
+        "protect_threshold": 0.215710854875974,
+        "status_priority": 0.19213000264316837,
+        "setup_willingness": 0.6913342433194094,
+        "boost_threshold": 2.375
+      },
+      "stall": {
+        "switch_threshold": 0.7933660241641336,
+        "hp_heal_threshold": 0.37726723659791306,
+        "item_use_chance": 0.5953740995845584,
+        "uncertainty": 0.013553319553140472,
+        "aggression": 0.41057369287194234,
+        "protect_threshold": 0.43933470625809745,
+        "status_priority": 0.7112642576898593,
+        "setup_willingness": 0.10365500730802005,
+        "boost_threshold": 3.75
+      },
+      "random": {
+        "switch_threshold": 0.8268510239482005,
+        "hp_heal_threshold": 0.28958293838651455,
+        "item_use_chance": 0.5899342353532999,
+        "uncertainty": 0.16279129668206274,
+        "aggression": 0.37021322296568904,
+        "protect_threshold": 0.11326376699627026,
+        "status_priority": 0.43314775292034646,
+        "setup_willingness": 0.30926561682054315,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.4685392498922574,
+        "hp_heal_threshold": 0.35865077471712853,
+        "item_use_chance": 0.7205009838093536,
+        "uncertainty": 0.03120122952489618,
+        "aggression": 0.9043198111218559,
+        "protect_threshold": 0.3225635308143011,
+        "status_priority": 0.16137553376153593,
+        "setup_willingness": 0.1015070724290212,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 16,
+    "family_win_rates": {
+      "setup": 0.5887096774193549,
+      "stall": 0.5080645161290323,
+      "random": 0.18548387096774194,
+      "greedy": 0.717741935483871
+    },
+    "population_diversity": 0.47976371742312596,
+    "avg_turns": 19.885080645161292,
+    "avg_winner_hp_fraction": 0.29047111875105736,
+    "mean_roster_bst": {
+      "setup": 539.625,
+      "stall": 538.8125,
+      "random": 550.7608695652174,
+      "greedy": 557.375
+    },
+    "roster_diversity": {
+      "setup": 0.5208333333333334,
+      "stall": 0.6458333333333334,
+      "random": 0.625,
+      "greedy": 0.6458333333333334
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.738492160903989,
+        "hp_heal_threshold": 0.3985132567363054,
+        "item_use_chance": 0.6306514750013271,
+        "uncertainty": 0.050233120633899814,
+        "aggression": 0.6616376193300211,
+        "protect_threshold": 0.22280738575175782,
+        "status_priority": 0.19302086933542217,
+        "setup_willingness": 0.6963871516640858,
+        "boost_threshold": 2.5
+      },
+      "stall": {
+        "switch_threshold": 0.7775898610345572,
+        "hp_heal_threshold": 0.3515029456616304,
+        "item_use_chance": 0.598887979558306,
+        "uncertainty": 0.009507351292748845,
+        "aggression": 0.390194576354973,
+        "protect_threshold": 0.4030894243130834,
+        "status_priority": 0.7252762670962549,
+        "setup_willingness": 0.11426197781159242,
+        "boost_threshold": 3.875
+      },
+      "random": {
+        "switch_threshold": 0.8439613694971962,
+        "hp_heal_threshold": 0.21749157757008242,
+        "item_use_chance": 0.5789789296319027,
+        "uncertainty": 0.15227174303921173,
+        "aggression": 0.3791455178653852,
+        "protect_threshold": 0.14033475309969135,
+        "status_priority": 0.43668237870013726,
+        "setup_willingness": 0.3332497010652774,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.455536537848966,
+        "hp_heal_threshold": 0.3554867707556279,
+        "item_use_chance": 0.7104460755500083,
+        "uncertainty": 0.034908249068931266,
+        "aggression": 0.9045300028234585,
+        "protect_threshold": 0.2933602526858542,
+        "status_priority": 0.16546955786303483,
+        "setup_willingness": 0.1159606165558029,
+        "boost_threshold": 3.875
+      }
+    }
+  },
+  {
+    "generation": 17,
+    "family_win_rates": {
+      "setup": 0.6169354838709677,
+      "stall": 0.45564516129032256,
+      "random": 0.1693548387096774,
+      "greedy": 0.7580645161290323
+    },
+    "population_diversity": 0.4509834111859411,
+    "avg_turns": 19.0,
+    "avg_winner_hp_fraction": 0.2912089272064058,
+    "mean_roster_bst": {
+      "setup": 536.5416666666666,
+      "stall": 540.8958333333334,
+      "random": 548.8478260869565,
+      "greedy": 559.0208333333334
+    },
+    "roster_diversity": {
+      "setup": 0.5,
+      "stall": 0.6666666666666666,
+      "random": 0.6458333333333334,
+      "greedy": 0.625
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7617140394457971,
+        "hp_heal_threshold": 0.37738412135114524,
+        "item_use_chance": 0.6423838323411545,
+        "uncertainty": 0.07074809004774908,
+        "aggression": 0.6994909004372952,
+        "protect_threshold": 0.2232974551271372,
+        "status_priority": 0.19183985295247258,
+        "setup_willingness": 0.7140762852601054,
+        "boost_threshold": 2.625
+      },
+      "stall": {
+        "switch_threshold": 0.7675608255823507,
+        "hp_heal_threshold": 0.36464070063800147,
+        "item_use_chance": 0.578487323175099,
+        "uncertainty": 0.025206304237619274,
+        "aggression": 0.3866067904068457,
+        "protect_threshold": 0.40723566395384936,
+        "status_priority": 0.7702871979258199,
+        "setup_willingness": 0.16081840753828158,
+        "boost_threshold": 3.75
+      },
+      "random": {
+        "switch_threshold": 0.8519161568710869,
+        "hp_heal_threshold": 0.18520872741123615,
+        "item_use_chance": 0.5773432783053916,
+        "uncertainty": 0.15964097461670215,
+        "aggression": 0.3776760206706161,
+        "protect_threshold": 0.17018808893441875,
+        "status_priority": 0.4369410502730369,
+        "setup_willingness": 0.38738860074882403,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4552943369574564,
+        "hp_heal_threshold": 0.3720599927849685,
+        "item_use_chance": 0.7656434959385809,
+        "uncertainty": 0.07210406167016346,
+        "aggression": 0.9310734019664392,
+        "protect_threshold": 0.30476760337349584,
+        "status_priority": 0.18652543052327272,
+        "setup_willingness": 0.11419467892683552,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 18,
+    "family_win_rates": {
+      "setup": 0.5725806451612904,
+      "stall": 0.45564516129032256,
+      "random": 0.18548387096774194,
+      "greedy": 0.7862903225806451
+    },
+    "population_diversity": 0.46534648444075305,
+    "avg_turns": 18.800403225806452,
+    "avg_winner_hp_fraction": 0.2989379592122185,
+    "mean_roster_bst": {
+      "setup": 542.7446808510638,
+      "stall": 539.2083333333334,
+      "random": 555.0434782608696,
+      "greedy": 557.3333333333334
+    },
+    "roster_diversity": {
+      "setup": 0.5,
+      "stall": 0.625,
+      "random": 0.6041666666666666,
+      "greedy": 0.625
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7275709872467089,
+        "hp_heal_threshold": 0.4414959417634552,
+        "item_use_chance": 0.7030531179227939,
+        "uncertainty": 0.018259249041306505,
+        "aggression": 0.6343579210684522,
+        "protect_threshold": 0.20767083624655533,
+        "status_priority": 0.2142801425390713,
+        "setup_willingness": 0.7003705493860987,
+        "boost_threshold": 2.875
+      },
+      "stall": {
+        "switch_threshold": 0.761860187296518,
+        "hp_heal_threshold": 0.3845677189346103,
+        "item_use_chance": 0.6059482885037553,
+        "uncertainty": 0.023751544521059032,
+        "aggression": 0.38722146250503275,
+        "protect_threshold": 0.40847874848354826,
+        "status_priority": 0.7844318088859082,
+        "setup_willingness": 0.1928540660299692,
+        "boost_threshold": 3.625
+      },
+      "random": {
+        "switch_threshold": 0.8585796925406851,
+        "hp_heal_threshold": 0.15689019061495404,
+        "item_use_chance": 0.5769910444827674,
+        "uncertainty": 0.1340250080010703,
+        "aggression": 0.3954509478532988,
+        "protect_threshold": 0.16459027119662112,
+        "status_priority": 0.4302118554556814,
+        "setup_willingness": 0.37685551611551504,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.43875048951709633,
+        "hp_heal_threshold": 0.33076515076786156,
+        "item_use_chance": 0.7671929024567278,
+        "uncertainty": 0.05854914917935179,
+        "aggression": 0.9212997316605916,
+        "protect_threshold": 0.30198730206904245,
+        "status_priority": 0.22298873765962615,
+        "setup_willingness": 0.1035177807085615,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 19,
+    "family_win_rates": {
+      "setup": 0.6048387096774194,
+      "stall": 0.4314516129032258,
+      "random": 0.2056451612903226,
+      "greedy": 0.7580645161290323
+    },
+    "population_diversity": 0.4702310385729736,
+    "avg_turns": 19.18548387096774,
+    "avg_winner_hp_fraction": 0.31293717769525425,
+    "mean_roster_bst": {
+      "setup": 541.8478260869565,
+      "stall": 548.1875,
+      "random": 555.7111111111111,
+      "greedy": 560.1666666666666
+    },
+    "roster_diversity": {
+      "setup": 0.5,
+      "stall": 0.5833333333333334,
+      "random": 0.6041666666666666,
+      "greedy": 0.5833333333333334
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7630785762123268,
+        "hp_heal_threshold": 0.4291476703286998,
+        "item_use_chance": 0.6841993292561238,
+        "uncertainty": 0.0228292898326541,
+        "aggression": 0.6187593783800756,
+        "protect_threshold": 0.16271100064164465,
+        "status_priority": 0.20660267999127022,
+        "setup_willingness": 0.6921306917870282,
+        "boost_threshold": 2.75
+      },
+      "stall": {
+        "switch_threshold": 0.7799243311676075,
+        "hp_heal_threshold": 0.4543694342539948,
+        "item_use_chance": 0.5975172300703283,
+        "uncertainty": 0.019677618652658574,
+        "aggression": 0.3762669823420189,
+        "protect_threshold": 0.40643844957214526,
+        "status_priority": 0.7321185142983514,
+        "setup_willingness": 0.16288662317166838,
+        "boost_threshold": 3.25
+      },
+      "random": {
+        "switch_threshold": 0.8923364777961015,
+        "hp_heal_threshold": 0.1693207733170945,
+        "item_use_chance": 0.5686120017691412,
+        "uncertainty": 0.14623548552823873,
+        "aggression": 0.4133326568785057,
+        "protect_threshold": 0.1688368949691058,
+        "status_priority": 0.47006935334093863,
+        "setup_willingness": 0.4169827948306599,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.43495188355945774,
+        "hp_heal_threshold": 0.3100954561454467,
+        "item_use_chance": 0.7828869798922259,
+        "uncertainty": 0.07855090677729173,
+        "aggression": 0.9434021063069724,
+        "protect_threshold": 0.33582176299477506,
+        "status_priority": 0.21317497075299127,
+        "setup_willingness": 0.1334210973060366,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 20,
+    "family_win_rates": {
+      "setup": 0.5362903225806451,
+      "stall": 0.4959677419354839,
+      "random": 0.21370967741935484,
+      "greedy": 0.7540322580645161
+    },
+    "population_diversity": 0.48091863551470126,
+    "avg_turns": 19.243951612903224,
+    "avg_winner_hp_fraction": 0.30865603157984045,
+    "mean_roster_bst": {
+      "setup": 543.6739130434783,
+      "stall": 550.8125,
+      "random": 562.3409090909091,
+      "greedy": 557.2291666666666
+    },
+    "roster_diversity": {
+      "setup": 0.5208333333333334,
+      "stall": 0.6041666666666666,
+      "random": 0.6041666666666666,
+      "greedy": 0.6041666666666666
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7407143257943283,
+        "hp_heal_threshold": 0.40979840982683713,
+        "item_use_chance": 0.682175322020968,
+        "uncertainty": 0.010655676772445482,
+        "aggression": 0.6273999314931541,
+        "protect_threshold": 0.1538465564174097,
+        "status_priority": 0.1925945050270838,
+        "setup_willingness": 0.6741754299513364,
+        "boost_threshold": 2.875
+      },
+      "stall": {
+        "switch_threshold": 0.78895711225124,
+        "hp_heal_threshold": 0.4006119227432272,
+        "item_use_chance": 0.5515248440235523,
+        "uncertainty": 0.011160032850566359,
+        "aggression": 0.3719101739074926,
+        "protect_threshold": 0.3928904827934939,
+        "status_priority": 0.6677602833575057,
+        "setup_willingness": 0.1472509210493402,
+        "boost_threshold": 3.625
+      },
+      "random": {
+        "switch_threshold": 0.8430833989834883,
+        "hp_heal_threshold": 0.19450462387263578,
+        "item_use_chance": 0.5888504140039125,
+        "uncertainty": 0.16005703220114278,
+        "aggression": 0.423406438786307,
+        "protect_threshold": 0.1660977312407291,
+        "status_priority": 0.4217472554908308,
+        "setup_willingness": 0.3863335085744447,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4468312787035683,
+        "hp_heal_threshold": 0.32878149549241653,
+        "item_use_chance": 0.7808375135184159,
+        "uncertainty": 0.09054644190177127,
+        "aggression": 0.9608724000923251,
+        "protect_threshold": 0.34041385254098117,
+        "status_priority": 0.2126440126942404,
+        "setup_willingness": 0.13879563590889613,
+        "boost_threshold": 3.75
+      }
+    }
+  },
+  {
+    "generation": 21,
+    "family_win_rates": {
+      "setup": 0.5524193548387096,
+      "stall": 0.4838709677419355,
+      "random": 0.18951612903225806,
+      "greedy": 0.7741935483870968
+    },
+    "population_diversity": 0.47439629181769827,
+    "avg_turns": 18.91733870967742,
+    "avg_winner_hp_fraction": 0.3002602394545161,
+    "mean_roster_bst": {
+      "setup": 550.1739130434783,
+      "stall": 568.125,
+      "random": 552.8863636363636,
+      "greedy": 563.6875
+    },
+    "roster_diversity": {
+      "setup": 0.5208333333333334,
+      "stall": 0.5625,
+      "random": 0.625,
+      "greedy": 0.625
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7161533805285937,
+        "hp_heal_threshold": 0.42264269785216785,
+        "item_use_chance": 0.7072296461796517,
+        "uncertainty": 0.01672413367864343,
+        "aggression": 0.660983504410908,
+        "protect_threshold": 0.16345647030666652,
+        "status_priority": 0.20004927778864964,
+        "setup_willingness": 0.679154802457666,
+        "boost_threshold": 2.625
+      },
+      "stall": {
+        "switch_threshold": 0.7975863440974956,
+        "hp_heal_threshold": 0.41592306863622924,
+        "item_use_chance": 0.5669599805004347,
+        "uncertainty": 0.014845473795972541,
+        "aggression": 0.36894505249317383,
+        "protect_threshold": 0.37710671438095694,
+        "status_priority": 0.707686522229442,
+        "setup_willingness": 0.1470044325359193,
+        "boost_threshold": 3.625
+      },
+      "random": {
+        "switch_threshold": 0.8772188924373107,
+        "hp_heal_threshold": 0.1770512649094526,
+        "item_use_chance": 0.5544229588143886,
+        "uncertainty": 0.1378686787933541,
+        "aggression": 0.4383616701208024,
+        "protect_threshold": 0.15875159444437079,
+        "status_priority": 0.4526053063320998,
+        "setup_willingness": 0.43260630981438053,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4316790168219489,
+        "hp_heal_threshold": 0.31830873174145197,
+        "item_use_chance": 0.7913333496346059,
+        "uncertainty": 0.05930497392597104,
+        "aggression": 0.9620696925718653,
+        "protect_threshold": 0.3213530007577662,
+        "status_priority": 0.2358228947622962,
+        "setup_willingness": 0.17387806415650925,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 22,
+    "family_win_rates": {
+      "setup": 0.5362903225806451,
+      "stall": 0.5564516129032258,
+      "random": 0.1774193548387097,
+      "greedy": 0.7298387096774194
+    },
+    "population_diversity": 0.4650869665416583,
+    "avg_turns": 20.24798387096774,
+    "avg_winner_hp_fraction": 0.328714312294566,
+    "mean_roster_bst": {
+      "setup": 550.195652173913,
+      "stall": 562.7708333333334,
+      "random": 549.1136363636364,
+      "greedy": 562.1458333333334
+    },
+    "roster_diversity": {
+      "setup": 0.5,
+      "stall": 0.5833333333333334,
+      "random": 0.6666666666666666,
+      "greedy": 0.5625
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6772041163209308,
+        "hp_heal_threshold": 0.4893361691475459,
+        "item_use_chance": 0.6962269310643808,
+        "uncertainty": 0.06529202783128851,
+        "aggression": 0.6705141910618291,
+        "protect_threshold": 0.15136760591672865,
+        "status_priority": 0.19290087793655264,
+        "setup_willingness": 0.6741386797945547,
+        "boost_threshold": 2.375
+      },
+      "stall": {
+        "switch_threshold": 0.7837726054278011,
+        "hp_heal_threshold": 0.4539199325551645,
+        "item_use_chance": 0.5926176466973965,
+        "uncertainty": 0.023038992755021383,
+        "aggression": 0.38465978054638683,
+        "protect_threshold": 0.37225297845330235,
+        "status_priority": 0.7157507446032753,
+        "setup_willingness": 0.14661925579485194,
+        "boost_threshold": 3.5
+      },
+      "random": {
+        "switch_threshold": 0.8807192769738806,
+        "hp_heal_threshold": 0.18317151847862762,
+        "item_use_chance": 0.5849036408065812,
+        "uncertainty": 0.11277870811207269,
+        "aggression": 0.4270952882002583,
+        "protect_threshold": 0.1652391472729986,
+        "status_priority": 0.45104953541154824,
+        "setup_willingness": 0.4142908478148068,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4185993688792018,
+        "hp_heal_threshold": 0.34668786034976196,
+        "item_use_chance": 0.8030882703488748,
+        "uncertainty": 0.06701670105330264,
+        "aggression": 0.9580068165521839,
+        "protect_threshold": 0.34030586735410134,
+        "status_priority": 0.22948946979482857,
+        "setup_willingness": 0.18740096795389732,
+        "boost_threshold": 3.875
+      }
+    }
+  },
+  {
+    "generation": 23,
+    "family_win_rates": {
+      "setup": 0.5806451612903226,
+      "stall": 0.5120967741935484,
+      "random": 0.1935483870967742,
+      "greedy": 0.7137096774193549
+    },
+    "population_diversity": 0.4760620189182086,
+    "avg_turns": 19.544354838709676,
+    "avg_winner_hp_fraction": 0.3296341494668863,
+    "mean_roster_bst": {
+      "setup": 552.695652173913,
+      "stall": 563.8333333333334,
+      "random": 566.2727272727273,
+      "greedy": 571.0208333333334
+    },
+    "roster_diversity": {
+      "setup": 0.5416666666666666,
+      "stall": 0.5625,
+      "random": 0.625,
+      "greedy": 0.5625
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6662513973007996,
+        "hp_heal_threshold": 0.45970516687236584,
+        "item_use_chance": 0.6795102517938895,
+        "uncertainty": 0.04696605056680167,
+        "aggression": 0.6343754244947142,
+        "protect_threshold": 0.10171469092570963,
+        "status_priority": 0.17628275826997206,
+        "setup_willingness": 0.6559280059951602,
+        "boost_threshold": 2.375
+      },
+      "stall": {
+        "switch_threshold": 0.7904531068634325,
+        "hp_heal_threshold": 0.43521868951424475,
+        "item_use_chance": 0.6052329690997866,
+        "uncertainty": 0.03240542186985119,
+        "aggression": 0.35907279417328497,
+        "protect_threshold": 0.38461576597659164,
+        "status_priority": 0.7373339842558511,
+        "setup_willingness": 0.17183569496684906,
+        "boost_threshold": 3.75
+      },
+      "random": {
+        "switch_threshold": 0.8570538044198743,
+        "hp_heal_threshold": 0.208019039026228,
+        "item_use_chance": 0.5836104841540679,
+        "uncertainty": 0.15817157635401302,
+        "aggression": 0.4295572167732187,
+        "protect_threshold": 0.14302803755808613,
+        "status_priority": 0.44339255182417264,
+        "setup_willingness": 0.44479696887209436,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4332491834917252,
+        "hp_heal_threshold": 0.36253932487319307,
+        "item_use_chance": 0.7987430947701523,
+        "uncertainty": 0.06160791522923425,
+        "aggression": 0.9816981577919948,
+        "protect_threshold": 0.34223988745201134,
+        "status_priority": 0.23397169954057565,
+        "setup_willingness": 0.16203547602255525,
+        "boost_threshold": 3.75
+      }
+    }
+  },
+  {
+    "generation": 24,
+    "family_win_rates": {
+      "setup": 0.5645161290322581,
+      "stall": 0.5080645161290323,
+      "random": 0.1774193548387097,
+      "greedy": 0.75
+    },
+    "population_diversity": 0.4691581748187988,
+    "avg_turns": 19.77217741935484,
+    "avg_winner_hp_fraction": 0.31978547740708907,
+    "mean_roster_bst": {
+      "setup": 553.804347826087,
+      "stall": 570.3333333333334,
+      "random": 562.6976744186046,
+      "greedy": 576.5625
+    },
+    "roster_diversity": {
+      "setup": 0.5,
+      "stall": 0.4791666666666667,
+      "random": 0.6041666666666666,
+      "greedy": 0.5208333333333334
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6768452649461452,
+        "hp_heal_threshold": 0.4697182478065437,
+        "item_use_chance": 0.6989205137123715,
+        "uncertainty": 0.04318892696347025,
+        "aggression": 0.6559675557136211,
+        "protect_threshold": 0.11929592914947756,
+        "status_priority": 0.13283759719843627,
+        "setup_willingness": 0.631272871452054,
+        "boost_threshold": 2.25
+      },
+      "stall": {
+        "switch_threshold": 0.7786603882561994,
+        "hp_heal_threshold": 0.40317345528439724,
+        "item_use_chance": 0.5756954653019695,
+        "uncertainty": 0.024306068657839637,
+        "aggression": 0.36709029325619036,
+        "protect_threshold": 0.3868848731161442,
+        "status_priority": 0.7371667603112961,
+        "setup_willingness": 0.16639032565071352,
+        "boost_threshold": 3.875
+      },
+      "random": {
+        "switch_threshold": 0.8585077409609408,
+        "hp_heal_threshold": 0.23857674103280657,
+        "item_use_chance": 0.5918584549209942,
+        "uncertainty": 0.15846567210657714,
+        "aggression": 0.3842839093596837,
+        "protect_threshold": 0.1606065129316295,
+        "status_priority": 0.4193675596412275,
+        "setup_willingness": 0.40807642974217906,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4407532950305724,
+        "hp_heal_threshold": 0.36201383043942315,
+        "item_use_chance": 0.8302185761314956,
+        "uncertainty": 0.09359061515569117,
+        "aggression": 0.9663909547227073,
+        "protect_threshold": 0.3675093989294244,
+        "status_priority": 0.22219241576181173,
+        "setup_willingness": 0.1913189014350446,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 25,
+    "family_win_rates": {
+      "setup": 0.5443548387096774,
+      "stall": 0.5040322580645161,
+      "random": 0.1935483870967742,
+      "greedy": 0.7580645161290323
+    },
+    "population_diversity": 0.4513917763831039,
+    "avg_turns": 20.141129032258064,
+    "avg_winner_hp_fraction": 0.3201272361379966,
+    "mean_roster_bst": {
+      "setup": 555.6304347826087,
+      "stall": 577.8541666666666,
+      "random": 565.6428571428571,
+      "greedy": 576.875
+    },
+    "roster_diversity": {
+      "setup": 0.4791666666666667,
+      "stall": 0.4791666666666667,
+      "random": 0.5625,
+      "greedy": 0.4791666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7018117555987339,
+        "hp_heal_threshold": 0.46231305626592867,
+        "item_use_chance": 0.6547119892468728,
+        "uncertainty": 0.12319885310725451,
+        "aggression": 0.6611780788318319,
+        "protect_threshold": 0.16194519794676066,
+        "status_priority": 0.2036251920162721,
+        "setup_willingness": 0.6431684844888698,
+        "boost_threshold": 2.5
+      },
+      "stall": {
+        "switch_threshold": 0.7811269201625944,
+        "hp_heal_threshold": 0.395571260862584,
+        "item_use_chance": 0.5806335522588365,
+        "uncertainty": 0.004254753416807958,
+        "aggression": 0.3996109185563971,
+        "protect_threshold": 0.3668997045988898,
+        "status_priority": 0.769452041626582,
+        "setup_willingness": 0.2020865918790215,
+        "boost_threshold": 4.125
+      },
+      "random": {
+        "switch_threshold": 0.8791389366416658,
+        "hp_heal_threshold": 0.22850099273649044,
+        "item_use_chance": 0.5959949895218594,
+        "uncertainty": 0.1854864828756249,
+        "aggression": 0.35997621481677816,
+        "protect_threshold": 0.16640392962652464,
+        "status_priority": 0.44905215466725606,
+        "setup_willingness": 0.4247797098488915,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.4344254635536794,
+        "hp_heal_threshold": 0.3664663613792147,
+        "item_use_chance": 0.8322279082627736,
+        "uncertainty": 0.11507998656667652,
+        "aggression": 0.9784540341398087,
+        "protect_threshold": 0.39801359855658064,
+        "status_priority": 0.21236656450239355,
+        "setup_willingness": 0.19068817674455701,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 26,
+    "family_win_rates": {
+      "setup": 0.532258064516129,
+      "stall": 0.5241935483870968,
+      "random": 0.18951612903225806,
+      "greedy": 0.7540322580645161
+    },
+    "population_diversity": 0.4624866546221718,
+    "avg_turns": 19.3125,
+    "avg_winner_hp_fraction": 0.33444542469578564,
+    "mean_roster_bst": {
+      "setup": 562.0434782608696,
+      "stall": 579.9166666666666,
+      "random": 565.6666666666666,
+      "greedy": 574.5833333333334
+    },
+    "roster_diversity": {
+      "setup": 0.4791666666666667,
+      "stall": 0.4791666666666667,
+      "random": 0.5833333333333334,
+      "greedy": 0.4791666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6515193218417992,
+        "hp_heal_threshold": 0.5030665620158887,
+        "item_use_chance": 0.6999870061305561,
+        "uncertainty": 0.08669858039243222,
+        "aggression": 0.6244454822939934,
+        "protect_threshold": 0.1029999635970497,
+        "status_priority": 0.22243751427379066,
+        "setup_willingness": 0.6357183997775648,
+        "boost_threshold": 2.75
+      },
+      "stall": {
+        "switch_threshold": 0.7756416037097891,
+        "hp_heal_threshold": 0.3935510528671037,
+        "item_use_chance": 0.6150401581275975,
+        "uncertainty": 0.019650244407557423,
+        "aggression": 0.3694666318384263,
+        "protect_threshold": 0.32701508592722545,
+        "status_priority": 0.7595183536883336,
+        "setup_willingness": 0.20448653859224597,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.9206153699518462,
+        "hp_heal_threshold": 0.2548399546137833,
+        "item_use_chance": 0.5985797434365313,
+        "uncertainty": 0.20856288028307973,
+        "aggression": 0.3331494429714317,
+        "protect_threshold": 0.2033998733027976,
+        "status_priority": 0.4577181475133277,
+        "setup_willingness": 0.42909032032028316,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4149863021512919,
+        "hp_heal_threshold": 0.3620349782308465,
+        "item_use_chance": 0.8304396630295832,
+        "uncertainty": 0.10994108291399265,
+        "aggression": 0.992960707401523,
+        "protect_threshold": 0.39143216816809173,
+        "status_priority": 0.19646782268276358,
+        "setup_willingness": 0.20790458628435066,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 27,
+    "family_win_rates": {
+      "setup": 0.5564516129032258,
+      "stall": 0.49193548387096775,
+      "random": 0.1935483870967742,
+      "greedy": 0.7580645161290323
+    },
+    "population_diversity": 0.47469001099457114,
+    "avg_turns": 19.81451612903226,
+    "avg_winner_hp_fraction": 0.34457521982952605,
+    "mean_roster_bst": {
+      "setup": 558.9545454545455,
+      "stall": 584.4166666666666,
+      "random": 566.0952380952381,
+      "greedy": 576.6666666666666
+    },
+    "roster_diversity": {
+      "setup": 0.4791666666666667,
+      "stall": 0.4791666666666667,
+      "random": 0.5833333333333334,
+      "greedy": 0.5
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6239945286336837,
+        "hp_heal_threshold": 0.4680223200575997,
+        "item_use_chance": 0.6786477699190105,
+        "uncertainty": 0.0942230843603941,
+        "aggression": 0.6527676373837005,
+        "protect_threshold": 0.09320763612577074,
+        "status_priority": 0.2132928931896144,
+        "setup_willingness": 0.6757306927293703,
+        "boost_threshold": 2.875
+      },
+      "stall": {
+        "switch_threshold": 0.7529548504511514,
+        "hp_heal_threshold": 0.35247960070334394,
+        "item_use_chance": 0.607566029674085,
+        "uncertainty": 0.028526528670941353,
+        "aggression": 0.3767573924485929,
+        "protect_threshold": 0.33394539859657646,
+        "status_priority": 0.7378266751789262,
+        "setup_willingness": 0.19196806696892701,
+        "boost_threshold": 4.125
+      },
+      "random": {
+        "switch_threshold": 0.8606647683498105,
+        "hp_heal_threshold": 0.2604445970865443,
+        "item_use_chance": 0.5976635617482546,
+        "uncertainty": 0.16323499937231625,
+        "aggression": 0.3511622925106046,
+        "protect_threshold": 0.15616142326424162,
+        "status_priority": 0.4162809419887811,
+        "setup_willingness": 0.3817843349458394,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4743553442378456,
+        "hp_heal_threshold": 0.3643911700128784,
+        "item_use_chance": 0.790745306296718,
+        "uncertainty": 0.05963180233818106,
+        "aggression": 0.9831265735904698,
+        "protect_threshold": 0.40684868482129916,
+        "status_priority": 0.1766625319720419,
+        "setup_willingness": 0.21135864387597197,
+        "boost_threshold": 4.125
+      }
+    }
+  },
+  {
+    "generation": 28,
+    "family_win_rates": {
+      "setup": 0.45564516129032256,
+      "stall": 0.5967741935483871,
+      "random": 0.1774193548387097,
+      "greedy": 0.7701612903225806
+    },
+    "population_diversity": 0.45466957710248285,
+    "avg_turns": 19.10282258064516,
+    "avg_winner_hp_fraction": 0.335308505856733,
+    "mean_roster_bst": {
+      "setup": 558.2558139534884,
+      "stall": 583.5957446808511,
+      "random": 573.6585365853658,
+      "greedy": 583.0625
+    },
+    "roster_diversity": {
+      "setup": 0.4791666666666667,
+      "stall": 0.4583333333333333,
+      "random": 0.5625,
+      "greedy": 0.4791666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6815784123308292,
+        "hp_heal_threshold": 0.4728292037760526,
+        "item_use_chance": 0.6278397896941407,
+        "uncertainty": 0.2001795209999981,
+        "aggression": 0.6442902939227115,
+        "protect_threshold": 0.15420992043027218,
+        "status_priority": 0.1744809518238905,
+        "setup_willingness": 0.626225042496612,
+        "boost_threshold": 3.0
+      },
+      "stall": {
+        "switch_threshold": 0.7466223395910961,
+        "hp_heal_threshold": 0.3493276259756906,
+        "item_use_chance": 0.6203713972914119,
+        "uncertainty": 0.026508295245466502,
+        "aggression": 0.37587234936843056,
+        "protect_threshold": 0.34241002597767467,
+        "status_priority": 0.7688095818711478,
+        "setup_willingness": 0.20925790726689755,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8265334463560706,
+        "hp_heal_threshold": 0.32775789047880965,
+        "item_use_chance": 0.6599701210355848,
+        "uncertainty": 0.16954982967870336,
+        "aggression": 0.3277663560507423,
+        "protect_threshold": 0.15348755198780126,
+        "status_priority": 0.4309336363112492,
+        "setup_willingness": 0.3555557554064296,
+        "boost_threshold": 1.25
+      },
+      "greedy": {
+        "switch_threshold": 0.49707894620486864,
+        "hp_heal_threshold": 0.38448699552777055,
+        "item_use_chance": 0.7705705453116852,
+        "uncertainty": 0.04499920117179161,
+        "aggression": 0.963745812806463,
+        "protect_threshold": 0.3492282069640754,
+        "status_priority": 0.19627032740937334,
+        "setup_willingness": 0.1839472409222682,
+        "boost_threshold": 4.25
+      }
+    }
+  },
+  {
+    "generation": 29,
+    "family_win_rates": {
+      "setup": 0.4717741935483871,
+      "stall": 0.5282258064516129,
+      "random": 0.1975806451612903,
+      "greedy": 0.8024193548387096
+    },
+    "population_diversity": 0.44744958376332916,
+    "avg_turns": 18.951612903225808,
+    "avg_winner_hp_fraction": 0.3535065469050598,
+    "mean_roster_bst": {
+      "setup": 558.0930232558139,
+      "stall": 580.2553191489362,
+      "random": 569.5121951219512,
+      "greedy": 585.625
+    },
+    "roster_diversity": {
+      "setup": 0.4375,
+      "stall": 0.4791666666666667,
+      "random": 0.5208333333333334,
+      "greedy": 0.4583333333333333
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6769249569961582,
+        "hp_heal_threshold": 0.45973449834741054,
+        "item_use_chance": 0.6293291610182847,
+        "uncertainty": 0.1707997245849595,
+        "aggression": 0.6550548022699333,
+        "protect_threshold": 0.17219796612781788,
+        "status_priority": 0.20032598377708555,
+        "setup_willingness": 0.6265089085451241,
+        "boost_threshold": 2.375
+      },
+      "stall": {
+        "switch_threshold": 0.7492693832425374,
+        "hp_heal_threshold": 0.34557037896839204,
+        "item_use_chance": 0.6130185920547653,
+        "uncertainty": 0.013089992280735135,
+        "aggression": 0.3375145907934969,
+        "protect_threshold": 0.3193271436674457,
+        "status_priority": 0.7411480891162859,
+        "setup_willingness": 0.24650049622093212,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8717306962324441,
+        "hp_heal_threshold": 0.33749278102185387,
+        "item_use_chance": 0.6562778682131898,
+        "uncertainty": 0.18232808754828356,
+        "aggression": 0.2785994803063505,
+        "protect_threshold": 0.12837517675215812,
+        "status_priority": 0.43790592639124004,
+        "setup_willingness": 0.3642184041532785,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.47884624393471165,
+        "hp_heal_threshold": 0.38787517830462936,
+        "item_use_chance": 0.8016573763900646,
+        "uncertainty": 0.012337664178083046,
+        "aggression": 0.975068894736832,
+        "protect_threshold": 0.3454859147014242,
+        "status_priority": 0.23863009850799774,
+        "setup_willingness": 0.1372484753089251,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 30,
+    "family_win_rates": {
+      "setup": 0.45161290322580644,
+      "stall": 0.532258064516129,
+      "random": 0.21370967741935484,
+      "greedy": 0.8024193548387096
+    },
+    "population_diversity": 0.4496443136269114,
+    "avg_turns": 19.600806451612904,
+    "avg_winner_hp_fraction": 0.35139398587789444,
+    "mean_roster_bst": {
+      "setup": 563.0,
+      "stall": 582.5652173913044,
+      "random": 576.3658536585366,
+      "greedy": 585.5208333333334
+    },
+    "roster_diversity": {
+      "setup": 0.4375,
+      "stall": 0.4583333333333333,
+      "random": 0.5,
+      "greedy": 0.4791666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6814866319923005,
+        "hp_heal_threshold": 0.5124237191349341,
+        "item_use_chance": 0.6079526427795463,
+        "uncertainty": 0.2052996193641521,
+        "aggression": 0.6520855041567246,
+        "protect_threshold": 0.2066608075213068,
+        "status_priority": 0.20404895191100403,
+        "setup_willingness": 0.617283310449944,
+        "boost_threshold": 2.625
+      },
+      "stall": {
+        "switch_threshold": 0.7572680543134722,
+        "hp_heal_threshold": 0.3371783618537352,
+        "item_use_chance": 0.6498012195214874,
+        "uncertainty": 0.018364087218969812,
+        "aggression": 0.3353802732839855,
+        "protect_threshold": 0.2946715065714878,
+        "status_priority": 0.75756323872497,
+        "setup_willingness": 0.2392768740659963,
+        "boost_threshold": 4.25
+      },
+      "random": {
+        "switch_threshold": 0.8442839729698953,
+        "hp_heal_threshold": 0.3345602906429467,
+        "item_use_chance": 0.6785849860221894,
+        "uncertainty": 0.21063176298338154,
+        "aggression": 0.2303020607337133,
+        "protect_threshold": 0.1309599919500311,
+        "status_priority": 0.4651395877352546,
+        "setup_willingness": 0.33818392655571317,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4830134538092895,
+        "hp_heal_threshold": 0.39878769626157806,
+        "item_use_chance": 0.7944596470189411,
+        "uncertainty": 0.016145746832488716,
+        "aggression": 0.9795128192122332,
+        "protect_threshold": 0.3456396584009427,
+        "status_priority": 0.23940756627218546,
+        "setup_willingness": 0.12452838083307119,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 31,
+    "family_win_rates": {
+      "setup": 0.4153225806451613,
+      "stall": 0.5403225806451613,
+      "random": 0.25,
+      "greedy": 0.7943548387096774
+    },
+    "population_diversity": 0.43547699589020733,
+    "avg_turns": 18.836693548387096,
+    "avg_winner_hp_fraction": 0.34905648973987735,
+    "mean_roster_bst": {
+      "setup": 572.0,
+      "stall": 584.9555555555555,
+      "random": 566.85,
+      "greedy": 586.5625
+    },
+    "roster_diversity": {
+      "setup": 0.4375,
+      "stall": 0.4375,
+      "random": 0.5208333333333334,
+      "greedy": 0.4791666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6686304076689724,
+        "hp_heal_threshold": 0.4631506236191061,
+        "item_use_chance": 0.6201335439152857,
+        "uncertainty": 0.16020561662332028,
+        "aggression": 0.6820419365768682,
+        "protect_threshold": 0.18376059003024395,
+        "status_priority": 0.19101961394732503,
+        "setup_willingness": 0.6532534713471893,
+        "boost_threshold": 2.375
+      },
+      "stall": {
+        "switch_threshold": 0.7382663089767574,
+        "hp_heal_threshold": 0.3599215047675338,
+        "item_use_chance": 0.6553721335993195,
+        "uncertainty": 0.027010156613104137,
+        "aggression": 0.32583623256976146,
+        "protect_threshold": 0.29420813258817385,
+        "status_priority": 0.7345978894065265,
+        "setup_willingness": 0.26767866825866177,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8734483162831775,
+        "hp_heal_threshold": 0.2873708270617381,
+        "item_use_chance": 0.6488011830493816,
+        "uncertainty": 0.1739797870299324,
+        "aggression": 0.25445884438005856,
+        "protect_threshold": 0.1381258673844413,
+        "status_priority": 0.4342597841274325,
+        "setup_willingness": 0.3424953078957415,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4596579535871238,
+        "hp_heal_threshold": 0.4340922164949902,
+        "item_use_chance": 0.8172097069184557,
+        "uncertainty": 0.012195454058188875,
+        "aggression": 0.9434610252284805,
+        "protect_threshold": 0.35051455030816153,
+        "status_priority": 0.3018573401123598,
+        "setup_willingness": 0.15400316791982382,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 32,
+    "family_win_rates": {
+      "setup": 0.47580645161290325,
+      "stall": 0.4879032258064516,
+      "random": 0.23387096774193547,
+      "greedy": 0.8024193548387096
+    },
+    "population_diversity": 0.4687270980501692,
+    "avg_turns": 17.971774193548388,
+    "avg_winner_hp_fraction": 0.38552834619095055,
+    "mean_roster_bst": {
+      "setup": 578.2439024390244,
+      "stall": 586.6428571428571,
+      "random": 565.6,
+      "greedy": 580.0
+    },
+    "roster_diversity": {
+      "setup": 0.3958333333333333,
+      "stall": 0.5,
+      "random": 0.5,
+      "greedy": 0.4583333333333333
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6641737022789495,
+        "hp_heal_threshold": 0.4815126298753073,
+        "item_use_chance": 0.6235044814842491,
+        "uncertainty": 0.14415844192498378,
+        "aggression": 0.6535614026350403,
+        "protect_threshold": 0.15210702082266014,
+        "status_priority": 0.19681315717882425,
+        "setup_willingness": 0.6453075290269285,
+        "boost_threshold": 2.625
+      },
+      "stall": {
+        "switch_threshold": 0.7467545476860429,
+        "hp_heal_threshold": 0.34364996553289134,
+        "item_use_chance": 0.6538595853137092,
+        "uncertainty": 0.015516522248221242,
+        "aggression": 0.3466809194575419,
+        "protect_threshold": 0.32579074843339634,
+        "status_priority": 0.7486341572285273,
+        "setup_willingness": 0.24982066844459175,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8683469157782218,
+        "hp_heal_threshold": 0.2981183372081979,
+        "item_use_chance": 0.6384050818324362,
+        "uncertainty": 0.1734286850470802,
+        "aggression": 0.21083172027056157,
+        "protect_threshold": 0.1366490432357255,
+        "status_priority": 0.434364462839804,
+        "setup_willingness": 0.32603594065628877,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.4494529682319426,
+        "hp_heal_threshold": 0.4202111057431165,
+        "item_use_chance": 0.8412496195810295,
+        "uncertainty": 0.014599669263366574,
+        "aggression": 0.9328148380607962,
+        "protect_threshold": 0.35695900987005286,
+        "status_priority": 0.28090726471772215,
+        "setup_willingness": 0.17409574762317206,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 33,
+    "family_win_rates": {
+      "setup": 0.5,
+      "stall": 0.5161290322580645,
+      "random": 0.20967741935483872,
+      "greedy": 0.7741935483870968
+    },
+    "population_diversity": 0.45841634734230674,
+    "avg_turns": 18.554435483870968,
+    "avg_winner_hp_fraction": 0.3875763245642209,
+    "mean_roster_bst": {
+      "setup": 568.4878048780488,
+      "stall": 594.3809523809524,
+      "random": 562.05,
+      "greedy": 582.0833333333334
+    },
+    "roster_diversity": {
+      "setup": 0.4375,
+      "stall": 0.4375,
+      "random": 0.4791666666666667,
+      "greedy": 0.4583333333333333
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.7084072968273805,
+        "hp_heal_threshold": 0.49001659964360333,
+        "item_use_chance": 0.6173020590334826,
+        "uncertainty": 0.17793195793717112,
+        "aggression": 0.6417036639650738,
+        "protect_threshold": 0.1257363387879463,
+        "status_priority": 0.17896463982060667,
+        "setup_willingness": 0.6988876546961826,
+        "boost_threshold": 2.625
+      },
+      "stall": {
+        "switch_threshold": 0.7373118537845312,
+        "hp_heal_threshold": 0.3463201334700483,
+        "item_use_chance": 0.625434722119373,
+        "uncertainty": 0.0278210564790769,
+        "aggression": 0.34179400469384025,
+        "protect_threshold": 0.27649050228237354,
+        "status_priority": 0.7584915631111497,
+        "setup_willingness": 0.25595416378292496,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8885730993031511,
+        "hp_heal_threshold": 0.31967778624222276,
+        "item_use_chance": 0.6508528059493979,
+        "uncertainty": 0.1990142570607547,
+        "aggression": 0.24293847734288843,
+        "protect_threshold": 0.12353420085163118,
+        "status_priority": 0.40783861197469334,
+        "setup_willingness": 0.35772881805762796,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.4590895590149068,
+        "hp_heal_threshold": 0.39984800761335837,
+        "item_use_chance": 0.8439136848307157,
+        "uncertainty": 0.014144262085098037,
+        "aggression": 0.9567493180235807,
+        "protect_threshold": 0.309738731306029,
+        "status_priority": 0.21699182042290907,
+        "setup_willingness": 0.19100965016408974,
+        "boost_threshold": 4.125
+      }
+    }
+  },
+  {
+    "generation": 34,
+    "family_win_rates": {
+      "setup": 0.43951612903225806,
+      "stall": 0.5120967741935484,
+      "random": 0.25806451612903225,
+      "greedy": 0.7903225806451613
+    },
+    "population_diversity": 0.4873702215056864,
+    "avg_turns": 18.95766129032258,
+    "avg_winner_hp_fraction": 0.39478351879862195,
+    "mean_roster_bst": {
+      "setup": 577.1463414634146,
+      "stall": 590.3333333333334,
+      "random": 553.6153846153846,
+      "greedy": 587.5
+    },
+    "roster_diversity": {
+      "setup": 0.4375,
+      "stall": 0.4791666666666667,
+      "random": 0.5,
+      "greedy": 0.4583333333333333
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6692454136101488,
+        "hp_heal_threshold": 0.47611204981929306,
+        "item_use_chance": 0.6715644132693239,
+        "uncertainty": 0.09435251269372756,
+        "aggression": 0.6191721782772206,
+        "protect_threshold": 0.10056228772559238,
+        "status_priority": 0.18733350696312728,
+        "setup_willingness": 0.6668155382977438,
+        "boost_threshold": 2.875
+      },
+      "stall": {
+        "switch_threshold": 0.7313509185223438,
+        "hp_heal_threshold": 0.340411918330321,
+        "item_use_chance": 0.6323795324637831,
+        "uncertainty": 0.015036707790075505,
+        "aggression": 0.34559153891599503,
+        "protect_threshold": 0.3181003665219395,
+        "status_priority": 0.7546404372746854,
+        "setup_willingness": 0.2572231859763165,
+        "boost_threshold": 3.875
+      },
+      "random": {
+        "switch_threshold": 0.8427718714489519,
+        "hp_heal_threshold": 0.27648132265571324,
+        "item_use_chance": 0.6542978951317592,
+        "uncertainty": 0.19147409898963935,
+        "aggression": 0.21380561620864463,
+        "protect_threshold": 0.15032747657096254,
+        "status_priority": 0.4250983165754411,
+        "setup_willingness": 0.33435947650270187,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.43972482203465857,
+        "hp_heal_threshold": 0.3870891787995256,
+        "item_use_chance": 0.8407918533997344,
+        "uncertainty": 0.009757573791852228,
+        "aggression": 0.94812123827742,
+        "protect_threshold": 0.2937002104439149,
+        "status_priority": 0.21790148965049877,
+        "setup_willingness": 0.20905026915816646,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 35,
+    "family_win_rates": {
+      "setup": 0.4838709677419355,
+      "stall": 0.46774193548387094,
+      "random": 0.25,
+      "greedy": 0.7983870967741935
+    },
+    "population_diversity": 0.4853858303273373,
+    "avg_turns": 18.50201612903226,
+    "avg_winner_hp_fraction": 0.4207791391642753,
+    "mean_roster_bst": {
+      "setup": 576.3658536585366,
+      "stall": 587.4736842105264,
+      "random": 573.5641025641025,
+      "greedy": 576.8541666666666
+    },
+    "roster_diversity": {
+      "setup": 0.4166666666666667,
+      "stall": 0.5,
+      "random": 0.5,
+      "greedy": 0.5
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6569218984774347,
+        "hp_heal_threshold": 0.4946714703144155,
+        "item_use_chance": 0.6612146017430338,
+        "uncertainty": 0.11565152693922677,
+        "aggression": 0.6139236504577504,
+        "protect_threshold": 0.11058041775808312,
+        "status_priority": 0.17716495958493095,
+        "setup_willingness": 0.6936801960676331,
+        "boost_threshold": 2.25
+      },
+      "stall": {
+        "switch_threshold": 0.7213344651133973,
+        "hp_heal_threshold": 0.3324378952523731,
+        "item_use_chance": 0.6159328310103901,
+        "uncertainty": 0.011421153896442715,
+        "aggression": 0.35560386525898796,
+        "protect_threshold": 0.2711563557017832,
+        "status_priority": 0.7505894960344459,
+        "setup_willingness": 0.24454617079461652,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8684256433122658,
+        "hp_heal_threshold": 0.2561245557818368,
+        "item_use_chance": 0.6581663688951717,
+        "uncertainty": 0.19784928489758724,
+        "aggression": 0.22743247468830363,
+        "protect_threshold": 0.12711100296512584,
+        "status_priority": 0.44178592823087637,
+        "setup_willingness": 0.3629048142894263,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4392142422768927,
+        "hp_heal_threshold": 0.3932717740161471,
+        "item_use_chance": 0.8375858852669545,
+        "uncertainty": 0.0077213731851587235,
+        "aggression": 0.9448526029064924,
+        "protect_threshold": 0.2927207409547681,
+        "status_priority": 0.23560978876097896,
+        "setup_willingness": 0.17650437686775322,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 36,
+    "family_win_rates": {
+      "setup": 0.5,
+      "stall": 0.4717741935483871,
+      "random": 0.2661290322580645,
+      "greedy": 0.7620967741935484
+    },
+    "population_diversity": 0.45955290458392156,
+    "avg_turns": 16.125,
+    "avg_winner_hp_fraction": 0.4269151797136777,
+    "mean_roster_bst": {
+      "setup": 576.1951219512196,
+      "stall": 589.4473684210526,
+      "random": 571.9487179487179,
+      "greedy": 579.375
+    },
+    "roster_diversity": {
+      "setup": 0.4583333333333333,
+      "stall": 0.4791666666666667,
+      "random": 0.5416666666666666,
+      "greedy": 0.4583333333333333
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6679388068812427,
+        "hp_heal_threshold": 0.4471544971477076,
+        "item_use_chance": 0.6820176972765857,
+        "uncertainty": 0.083745502358871,
+        "aggression": 0.6264253503007238,
+        "protect_threshold": 0.13699839432604824,
+        "status_priority": 0.16549937415982421,
+        "setup_willingness": 0.6757467703293266,
+        "boost_threshold": 2.375
+      },
+      "stall": {
+        "switch_threshold": 0.7514526217108194,
+        "hp_heal_threshold": 0.37426077472146513,
+        "item_use_chance": 0.6251414420823608,
+        "uncertainty": 0.02454419350825741,
+        "aggression": 0.349976779294578,
+        "protect_threshold": 0.29402014205548954,
+        "status_priority": 0.798918762611854,
+        "setup_willingness": 0.26475555244098326,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8899519957158122,
+        "hp_heal_threshold": 0.2849468929341564,
+        "item_use_chance": 0.6305893946199643,
+        "uncertainty": 0.17012496024501256,
+        "aggression": 0.2180228090488569,
+        "protect_threshold": 0.1483620373253083,
+        "status_priority": 0.44514210299204593,
+        "setup_willingness": 0.32065597113932437,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.49797891027286223,
+        "hp_heal_threshold": 0.3934633372129689,
+        "item_use_chance": 0.8526089036391592,
+        "uncertainty": 0.021605938820372164,
+        "aggression": 0.9311136618861494,
+        "protect_threshold": 0.3175126364625416,
+        "status_priority": 0.2426967678934696,
+        "setup_willingness": 0.14779014654755762,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 37,
+    "family_win_rates": {
+      "setup": 0.49193548387096775,
+      "stall": 0.46774193548387094,
+      "random": 0.24193548387096775,
+      "greedy": 0.7983870967741935
+    },
+    "population_diversity": 0.4884963251056784,
+    "avg_turns": 16.18951612903226,
+    "avg_winner_hp_fraction": 0.42242198233971134,
+    "mean_roster_bst": {
+      "setup": 578.8536585365854,
+      "stall": 596.6842105263158,
+      "random": 560.2564102564103,
+      "greedy": 580.2083333333334
+    },
+    "roster_diversity": {
+      "setup": 0.4583333333333333,
+      "stall": 0.4791666666666667,
+      "random": 0.5,
+      "greedy": 0.4791666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6639597052326045,
+        "hp_heal_threshold": 0.44086941511456657,
+        "item_use_chance": 0.6603265360480769,
+        "uncertainty": 0.10195374119786331,
+        "aggression": 0.6022454324393517,
+        "protect_threshold": 0.12804211555707332,
+        "status_priority": 0.15146119694441917,
+        "setup_willingness": 0.6810107832799064,
+        "boost_threshold": 2.125
+      },
+      "stall": {
+        "switch_threshold": 0.7257159431783001,
+        "hp_heal_threshold": 0.35142254237567155,
+        "item_use_chance": 0.604681588003248,
+        "uncertainty": 0.013537077660737116,
+        "aggression": 0.33314268081650095,
+        "protect_threshold": 0.29054734941828686,
+        "status_priority": 0.7700223734374835,
+        "setup_willingness": 0.30290181977708747,
+        "boost_threshold": 4.5
+      },
+      "random": {
+        "switch_threshold": 0.8900490589615425,
+        "hp_heal_threshold": 0.28349419994999536,
+        "item_use_chance": 0.6454630626637784,
+        "uncertainty": 0.19250910079644407,
+        "aggression": 0.21788161474051743,
+        "protect_threshold": 0.12345744622945921,
+        "status_priority": 0.41227064865580243,
+        "setup_willingness": 0.3431748460992244,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.47369692661558516,
+        "hp_heal_threshold": 0.4447054677025604,
+        "item_use_chance": 0.8459633612613577,
+        "uncertainty": 0.004897744373515606,
+        "aggression": 0.9346726204438837,
+        "protect_threshold": 0.3349274756057304,
+        "status_priority": 0.2684960180932705,
+        "setup_willingness": 0.1312286763226721,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 38,
+    "family_win_rates": {
+      "setup": 0.5080645161290323,
+      "stall": 0.49193548387096775,
+      "random": 0.24193548387096775,
+      "greedy": 0.7580645161290323
+    },
+    "population_diversity": 0.4866858935879171,
+    "avg_turns": 15.40725806451613,
+    "avg_winner_hp_fraction": 0.43510149508611073,
+    "mean_roster_bst": {
+      "setup": 576.3170731707318,
+      "stall": 601.5526315789474,
+      "random": 572.4358974358975,
+      "greedy": 584.1666666666666
+    },
+    "roster_diversity": {
+      "setup": 0.4791666666666667,
+      "stall": 0.4583333333333333,
+      "random": 0.4791666666666667,
+      "greedy": 0.4583333333333333
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6439717462096,
+        "hp_heal_threshold": 0.48687422154108456,
+        "item_use_chance": 0.6842546824803186,
+        "uncertainty": 0.09687898538354314,
+        "aggression": 0.5889603966835353,
+        "protect_threshold": 0.10287284598334911,
+        "status_priority": 0.139111286894621,
+        "setup_willingness": 0.6884137492667104,
+        "boost_threshold": 2.25
+      },
+      "stall": {
+        "switch_threshold": 0.7020479836562734,
+        "hp_heal_threshold": 0.3506956763904983,
+        "item_use_chance": 0.5652246937036456,
+        "uncertainty": 0.011522157094928822,
+        "aggression": 0.3479981417593302,
+        "protect_threshold": 0.27188754943201177,
+        "status_priority": 0.759263140594373,
+        "setup_willingness": 0.28107890096529986,
+        "boost_threshold": 4.625
+      },
+      "random": {
+        "switch_threshold": 0.8667612389376895,
+        "hp_heal_threshold": 0.3024354765977765,
+        "item_use_chance": 0.6555304756319171,
+        "uncertainty": 0.20359833314178838,
+        "aggression": 0.20344736555744708,
+        "protect_threshold": 0.12212775997897152,
+        "status_priority": 0.4112543960319121,
+        "setup_willingness": 0.38065935719720745,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4821934477272803,
+        "hp_heal_threshold": 0.46123369235306916,
+        "item_use_chance": 0.888578837192379,
+        "uncertainty": 0.02458165234846033,
+        "aggression": 0.9331678269707705,
+        "protect_threshold": 0.3105473331733497,
+        "status_priority": 0.2856936718926524,
+        "setup_willingness": 0.12174853536681235,
+        "boost_threshold": 4.125
+      }
+    }
+  },
+  {
+    "generation": 39,
+    "family_win_rates": {
+      "setup": 0.5201612903225806,
+      "stall": 0.45161290322580644,
+      "random": 0.22983870967741934,
+      "greedy": 0.7983870967741935
+    },
+    "population_diversity": 0.4448002100945921,
+    "avg_turns": 15.3125,
+    "avg_winner_hp_fraction": 0.43526831024959994,
+    "mean_roster_bst": {
+      "setup": 583.1463414634146,
+      "stall": 600.1052631578947,
+      "random": 577.4736842105264,
+      "greedy": 589.3333333333334
+    },
+    "roster_diversity": {
+      "setup": 0.4583333333333333,
+      "stall": 0.4375,
+      "random": 0.4583333333333333,
+      "greedy": 0.4166666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6841153547433784,
+        "hp_heal_threshold": 0.4334809062272655,
+        "item_use_chance": 0.643309472357515,
+        "uncertainty": 0.1277061589244371,
+        "aggression": 0.6258708958731913,
+        "protect_threshold": 0.17103281110306118,
+        "status_priority": 0.14075595481970393,
+        "setup_willingness": 0.7092046316940309,
+        "boost_threshold": 2.125
+      },
+      "stall": {
+        "switch_threshold": 0.7244964554674405,
+        "hp_heal_threshold": 0.4422714927402751,
+        "item_use_chance": 0.5919284220329943,
+        "uncertainty": 0.03145708639645331,
+        "aggression": 0.3514849670104633,
+        "protect_threshold": 0.265143280640542,
+        "status_priority": 0.7982829156253968,
+        "setup_willingness": 0.23967677741879173,
+        "boost_threshold": 4.375
+      },
+      "random": {
+        "switch_threshold": 0.8517601784682383,
+        "hp_heal_threshold": 0.3108072887681185,
+        "item_use_chance": 0.6698235546924789,
+        "uncertainty": 0.18531006028423935,
+        "aggression": 0.21971270351109318,
+        "protect_threshold": 0.14362026198447989,
+        "status_priority": 0.43504311703229326,
+        "setup_willingness": 0.3462333578663974,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.48220160117555294,
+        "hp_heal_threshold": 0.43756648565671374,
+        "item_use_chance": 0.875605092294626,
+        "uncertainty": 0.03698747646000276,
+        "aggression": 0.9363727297992882,
+        "protect_threshold": 0.2891271909965887,
+        "status_priority": 0.27162029914685787,
+        "setup_willingness": 0.11955386604218736,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 40,
+    "family_win_rates": {
+      "setup": 0.4798387096774194,
+      "stall": 0.4879032258064516,
+      "random": 0.23387096774193547,
+      "greedy": 0.7983870967741935
+    },
+    "population_diversity": 0.4426738076893416,
+    "avg_turns": 16.887096774193548,
+    "avg_winner_hp_fraction": 0.4490414119363859,
+    "mean_roster_bst": {
+      "setup": 584.6341463414634,
+      "stall": 595.2368421052631,
+      "random": 579.0,
+      "greedy": 586.8541666666666
+    },
+    "roster_diversity": {
+      "setup": 0.4166666666666667,
+      "stall": 0.4583333333333333,
+      "random": 0.5,
+      "greedy": 0.4375
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6995461378949597,
+        "hp_heal_threshold": 0.4300669796154376,
+        "item_use_chance": 0.6170886932098506,
+        "uncertainty": 0.14289125192450797,
+        "aggression": 0.6863761627804843,
+        "protect_threshold": 0.17961134729148887,
+        "status_priority": 0.17180944410273832,
+        "setup_willingness": 0.7388787412928488,
+        "boost_threshold": 2.125
+      },
+      "stall": {
+        "switch_threshold": 0.6888102322849394,
+        "hp_heal_threshold": 0.4029682987122043,
+        "item_use_chance": 0.5541343937239938,
+        "uncertainty": 0.016687143876726256,
+        "aggression": 0.37072228640638766,
+        "protect_threshold": 0.2633560972452585,
+        "status_priority": 0.7576375598706879,
+        "setup_willingness": 0.30794549026542367,
+        "boost_threshold": 4.625
+      },
+      "random": {
+        "switch_threshold": 0.861731033711317,
+        "hp_heal_threshold": 0.2982173985440969,
+        "item_use_chance": 0.6590729743088792,
+        "uncertainty": 0.16858561111431242,
+        "aggression": 0.21688810779045703,
+        "protect_threshold": 0.13669674471232615,
+        "status_priority": 0.4262702199991042,
+        "setup_willingness": 0.3633364372744265,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.464333874776617,
+        "hp_heal_threshold": 0.44205469095564914,
+        "item_use_chance": 0.882510808553019,
+        "uncertainty": 0.06024170642114486,
+        "aggression": 0.9524455604920724,
+        "protect_threshold": 0.3046011326031403,
+        "status_priority": 0.27107922159535763,
+        "setup_willingness": 0.08888285488141724,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 41,
+    "family_win_rates": {
+      "setup": 0.5241935483870968,
+      "stall": 0.4475806451612903,
+      "random": 0.25,
+      "greedy": 0.7782258064516129
+    },
+    "population_diversity": 0.447976329716013,
+    "avg_turns": 14.258064516129032,
+    "avg_winner_hp_fraction": 0.4568468730413072,
+    "mean_roster_bst": {
+      "setup": 585.7560975609756,
+      "stall": 599.2894736842105,
+      "random": 585.3157894736842,
+      "greedy": 589.6458333333334
+    },
+    "roster_diversity": {
+      "setup": 0.4166666666666667,
+      "stall": 0.4583333333333333,
+      "random": 0.4791666666666667,
+      "greedy": 0.4166666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6819974381004388,
+        "hp_heal_threshold": 0.44947515585841125,
+        "item_use_chance": 0.6399126835615918,
+        "uncertainty": 0.13274248002574263,
+        "aggression": 0.6623469774110027,
+        "protect_threshold": 0.15621746783456456,
+        "status_priority": 0.14393962421265077,
+        "setup_willingness": 0.7422225713626475,
+        "boost_threshold": 2.375
+      },
+      "stall": {
+        "switch_threshold": 0.7295029758016359,
+        "hp_heal_threshold": 0.39715620674319774,
+        "item_use_chance": 0.5768521089770289,
+        "uncertainty": 0.03268485659547603,
+        "aggression": 0.37210836883842285,
+        "protect_threshold": 0.2676413931550332,
+        "status_priority": 0.7719144094522923,
+        "setup_willingness": 0.2845067016064629,
+        "boost_threshold": 4.375
+      },
+      "random": {
+        "switch_threshold": 0.8508934399604432,
+        "hp_heal_threshold": 0.3014155033121674,
+        "item_use_chance": 0.6542638135157393,
+        "uncertainty": 0.17854278865795242,
+        "aggression": 0.21583433434448607,
+        "protect_threshold": 0.13626470922051664,
+        "status_priority": 0.43866431451762755,
+        "setup_willingness": 0.3562228792727569,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.46881356559747117,
+        "hp_heal_threshold": 0.4462792521812469,
+        "item_use_chance": 0.9184952798229565,
+        "uncertainty": 0.0726835937630574,
+        "aggression": 0.9212691282058361,
+        "protect_threshold": 0.30392392601034135,
+        "status_priority": 0.27292264771899133,
+        "setup_willingness": 0.09106999610459614,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 42,
+    "family_win_rates": {
+      "setup": 0.5161290322580645,
+      "stall": 0.4596774193548387,
+      "random": 0.25,
+      "greedy": 0.7741935483870968
+    },
+    "population_diversity": 0.44881983473694603,
+    "avg_turns": 15.034274193548388,
+    "avg_winner_hp_fraction": 0.4425645055455342,
+    "mean_roster_bst": {
+      "setup": 583.4146341463414,
+      "stall": 595.3684210526316,
+      "random": 597.6842105263158,
+      "greedy": 587.8125
+    },
+    "roster_diversity": {
+      "setup": 0.4375,
+      "stall": 0.4791666666666667,
+      "random": 0.4375,
+      "greedy": 0.4375
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6906667622567398,
+        "hp_heal_threshold": 0.4912798403779892,
+        "item_use_chance": 0.6162426411891535,
+        "uncertainty": 0.12500877580411676,
+        "aggression": 0.6856757196138457,
+        "protect_threshold": 0.13292694166093186,
+        "status_priority": 0.16140452092740265,
+        "setup_willingness": 0.7663545788467429,
+        "boost_threshold": 2.375
+      },
+      "stall": {
+        "switch_threshold": 0.7748012734663667,
+        "hp_heal_threshold": 0.4085773709513735,
+        "item_use_chance": 0.5903720378099632,
+        "uncertainty": 0.06379931634750977,
+        "aggression": 0.3672829308597666,
+        "protect_threshold": 0.2741405612586451,
+        "status_priority": 0.7993455304403911,
+        "setup_willingness": 0.2642175029564011,
+        "boost_threshold": 4.125
+      },
+      "random": {
+        "switch_threshold": 0.8574200141586208,
+        "hp_heal_threshold": 0.317312742194563,
+        "item_use_chance": 0.6679985766231604,
+        "uncertainty": 0.1517857911107761,
+        "aggression": 0.2720471942699802,
+        "protect_threshold": 0.11373457751498557,
+        "status_priority": 0.43168074332116213,
+        "setup_willingness": 0.38326257273002384,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.444188678590105,
+        "hp_heal_threshold": 0.43466726784054094,
+        "item_use_chance": 0.8570507802482423,
+        "uncertainty": 0.0325984595724332,
+        "aggression": 0.9694447434650659,
+        "protect_threshold": 0.3027512702456618,
+        "status_priority": 0.2724368573395172,
+        "setup_willingness": 0.08066103860685207,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 43,
+    "family_win_rates": {
+      "setup": 0.5040322580645161,
+      "stall": 0.43951612903225806,
+      "random": 0.2661290322580645,
+      "greedy": 0.7903225806451613
+    },
+    "population_diversity": 0.4656709076853874,
+    "avg_turns": 15.709677419354838,
+    "avg_winner_hp_fraction": 0.43050609234166015,
+    "mean_roster_bst": {
+      "setup": 586.8536585365854,
+      "stall": 597.3421052631579,
+      "random": 597.1578947368421,
+      "greedy": 593.5106382978723
+    },
+    "roster_diversity": {
+      "setup": 0.3958333333333333,
+      "stall": 0.4791666666666667,
+      "random": 0.4583333333333333,
+      "greedy": 0.3958333333333333
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6989366233259448,
+        "hp_heal_threshold": 0.5139636291146334,
+        "item_use_chance": 0.6405867999680294,
+        "uncertainty": 0.10992203089812874,
+        "aggression": 0.711790156300026,
+        "protect_threshold": 0.09156082392796669,
+        "status_priority": 0.18327521176004652,
+        "setup_willingness": 0.7665876073947747,
+        "boost_threshold": 2.625
+      },
+      "stall": {
+        "switch_threshold": 0.7465281280007933,
+        "hp_heal_threshold": 0.4106653403953012,
+        "item_use_chance": 0.5630430910672495,
+        "uncertainty": 0.07199372343459437,
+        "aggression": 0.37060192465171427,
+        "protect_threshold": 0.26114858928047846,
+        "status_priority": 0.7954001906927365,
+        "setup_willingness": 0.2716721169606173,
+        "boost_threshold": 4.125
+      },
+      "random": {
+        "switch_threshold": 0.8999742289186471,
+        "hp_heal_threshold": 0.32333740518970583,
+        "item_use_chance": 0.6609533437261037,
+        "uncertainty": 0.1854940652411218,
+        "aggression": 0.2788838152074012,
+        "protect_threshold": 0.11879459549642182,
+        "status_priority": 0.4228551618515065,
+        "setup_willingness": 0.36571329424600835,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.410920730406354,
+        "hp_heal_threshold": 0.48651474757143637,
+        "item_use_chance": 0.8882665859001645,
+        "uncertainty": 0.03723018720811788,
+        "aggression": 0.9604413343013852,
+        "protect_threshold": 0.2840127939545217,
+        "status_priority": 0.25765923704886196,
+        "setup_willingness": 0.08099387467749194,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 44,
+    "family_win_rates": {
+      "setup": 0.5120967741935484,
+      "stall": 0.43951612903225806,
+      "random": 0.2782258064516129,
+      "greedy": 0.7701612903225806
+    },
+    "population_diversity": 0.5004952545818292,
+    "avg_turns": 15.185483870967742,
+    "avg_winner_hp_fraction": 0.4306866889354021,
+    "mean_roster_bst": {
+      "setup": 590.7560975609756,
+      "stall": 590.060606060606,
+      "random": 587.8648648648649,
+      "greedy": 594.4444444444445
+    },
+    "roster_diversity": {
+      "setup": 0.4166666666666667,
+      "stall": 0.4583333333333333,
+      "random": 0.4583333333333333,
+      "greedy": 0.375
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6685083565704715,
+        "hp_heal_threshold": 0.5002166289468567,
+        "item_use_chance": 0.6088501954660986,
+        "uncertainty": 0.13300648168119036,
+        "aggression": 0.7289930639979274,
+        "protect_threshold": 0.12281537549754395,
+        "status_priority": 0.18429417997388056,
+        "setup_willingness": 0.7989827950356568,
+        "boost_threshold": 2.625
+      },
+      "stall": {
+        "switch_threshold": 0.8229677125916098,
+        "hp_heal_threshold": 0.4570747949935167,
+        "item_use_chance": 0.6101167739136186,
+        "uncertainty": 0.04139480623799295,
+        "aggression": 0.4079793913092256,
+        "protect_threshold": 0.27075774960773913,
+        "status_priority": 0.833544046296127,
+        "setup_willingness": 0.24840387369941888,
+        "boost_threshold": 3.875
+      },
+      "random": {
+        "switch_threshold": 0.8880867806580628,
+        "hp_heal_threshold": 0.30360773206185293,
+        "item_use_chance": 0.6544078638376645,
+        "uncertainty": 0.16500880067409482,
+        "aggression": 0.22639754518258554,
+        "protect_threshold": 0.09658676992394698,
+        "status_priority": 0.43646570581322475,
+        "setup_willingness": 0.39620470035954697,
+        "boost_threshold": 1.125
+      },
+      "greedy": {
+        "switch_threshold": 0.40007686764642175,
+        "hp_heal_threshold": 0.4396454606780862,
+        "item_use_chance": 0.8634274700727216,
+        "uncertainty": 0.020104765645855668,
+        "aggression": 0.9839097636895956,
+        "protect_threshold": 0.28340525504535186,
+        "status_priority": 0.24598282555137882,
+        "setup_willingness": 0.03979670407522513,
+        "boost_threshold": 4.125
+      }
+    }
+  },
+  {
+    "generation": 45,
+    "family_win_rates": {
+      "setup": 0.5241935483870968,
+      "stall": 0.4596774193548387,
+      "random": 0.2661290322580645,
+      "greedy": 0.75
+    },
+    "population_diversity": 0.4904637544586918,
+    "avg_turns": 15.235887096774194,
+    "avg_winner_hp_fraction": 0.4637908100739447,
+    "mean_roster_bst": {
+      "setup": 585.0487804878048,
+      "stall": 588.3030303030303,
+      "random": 585.4324324324324,
+      "greedy": 598.0
+    },
+    "roster_diversity": {
+      "setup": 0.3958333333333333,
+      "stall": 0.4791666666666667,
+      "random": 0.4375,
+      "greedy": 0.3958333333333333
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6718968096213435,
+        "hp_heal_threshold": 0.4751216198196646,
+        "item_use_chance": 0.5941799601996861,
+        "uncertainty": 0.11193027670474479,
+        "aggression": 0.7066032556873656,
+        "protect_threshold": 0.10946012372220229,
+        "status_priority": 0.18049457872001531,
+        "setup_willingness": 0.7804543335236309,
+        "boost_threshold": 2.5
+      },
+      "stall": {
+        "switch_threshold": 0.8111665963452368,
+        "hp_heal_threshold": 0.4470074547667038,
+        "item_use_chance": 0.6200691292529957,
+        "uncertainty": 0.056458334847326076,
+        "aggression": 0.3915166395406472,
+        "protect_threshold": 0.2611567122891507,
+        "status_priority": 0.8487802199127176,
+        "setup_willingness": 0.26426919415759403,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.87331037772343,
+        "hp_heal_threshold": 0.3210279726315617,
+        "item_use_chance": 0.663888368479675,
+        "uncertainty": 0.1729715010697262,
+        "aggression": 0.28030395105961475,
+        "protect_threshold": 0.09925002038564074,
+        "status_priority": 0.4321976286373701,
+        "setup_willingness": 0.3640038577364413,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.3866054459900956,
+        "hp_heal_threshold": 0.45187745837700477,
+        "item_use_chance": 0.8773009711940933,
+        "uncertainty": 0.004232396593170044,
+        "aggression": 0.9828800758620486,
+        "protect_threshold": 0.3026384726840589,
+        "status_priority": 0.26257830378267655,
+        "setup_willingness": 0.0581343122872721,
+        "boost_threshold": 3.875
+      }
+    }
+  },
+  {
+    "generation": 46,
+    "family_win_rates": {
+      "setup": 0.5120967741935484,
+      "stall": 0.45161290322580644,
+      "random": 0.2661290322580645,
+      "greedy": 0.7701612903225806
+    },
+    "population_diversity": 0.48500361965112326,
+    "avg_turns": 14.362903225806452,
+    "avg_winner_hp_fraction": 0.45951890314133653,
+    "mean_roster_bst": {
+      "setup": 591.829268292683,
+      "stall": 589.969696969697,
+      "random": 584.3333333333334,
+      "greedy": 595.8666666666667
+    },
+    "roster_diversity": {
+      "setup": 0.375,
+      "stall": 0.4166666666666667,
+      "random": 0.4166666666666667,
+      "greedy": 0.375
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6955283703603575,
+        "hp_heal_threshold": 0.5117040202045737,
+        "item_use_chance": 0.5817233214066923,
+        "uncertainty": 0.11467963590014185,
+        "aggression": 0.7571716385357499,
+        "protect_threshold": 0.04368621657777842,
+        "status_priority": 0.2083019510160926,
+        "setup_willingness": 0.7990027235103062,
+        "boost_threshold": 3.0
+      },
+      "stall": {
+        "switch_threshold": 0.841131146416663,
+        "hp_heal_threshold": 0.44433036503256024,
+        "item_use_chance": 0.6026227400353714,
+        "uncertainty": 0.07673412317561645,
+        "aggression": 0.3737443778820319,
+        "protect_threshold": 0.2698015202821572,
+        "status_priority": 0.8798719031870457,
+        "setup_willingness": 0.280539926811147,
+        "boost_threshold": 4.125
+      },
+      "random": {
+        "switch_threshold": 0.8811477703135182,
+        "hp_heal_threshold": 0.29498376098450657,
+        "item_use_chance": 0.6440140072429381,
+        "uncertainty": 0.15905618984069533,
+        "aggression": 0.2507149819864941,
+        "protect_threshold": 0.10290700960212211,
+        "status_priority": 0.4219889756544152,
+        "setup_willingness": 0.36899925220661445,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.46417191835348254,
+        "hp_heal_threshold": 0.43023591523359384,
+        "item_use_chance": 0.8511540197734488,
+        "uncertainty": 0.03220977649588182,
+        "aggression": 0.9691061405796676,
+        "protect_threshold": 0.3217866668658264,
+        "status_priority": 0.2459530617595658,
+        "setup_willingness": 0.08118990538762758,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 47,
+    "family_win_rates": {
+      "setup": 0.5120967741935484,
+      "stall": 0.4717741935483871,
+      "random": 0.27419354838709675,
+      "greedy": 0.7419354838709677
+    },
+    "population_diversity": 0.4885945298398193,
+    "avg_turns": 14.820564516129032,
+    "avg_winner_hp_fraction": 0.47241889978914803,
+    "mean_roster_bst": {
+      "setup": 593.8780487804878,
+      "stall": 598.4545454545455,
+      "random": 585.1944444444445,
+      "greedy": 590.0888888888888
+    },
+    "roster_diversity": {
+      "setup": 0.3958333333333333,
+      "stall": 0.4166666666666667,
+      "random": 0.375,
+      "greedy": 0.4166666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6476720020510095,
+        "hp_heal_threshold": 0.5169747185931466,
+        "item_use_chance": 0.5819900240118155,
+        "uncertainty": 0.09711358410051069,
+        "aggression": 0.7596439207782562,
+        "protect_threshold": 0.057704423161695384,
+        "status_priority": 0.1893140684877394,
+        "setup_willingness": 0.8059821902449095,
+        "boost_threshold": 2.875
+      },
+      "stall": {
+        "switch_threshold": 0.8440110402266386,
+        "hp_heal_threshold": 0.468518245204944,
+        "item_use_chance": 0.5818087456671208,
+        "uncertainty": 0.1008078623649428,
+        "aggression": 0.37946078320833665,
+        "protect_threshold": 0.2843439822274625,
+        "status_priority": 0.8491943966101572,
+        "setup_willingness": 0.29485086111500736,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8939048527986457,
+        "hp_heal_threshold": 0.3369066636575585,
+        "item_use_chance": 0.6582761404427774,
+        "uncertainty": 0.19382322800209376,
+        "aggression": 0.23799608889157406,
+        "protect_threshold": 0.09789558969657298,
+        "status_priority": 0.4307279850597199,
+        "setup_willingness": 0.385270259935079,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.3889451889799347,
+        "hp_heal_threshold": 0.49610742655284806,
+        "item_use_chance": 0.8597483769278269,
+        "uncertainty": 0.010071294780639267,
+        "aggression": 0.9753996884089652,
+        "protect_threshold": 0.3135444630865855,
+        "status_priority": 0.2807601827302673,
+        "setup_willingness": 0.08160846378731319,
+        "boost_threshold": 4.125
+      }
+    }
+  },
+  {
+    "generation": 48,
+    "family_win_rates": {
+      "setup": 0.5040322580645161,
+      "stall": 0.4838709677419355,
+      "random": 0.2903225806451613,
+      "greedy": 0.7217741935483871
+    },
+    "population_diversity": 0.47319725760406617,
+    "avg_turns": 15.566532258064516,
+    "avg_winner_hp_fraction": 0.4723023795391051,
+    "mean_roster_bst": {
+      "setup": 597.1463414634146,
+      "stall": 595.2121212121212,
+      "random": 574.8888888888889,
+      "greedy": 604.4878048780488
+    },
+    "roster_diversity": {
+      "setup": 0.375,
+      "stall": 0.4583333333333333,
+      "random": 0.375,
+      "greedy": 0.4166666666666667
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6449638860567375,
+        "hp_heal_threshold": 0.5478818683450002,
+        "item_use_chance": 0.6308657114656634,
+        "uncertainty": 0.0903215365138651,
+        "aggression": 0.7111701370510626,
+        "protect_threshold": 0.09183059413076133,
+        "status_priority": 0.1591505937755081,
+        "setup_willingness": 0.7663865668032143,
+        "boost_threshold": 2.625
+      },
+      "stall": {
+        "switch_threshold": 0.8241867899799136,
+        "hp_heal_threshold": 0.46510196756577843,
+        "item_use_chance": 0.619913006828378,
+        "uncertainty": 0.10495799832707753,
+        "aggression": 0.4059171594344286,
+        "protect_threshold": 0.2573168449236878,
+        "status_priority": 0.876364527503319,
+        "setup_willingness": 0.28234825592604423,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8937688902023935,
+        "hp_heal_threshold": 0.3180286939460615,
+        "item_use_chance": 0.6472536602683324,
+        "uncertainty": 0.1825550856267835,
+        "aggression": 0.2325250964534633,
+        "protect_threshold": 0.10040176500089845,
+        "status_priority": 0.4088631115179696,
+        "setup_willingness": 0.374978971656513,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.3958607039755347,
+        "hp_heal_threshold": 0.45120703583898125,
+        "item_use_chance": 0.8437103957639284,
+        "uncertainty": 0.020997982565138854,
+        "aggression": 0.9881843496891245,
+        "protect_threshold": 0.30216736149542706,
+        "status_priority": 0.2965581913825026,
+        "setup_willingness": 0.0959760504248658,
+        "boost_threshold": 4.375
+      }
+    }
+  },
+  {
+    "generation": 49,
+    "family_win_rates": {
+      "setup": 0.5201612903225806,
+      "stall": 0.46774193548387094,
+      "random": 0.2903225806451613,
+      "greedy": 0.7217741935483871
+    },
+    "population_diversity": 0.4653075027350743,
+    "avg_turns": 14.165322580645162,
+    "avg_winner_hp_fraction": 0.4733630814567302,
+    "mean_roster_bst": {
+      "setup": 592.975,
+      "stall": 599.2121212121212,
+      "random": 581.2857142857143,
+      "greedy": 607.8048780487804
+    },
+    "roster_diversity": {
+      "setup": 0.375,
+      "stall": 0.4375,
+      "random": 0.375,
+      "greedy": 0.3958333333333333
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6716800510305618,
+        "hp_heal_threshold": 0.5246103452247795,
+        "item_use_chance": 0.6079964167203593,
+        "uncertainty": 0.12332476809807269,
+        "aggression": 0.7376109973000007,
+        "protect_threshold": 0.05585007433935879,
+        "status_priority": 0.1455892060870538,
+        "setup_willingness": 0.8045804612346407,
+        "boost_threshold": 3.0
+      },
+      "stall": {
+        "switch_threshold": 0.8161231680135096,
+        "hp_heal_threshold": 0.4875727431611811,
+        "item_use_chance": 0.6295122416870429,
+        "uncertainty": 0.11168438741128843,
+        "aggression": 0.4004020709837511,
+        "protect_threshold": 0.28919414960004813,
+        "status_priority": 0.8695315667172362,
+        "setup_willingness": 0.2670116820522653,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.870648478924069,
+        "hp_heal_threshold": 0.318611346345062,
+        "item_use_chance": 0.6557652344527684,
+        "uncertainty": 0.17685942067615348,
+        "aggression": 0.2584822617317108,
+        "protect_threshold": 0.09605726595456118,
+        "status_priority": 0.437516783534071,
+        "setup_willingness": 0.37949337370439845,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.5260525823077085,
+        "hp_heal_threshold": 0.3951679963772634,
+        "item_use_chance": 0.8699360250236589,
+        "uncertainty": 0.02602114703179814,
+        "aggression": 0.964992709933768,
+        "protect_threshold": 0.3048695102749688,
+        "status_priority": 0.2845517951965909,
+        "setup_willingness": 0.10354006224713004,
+        "boost_threshold": 4.0
+      }
+    }
+  },
+  {
+    "generation": 50,
+    "family_win_rates": {
+      "setup": 0.5362903225806451,
+      "stall": 0.4798387096774194,
+      "random": 0.29435483870967744,
+      "greedy": 0.6895161290322581
+    },
+    "population_diversity": 0.47360569633348626,
+    "avg_turns": 15.290322580645162,
+    "avg_winner_hp_fraction": 0.49559199440878327,
+    "mean_roster_bst": {
+      "setup": 599.575,
+      "stall": 592.6363636363636,
+      "random": 589.1470588235294,
+      "greedy": 595.8536585365854
+    },
+    "roster_diversity": {
+      "setup": 0.375,
+      "stall": 0.4375,
+      "random": 0.375,
+      "greedy": 0.375
+    },
+    "mean_genomes": {
+      "setup": {
+        "switch_threshold": 0.6449925407480255,
+        "hp_heal_threshold": 0.5280227294333333,
+        "item_use_chance": 0.6299799007747527,
+        "uncertainty": 0.10862727446811521,
+        "aggression": 0.7142373212326594,
+        "protect_threshold": 0.07268424952298434,
+        "status_priority": 0.1693784755295875,
+        "setup_willingness": 0.7883926044162892,
+        "boost_threshold": 2.75
+      },
+      "stall": {
+        "switch_threshold": 0.816738212929199,
+        "hp_heal_threshold": 0.4283514094196393,
+        "item_use_chance": 0.6289690278140534,
+        "uncertainty": 0.07139264698183624,
+        "aggression": 0.3732010985769572,
+        "protect_threshold": 0.27718840323504756,
+        "status_priority": 0.8554221960886402,
+        "setup_willingness": 0.2662680277668933,
+        "boost_threshold": 4.0
+      },
+      "random": {
+        "switch_threshold": 0.8692136640729585,
+        "hp_heal_threshold": 0.30972482270141133,
+        "item_use_chance": 0.6773582661815513,
+        "uncertainty": 0.1757776741185657,
+        "aggression": 0.24721732557131404,
+        "protect_threshold": 0.09216319006909536,
+        "status_priority": 0.4266669170311277,
+        "setup_willingness": 0.3662590649867767,
+        "boost_threshold": 1.0
+      },
+      "greedy": {
+        "switch_threshold": 0.4655928312005094,
+        "hp_heal_threshold": 0.3875195099252181,
+        "item_use_chance": 0.8469899347382147,
+        "uncertainty": 0.02246120945592732,
+        "aggression": 0.9739418835002136,
+        "protect_threshold": 0.313990104241406,
+        "status_priority": 0.29001652292988744,
+        "setup_willingness": 0.08495933486782202,
+        "boost_threshold": 4.0
+      }
+    }
+  }
+]

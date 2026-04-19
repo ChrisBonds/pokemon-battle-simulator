@@ -102,6 +102,8 @@ class Battle:
     # ------------------------------------------------------------------
 
     def _run_turn(self) -> None:
+        self.t1.active.turns_active += 1
+        self.t2.active.turns_active += 1
         state = BattleState(self.t1, self.t2, self.weather, self._turn)
         action1 = self.t1.choose_action(state) # only 1 action per turn
         action2 = self.t2.choose_action(state)
@@ -208,6 +210,8 @@ class Battle:
                 self._emit(f"  {attacker.name}'s attack missed!")
                 return
 
+        attacker.move_usage[move.name] = attacker.move_usage.get(move.name, 0) + 1
+
         # Assault Vest blocks status moves
         if move.category == "status":
             item_data = get_item_data(defender.held_item)
@@ -272,6 +276,7 @@ class Battle:
 
         if defender.is_fainted:
             self._emit(f"  {defender.name} fainted!")
+            attacker.kos_dealt += 1
             self._handle_faint_replacement(opponent)
 
         if attacker.is_fainted:

@@ -110,9 +110,20 @@ class Pokemon:
         self.is_protecting: bool = False
         self.protect_used_last_turn: bool = False
 
+        # Battle-stat accumulators — read by evolution layer; reset each battle
+        self.kos_dealt: int = 0
+        self.turns_active: int = 0
+        self.stat_stages_gained: int = 0
+        self.move_usage: dict[str, int] = {}
+
     @property
     def is_fainted(self) -> bool:
         return self.current_hp <= 0
+
+    @property
+    def bst(self) -> int:
+        """Base stat total — sum of all six base stats."""
+        return sum(self._base.values())
 
     def effective_stat(self, stat: str) -> int:
         """Return stat value after applying stage multiplier."""
@@ -131,13 +142,17 @@ class Pokemon:
         return _STAGE_DESC.get(clamped, "changed")
 
     def reset_battle_state(self) -> None:
-        """Reset HP, status, and stat stages for a fresh battle."""
+        """Reset HP, status, stat stages, and battle-stat accumulators for a fresh battle."""
         self.current_hp = self.hp
         self.status = None
         self.stat_stages = {k: 0 for k in _STAT_KEYS}
         self.badly_poison_counter = 0
         self.is_protecting = False
         self.protect_used_last_turn = False
+        self.kos_dealt = 0
+        self.turns_active = 0
+        self.stat_stages_gained = 0
+        self.move_usage = {}
 
     def __repr__(self) -> str:
         types_str = "/".join(self.types)
